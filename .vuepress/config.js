@@ -1,9 +1,9 @@
 module.exports = {
-  title: 'danielmlc',
-  description: '马龙昌的博客',
-  port: 8066, //端口
+  title: '易龙软件技术开发文档',
+  description: '欢饮使用',
+  port: 8066, 
   dest: 'docs',
-  base:'/blog/',
+  base:'/YlDocument/',
   head: [
     ['link', { rel: 'icon', href: '/img/favicon.ico' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -16,49 +16,51 @@ module.exports = {
   ],
   serviceWorker: true,
   themeConfig: {
+    
     nav: [
       { text: '首页', link: '/' },
-      { text: '聊聊工作', link: '/work/' },
-      { text: '谈谈生活', link: '/everything/'},
-      { text: '我', link: '/me/'  },
-      { text: 'GitHub', link: 'https://github.com/danielmlc/'  },
+      { text: 'PC端配置', link: '/front/' },
+      { text: 'webApp端配置', link: '/webApp/'},
+      { text: '服务端文档', link: '/service/'},
+      { text: '技术扩展', link: '/more/'},
+      { text: '更新日志', link: '/update/'},
+      { text: 'GitHub', link: 'https://github.com/danielmlc/YlDocument'  },
     ],
+    sidebarDepth :3,
     sidebar: {
-      '/work/': [ 
-        {
-          title: '前端知识集',
-          collapsable: true,
-          children: [
-            'frontEnd/hellovuepress',
-          ]
-        },
-        {
-          title: '服务器知识集',
-          collapsable: true,
-          children: [
-          ]
-        },
-        {
-          title: '其他',
-          collapsable: true,
-          children: [
-          ]
-        },
+      '/front/': [ 
+        'frontRules',
+        'globalFun',
+        'directive',
+        'components',
+        'ocomponents',
+        'renderComs',
+        'containerComs',
+        'moduleConf',
+        'reportConf',
       ],
-      '/everything/': [
+      '/webApp/': [ 
+      ],
+      '/service/': [
+        'service'
+      ],
+      '/more/': [
         {
-          title: '文章',
+          title: 'markdown语法',
           collapsable: true,
           children: [
+            'markdown/',
           ]
         },
-        {
-          title: '记录',
-          collapsable: true,
-          children: [
-          ]
-        }
-      ]
+          {
+            title: 'git知识',
+            collapsable: true,
+            children: [
+              'git/',
+            ]
+          },
+         
+      ],
     },
    }
   }

@@ -1,21 +1,20 @@
 ---
 home: true
-heroImage: /img/userimg.jpg
-actionText: 关于我 →
-actionLink: /me/
-footer: MIT Licensed | Copyright © 2018-present Daniel MLC
+heroImage: /img/logo.png
+actionText: 关于易龙 →
+footer: MIT Licensed | Copyright © 2018-present 易龙软件
+sidebarDepth: 3
 ---
-<p style='text-align:center'>
-    试着尝试你喜欢的事物，终会找到你的所爱所长!
-</p>
 
-### 
+
 
 ``` bash
+# 安装
+cnpm install -d vuepress
 
 # 开始写作
-vuepress dev
+cnpm run docs:dev
 
-# b发布
-vuepress build 
-```# YlFrontsDocument
+# 发布
+cnpm run docs:build
+```

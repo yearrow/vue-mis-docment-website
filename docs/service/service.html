@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>易龙平台后台接口说明 | 易龙软件技术开发文档</title>
+    <meta name="description" content="欢饮使用">
+    <link rel="icon" href="/YlDocument/img/favicon.ico">
+  <link rel="manifest" href="/YlDocument/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/YlDocument/img/icons/Icon-152.png">
+  <meta name="msapplication-TileImage" content="/img/icons/Icon-120.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/YlDocument/assets/css/0.styles.e6507654.css" as="style"><link rel="preload" href="/YlDocument/assets/js/app.827f161c.js" as="script"><link rel="preload" href="/YlDocument/assets/js/18.7d5b8f13.js" as="script"><link rel="prefetch" href="/YlDocument/assets/js/9.cb2521b8.js"><link rel="prefetch" href="/YlDocument/assets/js/2.ea010887.js"><link rel="prefetch" href="/YlDocument/assets/js/3.13e73a29.js"><link rel="prefetch" href="/YlDocument/assets/js/4.06d520dd.js"><link rel="prefetch" href="/YlDocument/assets/js/5.710105b1.js"><link rel="prefetch" href="/YlDocument/assets/js/6.8de2a71e.js"><link rel="prefetch" href="/YlDocument/assets/js/7.3fda7f38.js"><link rel="prefetch" href="/YlDocument/assets/js/8.ca965cea.js"><link rel="prefetch" href="/YlDocument/assets/js/10.b43f8d06.js"><link rel="prefetch" href="/YlDocument/assets/js/11.db73f8c1.js"><link rel="prefetch" href="/YlDocument/assets/js/12.44f13a91.js"><link rel="prefetch" href="/YlDocument/assets/js/13.8f6d10a5.js"><link rel="prefetch" href="/YlDocument/assets/js/14.0ebb7507.js"><link rel="prefetch" href="/YlDocument/assets/js/15.0fbd77ff.js"><link rel="prefetch" href="/YlDocument/assets/js/16.6d924c43.js"><link rel="prefetch" href="/YlDocument/assets/js/17.8f202373.js"><link rel="prefetch" href="/YlDocument/assets/js/19.8cdbef3e.js"><link rel="prefetch" href="/YlDocument/assets/js/20.18b2bebb.js">
+    <link rel="stylesheet" href="/YlDocument/assets/css/0.styles.e6507654.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/YlDocument/" class="home-link router-link-active"><!----><span class="site-name">
+      易龙软件技术开发文档
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/YlDocument/" class="nav-link">首页</a></div><div class="nav-item"><a href="/YlDocument/front/" class="nav-link">PC端配置</a></div><div class="nav-item"><a href="/YlDocument/webApp/" class="nav-link">webApp端配置</a></div><div class="nav-item"><a href="/YlDocument/service/" class="nav-link router-link-active">服务端文档</a></div><div class="nav-item"><a href="/YlDocument/more/" class="nav-link">技术扩展</a></div><div class="nav-item"><a href="/YlDocument/update/" class="nav-link">更新日志</a></div><div class="nav-item"><a href="https://github.com/danielmlc/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/YlDocument/" class="nav-link">首页</a></div><div class="nav-item"><a href="/YlDocument/front/" class="nav-link">PC端配置</a></div><div class="nav-item"><a href="/YlDocument/webApp/" class="nav-link">webApp端配置</a></div><div class="nav-item"><a href="/YlDocument/service/" class="nav-link router-link-active">服务端文档</a></div><div class="nav-item"><a href="/YlDocument/more/" class="nav-link">技术扩展</a></div><div class="nav-item"><a href="/YlDocument/update/" class="nav-link">更新日志</a></div><div class="nav-item"><a href="https://github.com/danielmlc/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><a href="/YlDocument/service/service.html" class="active sidebar-link">易龙平台后台接口说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/service/service.html#通用业务表接口说明" class="sidebar-link">通用业务表接口说明</a></li><li class="sidebar-sub-header"><a href="/YlDocument/service/service.html#普通单表api接口" class="sidebar-link">普通单表API接口</a></li><li class="sidebar-sub-header"><a href="/YlDocument/service/service.html#主从表接口" class="sidebar-link">主从表接口</a></li><li class="sidebar-sub-header"><a href="/YlDocument/service/service.html#系统功能性接口说明" class="sidebar-link">系统功能性接口说明</a></li><li class="sidebar-sub-header"><a href="/YlDocument/service/service.html#前端调用api说明：" class="sidebar-link">前端调用API说明：</a></li></ul></li></ul></div><div class="page"><div class="content"><h1 id="易龙平台后台接口说明"><a href="#易龙平台后台接口说明" aria-hidden="true" class="header-anchor">#</a> 易龙平台后台接口说明</h1><blockquote><p>易龙后台API接口采用<code>webapi</code>的方式统一向外开放接口。接口详细列表一般为：<code>后台IP+Port+/swagger/ui/index</code>。</p></blockquote><h2 id="通用业务表接口说明"><a href="#通用业务表接口说明" aria-hidden="true" class="header-anchor">#</a> 通用业务表接口说明</h2><p><em>说明</em>
+后台通用表被设计为与业务无关。所有的通用表根据常见的业务类型划分为四种类型，其中包括<code>基础单表</code>、<code>业务单表</code>、<code>树形单表</code>、<code>普通主从表</code>、<code>业务主从表</code>、<code>中间表</code>。</p><h5 id="表命名说明："><a href="#表命名说明：" aria-hidden="true" class="header-anchor">#</a> 表命名说明：</h5><ol><li><p>基础单表
+命名规则： <code>Material_BasicTable</code>+表序号</p><p><strong>用途</strong>： 主要用于存放一些基础信息数据，与业务数据无关的信息。</p></li><li><p>业务单表
+命名规则： <code>Material_SingleTable</code>+表序号</p><p><strong>用途</strong>： 存放单条业务数据。</p></li><li><p>树形单表
+命名规则： <code>SingleTree_SingleTable</code>+表序号</p><p><strong>用途</strong>： 存放具有树形结构的数据，其中规定特定字段为树节点特定属性，参照以下列表使用。</p><p>针对单表树模板来说以下列为树属性对应列：</p><ul><li>V_Col6---名称</li><li>V_Col7---树截取Code</li><li>V_Col8---预留属性1</li><li>V_Col9---预留属性2</li><li>V_Col10---全称</li><li>B_Col17---是否为子节点</li><li>B_Col18---预留布尔类型一</li><li>B_Col19---预留布尔类型二</li><li>O_Col26---父节点ID</li></ul></li><li><p>普通主从表
+命名规则： <code>Material_Table</code>+表序号+<code>Order</code> 与 <code>Material_Table</code>+表序号+<code>Item</code></p><p><strong>用途</strong>： 存贮主从结构的单据数据。</p></li><li><p>业务主从表
+命名规则： <code>LMaterial_Table</code>+表序号+<code>Order</code> 与 <code>LMaterial_Table</code>+表序号+<code>Item</code></p><p><strong>用途</strong>： 存储主从结构的单据数据，主从表中附带业务字段。</p></li></ol><h5 id="表列命名说明："><a href="#表列命名说明：" aria-hidden="true" class="header-anchor">#</a> 表列命名说明：</h5><p><strong>通用列命名规范：</strong></p><pre><code>   - `I_`  表示int类型字段
+   - `O_`  表示guid类型字段
+   - `D_`  表示decimal类型字段
+   - `B_`  表示boolean类型字段
+   - `V_`  表示varchar类型字段
+</code></pre><blockquote><p>针对主从结构、从表的通用字段加<code>I</code>表示。</p></blockquote><p><strong>特殊字段用途说明</strong></p><pre><code>  - `Id`           用于单表结构的主键
+  - `OrderId`      用于主从结构主表主键
+  - `ItemId`        用于主从结构从表主键
+  - `OrgId`         用于存放组织机构主键
+  - `SortCode`      排序码
+  - `DataType`      单表数据类型
+  - `DataId`        单表数据来源主键
+  - `OrderBarCode`  用于主从结构主表单据唯一键
+  - `OrderDataType`  主从结构主表类型
+  - `OrderDataId`   主从结构主表数据来源主键
+  - `OrderDate`     单据日期
+  - `OrderCode`     单据编号
+  - `OrgName`       组织机构名称
+  - `IsState`       审批状态码
+  - `IsAudit`       审核标识
+  - `Auditor`       审核人
+  - `AuditDate`     审核时间
+</code></pre><hr><h2 id="普通单表api接口"><a href="#普通单表api接口" aria-hidden="true" class="header-anchor">#</a> 普通单表API接口</h2><p><strong>getMainAllList</strong></p><p>调用地址：<code>api/services/app/singleTable10/getMainAllList</code></p><blockquote><p>功能说明: 获取符合条件的所有数据</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/getMainAllList'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           sorting<span class="token punctuation">:</span> <span class="token string">''</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  //返回的数据列表
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><p><strong>getMainPageList</strong></p><p>调用地址：<code>api/services/app/singleTable10/getMainPageList</code></p><blockquote><p>功能说明: 按照分页获取符合条件的数据</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/getMainPageList'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           maxResultCount<span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">,</span>
+           skipCount<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+           draw<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+           sorting<span class="token punctuation">:</span> <span class="token string">''</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><em>通常在调用分页获取数据时，框架中封装了InputModel对象，调用方式如下</em></p><div class="language-javascript extra-class"><pre class="language-javascript"><code>    <span class="token keyword">var</span> inputArr<span class="token operator">=</span><span class="token punctuation">[</span>                                            
+                    <span class="token punctuation">{</span>
+                        key<span class="token punctuation">:</span><span class="token string">&quot;AttachName&quot;</span><span class="token punctuation">,</span>
+                        op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span>
+                        value<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>searchModel<span class="token punctuation">.</span>attachName<span class="token punctuation">,</span>
+                        TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                        dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                        relation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span>
+               <span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span>sorting<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>         
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span><span class="token function">addqueryConditionItem</span><span class="token punctuation">(</span>inputArr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//mainInput为inputModel的实例化对象</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/getMainPageList'</span><span class="token punctuation">,</span>
+        method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span>inputModel
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+              <span class="token property">&quot;draw&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> 
+              <span class="token property">&quot;recordsTotal&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;recordsFiltered&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> 
+              <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>  //返回的数据列表
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><p><strong>getMainObjectForEdit</strong></p><p>调用地址：<code>api/services/app/singleTable10/getMainObjectForEdit</code></p><blockquote><p>功能说明: 获取符合条件的第一个对象</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/getMainObjectForEdit'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           sorting<span class="token punctuation">:</span> <span class="token string">''</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+               order<span class="token operator">:</span><span class="token punctuation">{</span> //返回查询对象
+               <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>  
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><p><strong>createOrUpdateMainObject</strong></p><p>调用地址：<code>api/services/app/singleTable10/createOrUpdateMainObject</code></p><blockquote><p>功能说明: 添加或者修改一个对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/createOrUpdateMainObject'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           <span class="token string">&quot;order&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+               id<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//如果有id属性视为修改，没有视为添加</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           permissionType<span class="token punctuation">:</span> <span class="token number">0</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><p><strong>CreateMainList</strong></p><p>调用地址：<code>api/services/app/singleTable10/CreateMainList</code></p><blockquote><p>功能说明: 添加或者修改一个对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/CreateMainList'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            items<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                       <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                   <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            permissionType<span class="token punctuation">:</span> <span class="token number">0</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><p><strong>deleteMainObject</strong></p><p>调用地址：<code>api/services/app/singleTable10/deleteMainObject</code></p><blockquote><p>功能说明: 删除符合条件的对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/deleteMainObject'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            permissionType<span class="token punctuation">:</span> <span class="token number">0</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><p><strong>ExecuteSqlOne</strong></p><p>调用地址：<code>api/services/app/singleTable10/ExecuteSqlOne</code></p><blockquote><p>功能说明: 调用存储过程</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/ExecuteSqlOne'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+             <span class="token string">&quot;procType&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//0是返回值为影响行数，1是返回值类型为数据集合</span>
+             <span class="token string">&quot;firstKeys&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//存过过程的参数名集合以，分割</span>
+             <span class="token string">&quot;firstValues&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span><span class="token comment">//存过过程的参数值集合以，分割，如果值需要加单引                号需要用$符号包裹，不需要用#号包裹</span>
+             <span class="token string">&quot;secondKeys&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//调用系统中配置的sql语句时的sql语句标识 </span>
+             <span class="token string">&quot;secondOperates&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//暂时无用</span>
+             <span class="token string">&quot;secondValues&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//暂时无用</span>
+             <span class="token string">&quot;procName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span> <span class="token comment">//执行存储过程名称</span>
+           <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                      <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span> //影响行数
+                      <span class="token property">&quot;items&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>  //结果集
+                      <span class="token property">&quot;firstOutput&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> //输出参数<span class="token number">1</span>
+                      <span class="token property">&quot;secondOutput&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>  //输出参数<span class="token number">2</span>
+                      <span class="token property">&quot;resultType&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+</code></pre></div><p><strong>ExecuteSqlTwo</strong></p><p>调用地址：<code>api/services/app/singleTable10/ExecuteSqlTwo</code></p><blockquote><p>功能说明: 调用存储过程</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/ExecuteSqlTwo'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+             procType<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> 
+             firstKeys<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+             firstValues<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+             secondKeys<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+             secondOperates<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+             secondValues<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+             procName<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span>
+           <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                      <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span> //影响行数
+                      <span class="token property">&quot;items&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>  //结果集
+                      <span class="token property">&quot;firstOutput&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> //输出参数<span class="token number">1</span>
+                      <span class="token property">&quot;secondOutput&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>  //输出参数<span class="token number">2</span>
+                      <span class="token property">&quot;resultType&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>说明： <code>ExecuteSqlThree</code>、<code>ExecuteSqlFour</code>、<code>ExecuteSqlFive</code>、调用和功能与<code>ExecuteSqlTwo</code>相同。</p></blockquote><hr><h5 id="树形表api接口"><a href="#树形表api接口" aria-hidden="true" class="header-anchor">#</a> 树形表API接口</h5><p>相较于单表结构，树形结构表只是多了些树形数据获取的API，其他API与单表相同。</p><p><strong>GetTreeListByParent</strong></p><p>调用地址：<code>api/services/app/singleTable10/GetTreeListByParent</code></p><blockquote><p>功能说明: 根据父节点加载子节点</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/GetTreeListByParent'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+             parentId<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> 
+             orgId<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+           <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                      //树形结构数据
+                      <span class="token punctuation">{</span> 
+                        <span class="token property">&quot;parent&quot;</span><span class="token operator">:</span><span class="token string">&quot;父主键&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;主键&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;text&quot;</span><span class="token operator">:</span><span class="token string">&quot;名称&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;fullName&quot;</span><span class="token operator">:</span><span class="token string">&quot;全称&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;funcCode&quot;</span><span class="token operator">:</span><span class="token string">&quot;截取的编号&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展属性一&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;commonDataOne&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展属性二&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;funcName&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展属性三&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isCheck&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展布尔值一&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isDelivery&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展布尔值二&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isLeaf&quot;</span><span class="token operator">:</span><span class="token string">&quot;是否叶子节点&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+                          ...
+                        <span class="token punctuation">]</span>
+                      <span class="token punctuation">}</span>
+                  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+</code></pre></div><p><strong>GetTreeList</strong></p><p>调用地址：<code>api/services/app/singleTable10/GetTreeList</code></p><blockquote><p>功能说明: 按照树形结构获取所有数据</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/GetTreeList'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+             parentId<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> 
+             orgId<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+           <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                      //树形结构数据
+                      <span class="token punctuation">{</span> 
+                        <span class="token property">&quot;parent&quot;</span><span class="token operator">:</span><span class="token string">&quot;父主键&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;主键&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;text&quot;</span><span class="token operator">:</span><span class="token string">&quot;名称&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;fullName&quot;</span><span class="token operator">:</span><span class="token string">&quot;全称&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;funcCode&quot;</span><span class="token operator">:</span><span class="token string">&quot;截取的编号&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展属性一&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;commonDataOne&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展属性二&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;funcName&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展属性三&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isCheck&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展布尔值一&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isDelivery&quot;</span><span class="token operator">:</span><span class="token string">&quot;扩展布尔值二&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;isLeaf&quot;</span><span class="token operator">:</span><span class="token string">&quot;是否叶子节点&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+                          ...
+                        <span class="token punctuation">]</span>
+                      <span class="token punctuation">}</span>
+                  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+</code></pre></div><h2 id="主从表接口"><a href="#主从表接口" aria-hidden="true" class="header-anchor">#</a> 主从表接口</h2><p>相较于单表结构，主从结构表API相对较多，调用方式基本和单表类似。</p><p><strong>getMainAllList</strong></p><p>调用地址：<code>api/services/app/table38Order/getMainAllList</code></p><blockquote><p>功能说明: 查询符合条件的所有主表信息集合</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/getMainAllList'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           sorting<span class="token punctuation">:</span> <span class="token string">''</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  //返回的数据列表
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>getMainPageList</strong></p><p>调用地址：<code>api/services/app/table38Order/getMainPageList</code></p><blockquote><p>功能说明: 按照分页获取符合条件的主表数据</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/getMainPageList'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           maxResultCount<span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">,</span>
+           skipCount<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+           draw<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+           sorting<span class="token punctuation">:</span> <span class="token string">''</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><em>通常在调用分页获取数据时，框架中封装了InputModel对象，调用方式如下</em></p><div class="language-javascript extra-class"><pre class="language-javascript"><code>    <span class="token keyword">var</span> inputArr<span class="token operator">=</span><span class="token punctuation">[</span>                                            
+                    <span class="token punctuation">{</span>
+                        key<span class="token punctuation">:</span><span class="token string">&quot;AttachName&quot;</span><span class="token punctuation">,</span>
+                        op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span>
+                        value<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>searchModel<span class="token punctuation">.</span>attachName<span class="token punctuation">,</span>
+                        TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                        dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                        relation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span>
+               <span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span>sorting<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>         
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span><span class="token function">addqueryConditionItem</span><span class="token punctuation">(</span>inputArr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//mainInput为inputModel的实例化对象</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/getMainPageList'</span><span class="token punctuation">,</span>
+        method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span>inputModel
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+              <span class="token property">&quot;draw&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> 
+              <span class="token property">&quot;recordsTotal&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;recordsFiltered&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> 
+              <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>  //返回的数据列表
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>getItemAllList</strong></p><p>调用地址：<code>api/services/app/table38Order/getItemAllList</code></p><blockquote><p>功能说明: 查询符合条件的所有从表信息集合</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用方式参见 <code>getMainAllList</code></p><hr><p><strong>getItemPageList</strong></p><p>调用地址：<code>api/services/app/table38Order/getItemPageList</code></p><blockquote><p>功能说明: 按照分页查询符合条件的从表信息集合</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用方式参见 <code>getMainPageList</code></p><hr><p><strong>getAllList</strong></p><p>调用地址：<code>api/services/app/table38Order/getAllList</code></p><blockquote><p>功能说明: 查询所有符合条件的主从关联表信息集合</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用方式参见 <code>getMainAllList</code></p><hr><p><strong>getAllPageList</strong></p><p>调用地址：<code>api/services/app/table38Order/getAllPageList</code></p><blockquote><p>功能说明: 分页查询符合条件的主从关联表信息集合</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用方式参见 <code>getMainPageList</code></p><hr><p><strong>getMainObjectForEdit</strong></p><p>调用地址：<code>api/services/app/table38Order/getMainObjectForEdit</code></p><blockquote><p>功能说明: 获取符合条件的第一个主从对象</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/getMainObjectForEdit'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+           sorting<span class="token punctuation">:</span> <span class="token string">''</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+               order<span class="token operator">:</span><span class="token punctuation">{</span> //返回查询对象
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               items<span class="token operator">:</span><span class="token punctuation">[</span>
+                   <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> //明细列表集合
+               <span class="token punctuation">]</span>
+               
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>  
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>createOrUpdateMainObject</strong></p><p>调用地址：<code>api/services/app/table38Order/createOrUpdateMainObject</code></p><blockquote><p>功能说明: 添加或者修改一个主从对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/createOrUpdateMainObject'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           <span class="token string">&quot;order&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+               id<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//如果有id属性视为修改，没有视为添加</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token string">&quot;items&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+             <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token comment">//明细表对象</span>
+           <span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token string">&quot;config&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+               isGenerateCode<span class="token punctuation">:</span> <span class="token boolean">false</span>  <span class="token comment">//如果生成编号为true</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           permissionType<span class="token punctuation">:</span> <span class="token number">0</span>  <span class="token comment">//权限标识</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>deleteMainObject</strong></p><p>调用地址：<code>api/services/app/table38Order/deleteMainObject</code></p><blockquote><p>功能说明: 删除符合条件的主从对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/deleteMainObject'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            queryConditionItem<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                       dataField<span class="token punctuation">:</span><span class="token string">&quot;ShortName&quot;</span><span class="token punctuation">,</span> <span class="token comment">//条件属性</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//两列关系运算符（+-*/）</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">//计算列二</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件关系</span>
+                       dataValue<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token comment">//条件值</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;and&quot;</span> <span class="token comment">//条件链接关系(and\or)</span>
+               <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            permissionType<span class="token punctuation">:</span> <span class="token number">0</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>deleteItemObject</strong></p><p>调用地址：<code>api/services/app/table38Order/deleteItemObject</code></p><blockquote><p>功能说明: 删除符合条件的从表中的对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用请参考<code>deleteMainObject</code></p><hr><p><strong>auditObject</strong></p><p>调用地址：<code>api/services/app/table38Order/auditObject</code></p><blockquote><p>功能说明: 审核对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+           url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/auditObject'</span><span class="token punctuation">,</span>
+           method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+           data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                 procName<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//执行存储过程名称 //如果是配置的统一调用：Pr_CommonProc</span>
+                 tableName<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//数据库表名</span>
+                 id<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//</span>
+                 orgId<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+                 permissionType<span class="token punctuation">:</span> <span class="token number">0</span>
+               <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+              <span class="token property">&quot;errorResult&quot;</span><span class="token operator">:</span><span class="token string">&quot;审核成功！&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token number">1</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>unAuditObject</strong></p><p>调用地址：<code>api/services/app/table38Order/unAuditObject</code></p><blockquote><p>功能说明: 撤销审核对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+           url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/unAuditObject'</span><span class="token punctuation">,</span>
+           method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+           data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                 procName<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//执行存储过程名称 //如果是配置的统一调用：Pr_CommonProc_Un</span>
+                 tableName<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//数据库表名</span>
+                 id<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//</span>
+                 orgId<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+                 permissionType<span class="token punctuation">:</span> <span class="token number">0</span>
+               <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+              <span class="token property">&quot;errorResult&quot;</span><span class="token operator">:</span><span class="token string">&quot;撤销审核成功！&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token number">1</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>approveMainObject</strong></p><p>调用地址：<code>api/services/app/table38Order/approveMainObject</code></p><blockquote><p>功能说明: 审批对象</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+           url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/approveMainObject'</span><span class="token punctuation">,</span>
+           method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+           data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                 <span class="token string">&quot;tableName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//数据库表名</span>
+                 <span class="token string">&quot;isState&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>  
+                 <span class="token string">&quot;stateText&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+                 <span class="token string">&quot;stateDesc&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+                 <span class="token string">&quot;orgId&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+                 <span class="token string">&quot;orderId&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+                 <span class="token string">&quot;dealOptions&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+                 <span class="token string">&quot;permissionType&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span>
+               <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+     <span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong>ExecuteSqlOne</strong></p><p>调用地址：<code>api/services/app/table38Order/ExecuteSqlOne</code></p><blockquote><p>功能说明: 调用存储过程</p></blockquote><p>权限: <code>AbpClientAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/ExecuteSqlOne'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+             <span class="token string">&quot;procType&quot;</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//0是返回值为影响行数，1是返回值类型为数据集合</span>
+             <span class="token string">&quot;firstKeys&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//存过过程的参数名集合以，分割</span>
+             <span class="token string">&quot;firstValues&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span><span class="token comment">//存过过程的参数值集合以，分割，如果值需要加单引                号需要用$符号包裹，不需要用#号包裹</span>
+             <span class="token string">&quot;secondKeys&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//调用系统中配置的sql语句时的sql语句标识 </span>
+             <span class="token string">&quot;secondOperates&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//暂时无用</span>
+             <span class="token string">&quot;secondValues&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> <span class="token comment">//暂时无用</span>
+             <span class="token string">&quot;procName&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span> <span class="token comment">//执行存储过程名称</span>
+           <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                      <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span> //影响行数
+                      <span class="token property">&quot;items&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>  //结果集
+                      <span class="token property">&quot;firstOutput&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> //输出参数<span class="token number">1</span>
+                      <span class="token property">&quot;secondOutput&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>  //输出参数<span class="token number">2</span>
+                      <span class="token property">&quot;resultType&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+</code></pre></div><p><strong>ExecuteSqlTwo</strong></p><p>调用地址：<code>api/services/app/table38Order/ExecuteSqlTwo</code></p><blockquote><p>功能说明: 调用存储过程</p></blockquote><p>权限: <code>AbpAuthorize</code></p><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/table38Order/ExecuteSqlTwo'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token punctuation">{</span>
+             procType<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> 
+             firstKeys<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+             firstValues<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+             secondKeys<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+             secondOperates<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> 
+             secondValues<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+             procName<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span>
+           <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   
+</code></pre></div><p>返回值：</p><div class="language-json extra-class"><pre class="language-json"><code>      <span class="token punctuation">{</span>
+          <span class="token property">&quot;success&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+          <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                      <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span> //影响行数
+                      <span class="token property">&quot;items&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>  //结果集
+                      <span class="token property">&quot;firstOutput&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> //输出参数<span class="token number">1</span>
+                      <span class="token property">&quot;secondOutput&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>  //输出参数<span class="token number">2</span>
+                      <span class="token property">&quot;resultType&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;error&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;unAuthorizedRequest&quot;</span><span class="token operator">:</span><span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>说明： <code>ExecuteSqlThree</code>、<code>ExecuteSqlFour</code>、<code>ExecuteSqlFive</code>、调用和功能与<code>ExecuteSqlTwo</code>相同。</p></blockquote><hr><h2 id="系统功能性接口说明"><a href="#系统功能性接口说明" aria-hidden="true" class="header-anchor">#</a> 系统功能性接口说明</h2><h5 id="token获取接口"><a href="#token获取接口" aria-hidden="true" class="header-anchor">#</a> token获取接口</h5><h5 id="登录请求接口"><a href="#登录请求接口" aria-hidden="true" class="header-anchor">#</a> 登录请求接口</h5><h5 id="用户信息请求接口"><a href="#用户信息请求接口" aria-hidden="true" class="header-anchor">#</a> 用户信息请求接口</h5><h5 id="请求菜单接口"><a href="#请求菜单接口" aria-hidden="true" class="header-anchor">#</a> 请求菜单接口</h5><h5 id="角色转化-系统漫游"><a href="#角色转化-系统漫游" aria-hidden="true" class="header-anchor">#</a> 角色转化/系统漫游</h5><h5 id="文件上传下载接口说明："><a href="#文件上传下载接口说明：" aria-hidden="true" class="header-anchor">#</a> 文件上传下载接口说明：</h5><h5 id="通用存储过程接口说明："><a href="#通用存储过程接口说明：" aria-hidden="true" class="header-anchor">#</a> 通用存储过程接口说明：</h5><h5 id="单据编号接口说明"><a href="#单据编号接口说明" aria-hidden="true" class="header-anchor">#</a> 单据编号接口说明</h5><h2 id="前端调用api说明："><a href="#前端调用api说明：" aria-hidden="true" class="header-anchor">#</a> 前端调用API说明：</h2><h5 id="inputmodel对象"><a href="#inputmodel对象" aria-hidden="true" class="header-anchor">#</a> inputModel对象</h5><blockquote><p>inputModel对象是针对分页方法封装的参数对象。使用时需要实例化，具体结构如下：</p></blockquote><p><strong>属性</strong></p><ol><li>maxResultCount  //总条目数</li><li>draw     //当前页</li><li>sorting  //排序方式</li><li>skipCount  //跳过条目数</li><li>queryConditionItem  //条件集合数组</li></ol><p><strong>方法</strong></p><p><code>addqueryConditionItem</code>  给<code>queryConditionItem</code>中添加对象。</p><p>参数： items 其结构如下：</p><div class="language-json extra-class"><pre class="language-json"><code>        <span class="token punctuation">{</span>
+            key<span class="token operator">:</span><span class="token string">&quot;AttachName&quot;</span><span class="token punctuation">,</span>
+            op<span class="token operator">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span>
+            value<span class="token operator">:</span>this.searchModel.attachName<span class="token punctuation">,</span>
+            TwoFieldRelation<span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            dataFieldTwo<span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+            relation<span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+        
+</code></pre></div><blockquote><p>关于items中的`结构是为了在lamada表达试中构造过滤条件使用，其说明如下：</p></blockquote><table><thead><tr><th>op</th><th style="text-align:right">说明</th></tr></thead><tbody><tr><td>EQ</td><td style="text-align:right">等于</td></tr><tr><td>NEQ</td><td style="text-align:right">不等于</td></tr><tr><td>GT</td><td style="text-align:right">大于</td></tr><tr><td>GTE</td><td style="text-align:right">大于等于</td></tr><tr><td>LT</td><td style="text-align:right">小于</td></tr><tr><td>LTE</td><td style="text-align:right">小于等于</td></tr><tr><td>LIKE</td><td style="text-align:right">模糊匹配</td></tr><tr><td>LIKEL</td><td style="text-align:right">头部匹配</td></tr><tr><td>LIKER</td><td style="text-align:right">尾部匹配</td></tr><tr><td>TreeLeft</td><td style="text-align:right">以某种关键字截取</td></tr><tr><td>BGT</td><td style="text-align:right">大于（字符类型）</td></tr><tr><td>SGT</td><td style="text-align:right">小于（字符类型）</td></tr></tbody></table><table><thead><tr><th>TwoFieldRelation</th><th style="text-align:right">说明</th></tr></thead><tbody><tr><td>+</td><td style="text-align:right">加法</td></tr><tr><td>-</td><td style="text-align:right">减法</td></tr><tr><td>*</td><td style="text-align:right">乘法</td></tr><tr><td>/</td><td style="text-align:right">除法</td></tr></tbody></table><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">//引入</span>
+<span class="token keyword">import</span> imputModel <span class="token keyword">from</span> <span class="token string">'api/inputmodel.js'</span><span class="token punctuation">;</span>
+
+<span class="token comment">//实例化</span>
+<span class="token keyword">let</span> mainInput<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">imputModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//构造条件 </span>
+<span class="token keyword">var</span> inputArr<span class="token operator">=</span><span class="token punctuation">[</span>                                            
+                   <span class="token punctuation">{</span>
+                       key<span class="token punctuation">:</span><span class="token string">&quot;AttachName&quot;</span><span class="token punctuation">,</span>
+                       op<span class="token punctuation">:</span><span class="token string">&quot;LIKE&quot;</span><span class="token punctuation">,</span>
+                       value<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>searchModel<span class="token punctuation">.</span>attachName<span class="token punctuation">,</span>
+                       TwoFieldRelation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                       dataFieldTwo<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                       relation<span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                   <span class="token punctuation">}</span>
+              <span class="token punctuation">]</span><span class="token punctuation">;</span> 
+              
+   <span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span>sorting<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>     
+      
+   <span class="token comment">//mainInput为inputModel的实例化对象 </span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span><span class="token function">addqueryConditionItem</span><span class="token punctuation">(</span>inputArr<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+   
+   <span class="token comment">//调用</span>
+   <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       url<span class="token punctuation">:</span><span class="token string">'api/services/app/singleTable10/getMainPageList'</span><span class="token punctuation">,</span>
+       method<span class="token punctuation">:</span><span class="token string">'post'</span><span class="token punctuation">,</span>
+       data<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>mainInput<span class="token punctuation">.</span>inputModel
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+
+   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><hr><h5 id="fetch对象"><a href="#fetch对象" aria-hidden="true" class="header-anchor">#</a> fetch对象</h5><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fetch</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span>axiosConfig<span class="token operator">=</span><span class="token punctuation">{</span>baseURL<span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">,</span>authorization<span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">,</span>formatData<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p><code>fetch</code>对象是在axios插件基础上封装的后台调用方法，其参数说明如下：</p></blockquote><p><strong>参数：</strong></p><ol><li><p>options：请求配置，主要包含：</p><div class="language-json extra-class"><pre class="language-json"><code>     <span class="token punctuation">{</span>
+         <span class="token property">&quot;url&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> //请求路径
+         <span class="token property">&quot;method&quot;</span><span class="token operator">:</span><span class="token string">&quot;get&quot;</span><span class="token punctuation">,</span> //请求方法
+         <span class="token property">&quot;data&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span> //请求参数
+     <span class="token punctuation">}</span>
+</code></pre></div></li><li><p>axiosConfig：请求额外配置：包含：</p><div class="language-json extra-class"><pre class="language-json"><code>   <span class="token punctuation">{</span>
+       <span class="token property">&quot;baseURL&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>  //请求地址和端口号
+       <span class="token property">&quot;authorization&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> //请求权限 注意：（如果为none不带authorization在请求头部）
+       <span class="token property">&quot;formatData&quot;</span><span class="token operator">:</span><span class="token boolean">false</span> //是否格式化请求数据
+   <span class="token punctuation">}</span>
+</code></pre></div></li></ol></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
+    <script src="/YlDocument/assets/js/18.7d5b8f13.js" defer></script><script src="/YlDocument/assets/js/app.827f161c.js" defer></script>
+  </body>
+</html>

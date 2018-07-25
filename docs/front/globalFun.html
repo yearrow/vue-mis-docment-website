@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>全局函数说明 | 易龙软件技术开发文档</title>
+    <meta name="description" content="欢饮使用">
+    <link rel="icon" href="/YlDocument/img/favicon.ico">
+  <link rel="manifest" href="/YlDocument/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/YlDocument/img/icons/Icon-152.png">
+  <meta name="msapplication-TileImage" content="/img/icons/Icon-120.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/YlDocument/assets/css/0.styles.e6507654.css" as="style"><link rel="preload" href="/YlDocument/assets/js/app.827f161c.js" as="script"><link rel="preload" href="/YlDocument/assets/js/9.cb2521b8.js" as="script"><link rel="prefetch" href="/YlDocument/assets/js/2.ea010887.js"><link rel="prefetch" href="/YlDocument/assets/js/3.13e73a29.js"><link rel="prefetch" href="/YlDocument/assets/js/4.06d520dd.js"><link rel="prefetch" href="/YlDocument/assets/js/5.710105b1.js"><link rel="prefetch" href="/YlDocument/assets/js/6.8de2a71e.js"><link rel="prefetch" href="/YlDocument/assets/js/7.3fda7f38.js"><link rel="prefetch" href="/YlDocument/assets/js/8.ca965cea.js"><link rel="prefetch" href="/YlDocument/assets/js/10.b43f8d06.js"><link rel="prefetch" href="/YlDocument/assets/js/11.db73f8c1.js"><link rel="prefetch" href="/YlDocument/assets/js/12.44f13a91.js"><link rel="prefetch" href="/YlDocument/assets/js/13.8f6d10a5.js"><link rel="prefetch" href="/YlDocument/assets/js/14.0ebb7507.js"><link rel="prefetch" href="/YlDocument/assets/js/15.0fbd77ff.js"><link rel="prefetch" href="/YlDocument/assets/js/16.6d924c43.js"><link rel="prefetch" href="/YlDocument/assets/js/17.8f202373.js"><link rel="prefetch" href="/YlDocument/assets/js/18.7d5b8f13.js"><link rel="prefetch" href="/YlDocument/assets/js/19.8cdbef3e.js"><link rel="prefetch" href="/YlDocument/assets/js/20.18b2bebb.js">
+    <link rel="stylesheet" href="/YlDocument/assets/css/0.styles.e6507654.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/YlDocument/" class="home-link router-link-active"><!----><span class="site-name">
+      易龙软件技术开发文档
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/YlDocument/" class="nav-link">首页</a></div><div class="nav-item"><a href="/YlDocument/front/" class="nav-link router-link-active">PC端配置</a></div><div class="nav-item"><a href="/YlDocument/webApp/" class="nav-link">webApp端配置</a></div><div class="nav-item"><a href="/YlDocument/service/" class="nav-link">服务端文档</a></div><div class="nav-item"><a href="/YlDocument/more/" class="nav-link">技术扩展</a></div><div class="nav-item"><a href="/YlDocument/update/" class="nav-link">更新日志</a></div><div class="nav-item"><a href="https://github.com/danielmlc/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/YlDocument/" class="nav-link">首页</a></div><div class="nav-item"><a href="/YlDocument/front/" class="nav-link router-link-active">PC端配置</a></div><div class="nav-item"><a href="/YlDocument/webApp/" class="nav-link">webApp端配置</a></div><div class="nav-item"><a href="/YlDocument/service/" class="nav-link">服务端文档</a></div><div class="nav-item"><a href="/YlDocument/more/" class="nav-link">技术扩展</a></div><div class="nav-item"><a href="/YlDocument/update/" class="nav-link">更新日志</a></div><div class="nav-item"><a href="https://github.com/danielmlc/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><a href="/YlDocument/front/frontRules.html" class="sidebar-link">开发规范</a></li><li><a href="/YlDocument/front/globalFun.html" class="active sidebar-link">全局函数说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#全局函数说明" class="sidebar-link">全局函数说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#自定义表单验证" class="sidebar-link">自定义表单验证</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#判断字段重复" class="sidebar-link">判断字段重复</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#获取单号" class="sidebar-link">获取单号</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#日期格式化" class="sidebar-link">日期格式化</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#获取用户信息" class="sidebar-link">获取用户信息</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#获取当前模块对象" class="sidebar-link">获取当前模块对象</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#执行通用存储过程方法" class="sidebar-link">执行通用存储过程方法</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#使用async封装的异步请求-仅支持在代码中使用" class="sidebar-link">使用async封装的异步请求(仅支持在代码中使用)</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#获取审批状态信息" class="sidebar-link">获取审批状态信息</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#生成guid字符串" class="sidebar-link">生成guid字符串</a></li><li class="sidebar-sub-header"><a href="/YlDocument/front/globalFun.html#execl导入导出" class="sidebar-link">execl导入导出</a></li></ul></li></ul></li><li><a href="/YlDocument/front/directive.html" class="sidebar-link">功能权限控制</a></li><li><a href="/YlDocument/front/components.html" class="sidebar-link">布局组件</a></li><li><a href="/YlDocument/front/ocomponents.html" class="sidebar-link">业务组件</a></li><li><a href="/YlDocument/front/renderComs.html" class="sidebar-link">组件渲染器</a></li><li><a href="/YlDocument/front/containerComs.html" class="sidebar-link">容器组件</a></li><li><a href="/YlDocument/front/moduleConf.html" class="sidebar-link">模块配置</a></li><li><a href="/YlDocument/front/reportConf.html" class="sidebar-link">报表配置</a></li></ul></div><div class="page"><div class="content"><h2 id="全局函数说明"><a href="#全局函数说明" aria-hidden="true" class="header-anchor">#</a> 全局函数说明</h2><h3 id="自定义表单验证"><a href="#自定义表单验证" aria-hidden="true" class="header-anchor">#</a> 自定义表单验证</h3><blockquote><p>目前element中直提供了不能为空的表单验证，输入类型的表单验证需要自行定义。框架中提供了常用的表单验证</p></blockquote><ol start="0"><li>校验是否为空  <code>this.checkIsNull</code></li><li>校验整数  <code>this.checkInt</code></li><li>校验浮点数  <code>this.checkdecimal</code></li><li>校验邮箱格式  <code>this.checkemail</code></li><li>校验电话号码  <code>this.checkphoneNum</code></li><li>校验Url  <code>this.checkurl</code></li></ol><h5 id="单独校验是否输入类型用法-代码示例"><a href="#单独校验是否输入类型用法-代码示例" aria-hidden="true" class="header-anchor">#</a> 单独校验是否输入类型用法(代码示例)</h5><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">{</span>
+            rules<span class="token punctuation">:</span> <span class="token punctuation">{</span>    
+                        userName<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>  validator<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>checkInt<span class="token punctuation">,</span> trigger<span class="token punctuation">:</span> <span class="token string">'blur'</span> <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span><span class="token punctuation">,</span> 
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h5 id="单独校验是否输入类型用法-配置示例"><a href="#单独校验是否输入类型用法-配置示例" aria-hidden="true" class="header-anchor">#</a> 单独校验是否输入类型用法(配置示例)</h5><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+              <span class="token string">&quot;title&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;用户邮箱&quot;</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;userEmail&quot;</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;inputText&quot;</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;position&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;spanNum&quot;</span><span class="token punctuation">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;alone&quot;</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;style&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;elmentConfig&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;eventConf&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;isOn&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;blur&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;function(node,_this){}&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;init&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;function(_this,option){let obj={};obj.validator=_this.checkemail;obj.trigger='blur';obj.message='请输入邮箱格式！';option.rules.push(obj)}&quot;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;rules&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                  <span class="token string">&quot;required&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                  <span class="token string">&quot;message&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;材料名称不能为空！&quot;</span><span class="token punctuation">,</span>
+                  <span class="token string">&quot;trigger&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;blur&quot;</span>
+                <span class="token punctuation">}</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>** 注意:在配置页面中检验输入特殊类型时需要在控件的init事件中给rules对象加入验证规则 **</p><hr><h3 id="判断字段重复"><a href="#判断字段重复" aria-hidden="true" class="header-anchor">#</a> 判断字段重复</h3><blockquote><p>字段重复判断封装至全局函数中，调用<code>this.IsJudgeRepeat</code>来实现重复验证；<br>
+参数通过rule传入，一共四个参数，以<code>|</code>分割。<br>
+参数分别是：数据库表名|验证列（以逗号分割）|验证值（以逗号分割）|原值。</p></blockquote><h5 id="用法-（代码示例）"><a href="#用法-（代码示例）" aria-hidden="true" class="header-anchor">#</a> 用法 （代码示例）</h5><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        
+    <span class="token keyword">return</span><span class="token punctuation">{</span>
+            rules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        userName<span class="token punctuation">:</span> <span class="token punctuation">[</span> 
+                            <span class="token comment">//验证规则直接调用</span>
+                            <span class="token punctuation">{</span>validator<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>commonJudgeRepeat<span class="token punctuation">,</span> trigger<span class="token punctuation">:</span> <span class="token string">'blur'</span> <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span><span class="token punctuation">,</span> 
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token function">commonJudgeRepeat</span><span class="token punctuation">(</span>rule<span class="token punctuation">,</span> value<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">let</span> columnName<span class="token operator">=</span><span class="token string">'userName'</span><span class="token punctuation">,</span>columnValue<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">;</span>
+                <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> item <span class="token keyword">in</span> <span class="token keyword">this</span><span class="token punctuation">.</span>formModel<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>columnName<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                        columnValue<span class="token operator">=</span>columnValue<span class="token operator">+</span><span class="token keyword">this</span><span class="token punctuation">.</span>formModel<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">','</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                columnValue<span class="token operator">=</span>columnValue<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>columnValue<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+                <span class="token keyword">let</span> str<span class="token operator">=</span><span class="token template-string"><span class="token string">`Authority_User|</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">|</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnValue<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">|</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>formModel<span class="token punctuation">.</span>ouserName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">IsJudgeRepeat</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span>value<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h5 id="用法-（配置示例）"><a href="#用法-（配置示例）" aria-hidden="true" class="header-anchor">#</a> 用法 （配置示例）</h5><div class="language-javascript extra-class"><pre class="language-javascript"><code>    <span class="token comment">//在控件的init事件中配置初始化方法：</span>
+   <span class="token punctuation">{</span>
+         
+          <span class="token string">&quot;title&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;材料名称&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;infoName&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;inputText&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;position&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;spanNum&quot;</span><span class="token punctuation">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;alone&quot;</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;style&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;elmentConfig&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;请输入材料名称&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;eventConf&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;isOn&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;blur&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;function(node,_this){}&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;init&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;function(_this,option){let obj={};obj.validator=_this.commonJudgeRepeat;obj.message='材料名称不能重复';obj.trigger='blur';option.rules[1]=obj;}&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;rules&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token string">&quot;required&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;message&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;材料名称不能为空！&quot;</span><span class="token punctuation">,</span>
+              <span class="token string">&quot;trigger&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;blur&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+
+<span class="token comment">//在表单的拦截事件中给`_this.repeatFileds`赋值要判断重复的字段。</span>
+    <span class="token punctuation">{</span>
+  <span class="token string">&quot;InterceptEvent&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+       <span class="token string">&quot;beforeDataRender&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;isOn&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;event&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;function(_this){_this.repeatFileds='infoName'}&quot;</span>  
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><hr><h3 id="获取单号"><a href="#获取单号" aria-hidden="true" class="header-anchor">#</a> 获取单号</h3><blockquote><p>获取单号的方法<code>this.generateOrderCode</code>为全局方法 调用时记着要在编码管理模块配置才能生效</p></blockquote><p><strong>参数说明：fn(tableName,orderDate,callback,orderType=0,value='',sortCode='')</strong></p><ol><li>tableName 对应模块表名称</li><li>orgId     生成单号的组织机构编号</li><li>orderDate 对应的单据日期（格式 YYYY/YYYY-MM）</li><li>callback  回调函数</li><li>orderType 单据类型，和模块配置中orderType要对应</li><li>value     扩展列的值</li><li>sortCode  扩展列的排序值</li></ol><h5 id="用法"><a href="#用法" aria-hidden="true" class="header-anchor">#</a> 用法</h5><p>(代码示例)</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+ 
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">generateOrderCode</span><span class="token punctuation">(</span><span class="token string">'PL_GHInitialPlanOrder'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>formModel<span class="token punctuation">.</span>order<span class="token punctuation">.</span>orgId<span class="token punctuation">,</span>val<span class="token punctuation">,</span>    
+    <span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span>formModel<span class="token punctuation">.</span>order<span class="token punctuation">.</span>orderCode<span class="token operator">=</span>val<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><p>(配置示例)  --在动态模块中进一步对调用单号进行了封装，配置时按照一下方式配置即可：
+<code>_getCode(val,type)</code></p><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+   <span class="token comment">//页面初始化中调用：</span>
+   <span class="token string">&quot;InterceptEvent&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;mounted&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+           <span class="token string">&quot;isOn&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;event&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;function(_this){_this._getCode(_this.formModel.order.orderDate,0);}&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    
+      <span class="token comment">//账期控件change事件中调用：</span>
+       <span class="token string">&quot;eventConf&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;isOn&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;change&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;function(node,_this){_this.formModel.order.orderDate=node;_this._getCode(node,0)}&quot;</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           
+<span class="token punctuation">}</span>
+</code></pre></div><hr><h3 id="日期格式化"><a href="#日期格式化" aria-hidden="true" class="header-anchor">#</a> 日期格式化</h3><blockquote><p>全局函数中引入了<code>monment.js</code> 调用<code>this.formatDate</code>提供对日期进行格式化操作。</p></blockquote><p><strong>参数说明：formatDate(val,dateformat)</strong></p><ol><li>val  格式话对应的值</li><li>dateformat  格式化参数（参照monment.js官网）</li></ol><h5 id="用法示例"><a href="#用法示例" aria-hidden="true" class="header-anchor">#</a> 用法示例</h5><div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">formatDate</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>formModel<span class="token punctuation">.</span>order<span class="token punctuation">.</span>orderDate<span class="token punctuation">,</span><span class="token string">&quot;YYYY-MM&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><hr><h3 id="获取用户信息"><a href="#获取用户信息" aria-hidden="true" class="header-anchor">#</a> 获取用户信息</h3><blockquote><p>全局函数中提供<code>this.getUserInfo()</code>函数来全局调用当前用户信息。</p></blockquote><h5 id="对象说明："><a href="#对象说明：" aria-hidden="true" class="header-anchor">#</a> 对象说明：</h5><div class="language-json extra-class"><pre class="language-json"><code>
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;user&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;realName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;超级管理员&quot;</span><span class="token punctuation">,</span>   //用户姓名
+        <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span> <span class="token string">&quot;男&quot;</span><span class="token punctuation">,</span> //性别
+        <span class="token property">&quot;userName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span> //用户账号
+        <span class="token property">&quot;emailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;853458083@qq.com&quot;</span><span class="token punctuation">,</span> //用户邮箱地址
+        <span class="token property">&quot;manageOrgId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ec0d0d88-be0e-4de2-b767-a75b011747d7&quot;</span><span class="token punctuation">,</span> //组织机构主键
+        <span class="token property">&quot;manageOrgName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;中国中铁集团有限公司&quot;</span><span class="token punctuation">,</span> //组织机构名称
+        <span class="token property">&quot;companyId&quot;</span><span class="token operator">:</span><span class="token string">&quot;ec0d0d88-be0e-4de2-b767-a75b011747d7&quot;</span><span class="token punctuation">,</span> //管理单位主键
+        <span class="token property">&quot;companyName&quot;</span><span class="token operator">:</span><span class="token string">&quot;中国中铁集团有限公司&quot;</span><span class="token punctuation">,</span>  //管理单位名称
+        <span class="token property">&quot;roleId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8136d43a-3d32-4c8b-9da4-a75b011747e5&quot;</span><span class="token punctuation">,</span> //角色主键
+        <span class="token property">&quot;roleName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;超级管理员&quot;</span><span class="token punctuation">,</span> // 角色名称
+        <span class="token property">&quot;realOrgId&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> //如果是项目部工区 该值为项目部主键
+        <span class="token property">&quot;lastLoginTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-04-27T13:50:58.927+08:00&quot;</span><span class="token punctuation">,</span> //上次登录时间
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5d6c9789-806f-403d-aaed-a75b01174814&quot;</span><span class="token punctuation">,</span> //用户主键
+        <span class="token property">&quot;orgCategory&quot;</span><span class="token operator">:</span> <span class="token string">&quot;集团公司&quot;</span> //用户组织机构属性
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;userDataRanges&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>  //用户权限范围
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ec0d0d88-be0e-4de2-b767-a75b011747d7&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;中国中铁集团公司&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;userRoles&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> //用户角色范围
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;8136d43a-3d32-4c8b-9da4-a75b011747e5&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Admin&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><hr><h3 id="获取当前模块对象"><a href="#获取当前模块对象" aria-hidden="true" class="header-anchor">#</a> 获取当前模块对象</h3><blockquote><p>全局函数中封装了<code>getTableName(url='')</code>方法来返回模块对象</p></blockquote><p>参数： url为当前模块的访问路径，一般通过路由对象<code>this.$route.path</code>获取
+返回值：promise对象</p><hr><h3 id="执行通用存储过程方法"><a href="#执行通用存储过程方法" aria-hidden="true" class="header-anchor">#</a> 执行通用存储过程方法</h3><blockquote><p>全局函数中封装了<code>commonSqlExcute(params)</code>方法来执行存储过程
+参数： params具体属性如下：
+返回值：promise对象<br><code>json { &quot;procType&quot;: 0, //0是返回值类型为数据集合，1是返回值为影响行数 &quot;firstKeys&quot;: &quot;string&quot;, //存过过程的参数名集合以，分割 &quot;firstValues&quot;: &quot;string&quot;,/存过过程的参数值集合以，分割，如果值需要加单引号需要用$符号包裹，不需要用#号包裹 &quot;secondKeys&quot;: &quot;string&quot;, //调用系统中配置的sql语句时的sql语句标识 &quot;secondOperates&quot;: &quot;string&quot;, //暂时无用 &quot;secondValues&quot;: &quot;string&quot;, //暂时无用 &quot;procName&quot;: &quot;string&quot;, //执行存储过程名称 &quot;orderDataType&quot;: 0 }</code></p></blockquote><hr><h3 id="使用async封装的异步请求-仅支持在代码中使用"><a href="#使用async封装的异步请求-仅支持在代码中使用" aria-hidden="true" class="header-anchor">#</a> 使用async封装的异步请求(仅支持在代码中使用)</h3><blockquote><p>全局函数中封装了<code>asyncFunc(apiConf,errText='')</code>方法来调用异步请求</p></blockquote><p>返回值：promise对象
+参数：
+1.apiConf为异步请求参数，具体参数结构以调用的api决定。
+2.errText为错误提示信息</p><hr><h3 id="获取审批状态信息"><a href="#获取审批状态信息" aria-hidden="true" class="header-anchor">#</a> 获取审批状态信息</h3><blockquote><p>全局函数中封装了<code>getApproveInfo(tableName='')</code>方法来调用异步请求</p></blockquote><p>返回值：promise对象
+参数：tableName为对应模块表名称</p><hr><h3 id="生成guid字符串"><a href="#生成guid字符串" aria-hidden="true" class="header-anchor">#</a> 生成guid字符串</h3><ul><li>全局函数中提供<code>this.newGuid()</code>生成guid唯一字符串</li><li>全局函数中提供<code>this.guidOfNull()</code>生成空的guid字符串</li></ul><hr><h3 id="execl导入导出"><a href="#execl导入导出" aria-hidden="true" class="header-anchor">#</a> execl导入导出</h3><h5 id="导入方法"><a href="#导入方法" aria-hidden="true" class="header-anchor">#</a> 导入方法</h5><blockquote><p>全局函数中提供了<code>importToJsonData</code>方法来支持execl导入功能</p></blockquote><p><strong>参数：</strong></p><ol><li>files： 传入文件对象</li><li>callback: 回调函数，参数为导入文件的json数据字符串。</li></ol><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>    <span class="token keyword">const</span> files <span class="token operator">=</span> evt<span class="token punctuation">.</span>target<span class="token punctuation">.</span>files<span class="token punctuation">;</span>  <span class="token comment">//evt为事件方法参数</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span>files <span class="token operator">&amp;&amp;</span> files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">importToJsonData</span><span class="token punctuation">(</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+					<span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token operator">=</span>data<span class="token punctuation">;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+</code></pre></div><hr><h5 id="导出方法"><a href="#导出方法" aria-hidden="true" class="header-anchor">#</a> 导出方法</h5><blockquote><p>全局函数中提供了<code>exportHtmlToExcel</code>方法来支持execl导出功能</p></blockquote><p><strong>参数：</strong></p><ol><li><p>str： 导出文件的html拼接字符串</p></li><li><p>fileConf: fileConf为导出文件的配置参数详细说明如下：</p><div class="language-json extra-class"><pre class="language-json"><code>       <span class="token punctuation">{</span> 
+        <span class="token property">&quot;fileName&quot;</span><span class="token operator">:</span><span class="token string">&quot;导出文档&quot;</span><span class="token punctuation">,</span> //导出文件名
+        <span class="token property">&quot;titleName&quot;</span><span class="token operator">:</span><span class="token string">&quot;测试报表&quot;</span><span class="token punctuation">,</span>  //报表标题
+        <span class="token property">&quot;withDate&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>  //是否带导出日期
+        <span class="token property">&quot;withReportHeader&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span> //是否显示报表头
+        <span class="token property">&quot;HeaderColspan&quot;</span><span class="token operator">:</span><span class="token number">15</span><span class="token punctuation">,</span>  //表头合并列数
+        <span class="token property">&quot;blobType&quot;</span><span class="token operator">:</span><span class="token string">&quot;application/vnd.ms-excel&quot;</span><span class="token punctuation">,</span>  //导出文件格式
+        <span class="token property">&quot;docType&quot;</span><span class="token operator">:</span><span class="token string">&quot;.xls&quot;</span> //导出文件后缀
+       <span class="token punctuation">}</span>
+</code></pre></div></li></ol><p>调用示例：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>    <span class="token keyword">let</span> Str<span class="token operator">=</span><span class="token template-string"><span class="token string">`
+			&lt;table style=\&quot;border: 1px solid black;\&quot;&gt;
+				&lt;tr&gt;
+					&lt;td align=\&quot;center\&quot;  colspan=\&quot;14\&quot; height=\&quot;40\&quot;&gt; &lt;span style=\&quot;font-size: 20px;\&quot;&gt;&lt;b&gt;&lt;u&gt; 钢筋需用计划&lt;/u&gt;&lt;/b&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td nowrap colspan=\&quot;3\&quot;&gt; 计划单位:&lt;/td&gt;
+					&lt;td nowrap colspan=\&quot;5\&quot; align=\&quot;left\&quot;&gt;计划日期:&lt;/td&gt;
+					&lt;/td&gt;&lt;td nowrap align=\&quot;left\&quot; colspan=\&quot;6\&quot;&gt;设计编号：&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+			`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">exportHtmlToExcel</span><span class="token punctuation">(</span>Str<span class="token punctuation">,</span><span class="token punctuation">{</span>withDate<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">//配置参数可忽略</span>
+
+</code></pre></div><blockquote><p>为了方便调用，特别封装了<code>exportCommonTemplate</code>方法只需要传入数据集即可，该方法可以满足格式简单需求。</p></blockquote><p><strong>参数：</strong></p><ol><li>ColumnConf： 导出文件的html拼接字符串</li><li>DataList： 传入数据数组</li><li>titleName：导出文件标题</li></ol><p>调用示例</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">exportCommonTemplate</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+     <span class="token punctuation">{</span><span class="token string">&quot;attr&quot;</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">&quot;align&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;label&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;表&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;selection&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;width&quot;</span><span class="token punctuation">:</span><span class="token number">80</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">&quot;columnExplain&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;mouduleTableName&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;TS_TSingleTable01&quot;</span>
+     <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">&quot;测试报表&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><hr></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/YlDocument/front/frontRules.html" class="prev">
+          开发规范
+        </a></span><span class="next"><a href="/YlDocument/front/directive.html">
+          功能权限控制
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/YlDocument/assets/js/9.cb2521b8.js" defer></script><script src="/YlDocument/assets/js/app.827f161c.js" defer></script>
+  </body>
+</html>
