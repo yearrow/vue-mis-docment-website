@@ -1,0 +1,22 @@
+{
+  "name": "danielmlc",
+  "version": "1.0.0",
+  "description": "blog for danielmlc ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev ",
+    "build": "vuepress build "
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+  },
+  "keywords": [
+    "blog",
+    "vuepress",
+    "danielmlc"
+  ],
+  "author": "danielmlc",
+  "license": "ISC"
+}
