@@ -1,6 +1,6 @@
 module.exports = {
-  title: '易龙软件技术开发文档',
-  description: '欢饮使用',
+  title: ' ',
+  description: '易龙软件开发文档',
   port: 8066, 
   dest: 'docs',
   base:'/YlDocument/',
@@ -46,7 +46,7 @@ module.exports = {
       ],
       '/more/': [
         {
-          title: 'markdown语法',
+          title: '文档写作',
           collapsable: true,
           children: [
             'markdown/',
