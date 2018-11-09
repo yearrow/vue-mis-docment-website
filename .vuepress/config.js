@@ -1,6 +1,6 @@
 module.exports = {
-  title: ' ',
-  description: '易龙软件开发文档',
+  title: '易龙软件开发文档 ',
+  description: 'YLSoft Work Document',
   port: 8066, 
   dest: 'docs',
   base:'/YlDocument/',
@@ -24,7 +24,7 @@ module.exports = {
       { text: '服务端文档', link: '/service/'},
       { text: '技术扩展', link: '/more/'},
       { text: '更新日志', link: '/update/'},
-      { text: 'GitHub', link: 'https://github.com/danielmlc/YlDocument'  },
+      { text: 'GitHub', link: 'https://github.com/YLSoftWorkGroup'  },
     ],
     sidebarDepth :3,
     sidebar: {
@@ -45,22 +45,27 @@ module.exports = {
         'service'
       ],
       '/more/': [
-        {
-          title: '文档写作',
-          collapsable: true,
-          children: [
-            'markdown/',
-          ]
-        },
-          {
-            title: 'git知识',
-            collapsable: true,
-            children: [
-              'git/',
-            ]
-          },
-         
+        'markdown',
+        'git'
       ],
+      // 三级栏目的配置方式
+      // '/more/': [
+      //   {
+      //     title: '文档写作',
+      //     collapsable: true,
+      //     children: [
+      //       'markdown/',
+      //     ]
+      //   },
+      //     {
+      //       title: 'git知识',
+      //       collapsable: true,
+      //       children: [
+      //         'git/',
+      //       ]
+      //     },
+         
+      // ],
     },
    }
   }
