@@ -1,10 +1,10 @@
 # 组件渲染器
 
-** 渲染器配置说明**
+**渲染器配置说明**
 
 > 渲染器在配置中充当了组件的衔接工作，同过渲染器来定义规定好的参数口渲染出不同的组件。目前包含的渲染器有一下几种：`renderComs`控件渲染器,`renderTableRowComs`明细编辑器行内渲染器,`tableSlotComs`表列具名渲染器,`renderSelComs`树选择器渲染器,`containerComs`容器渲染器.
 
-### renderComs
+## renderComs
 
 ** 说明：**  `renderComs`控件渲染器主要根据传入配置渲染控件相关配置，主要作用于表单生成渲染，过滤器生成渲染。
 
@@ -12,7 +12,7 @@
 
 **控件配置说明**
 
-##### `inputNum`
+### `inputNum`
 
 inputNum输入框配置
 
@@ -42,7 +42,7 @@ inputNum输入框配置
 
 ```
 ---
-##### `inputText`
+### `inputText`
 
 inputText输入框配置
 
@@ -77,7 +77,7 @@ inputText输入框配置
 
 ---
 
-##### `span`
+### `span`
 
 span标签渲染组件
 
@@ -99,7 +99,7 @@ span标签渲染组件
 
 ---
 
-##### `switch`
+### `switch`
 
 switch开关配置
 ```json
@@ -129,7 +129,7 @@ switch开关配置
 
 ---
 
-##### `singleUpload`
+### `singleUpload`
 
 上传组件（单）配置
 ```json
@@ -160,7 +160,7 @@ switch开关配置
 
 ---
 
-##### `multipleUpload`
+### `multipleUpload`
 
 上传组件（多）配置
 ```json
@@ -191,7 +191,7 @@ switch开关配置
 
 ```
 ---
-##### `inputNumber`
+### `inputNumber`
 
 计数器配置
 ```json
@@ -219,7 +219,7 @@ switch开关配置
 ```
 ---
 
-##### `datePicker`
+### `datePicker`
 
 日期控件配置
 ```json
@@ -250,7 +250,7 @@ switch开关配置
 ```
 ---
 
-##### `timePicker`
+### `timePicker`
 
 时间控件配置
 ```json
@@ -286,7 +286,7 @@ switch开关配置
 ---
 
 
-##### `commonselect`
+### `commonselect`
 
 通用选择器配置
 ```json
@@ -314,7 +314,7 @@ switch开关配置
 
 ```
 ---
-##### `tableEdit`
+### `tableEdit`
 
 明细编辑器配置
 ```json
@@ -340,7 +340,7 @@ switch开关配置
 ```
 ---
 
-##### `editor`
+### `editor`
 
 富文本编辑器配置
 ```json
@@ -363,7 +363,7 @@ switch开关配置
 ```
 ---
 
-##### `treeselect`
+### `treeselect`
 
 选择树配置
 ```json
@@ -402,7 +402,7 @@ switch开关配置
 
 ---
 
-##### `commonTree`
+### `commonTree`
 
 通用逐步选择树配置
 
@@ -436,7 +436,7 @@ switch开关配置
 ```
 ---
 
-##### `commonAllTree`
+### `commonAllTree`
 
 通用逐步选择树配置
 
@@ -472,7 +472,7 @@ switch开关配置
 ---
 
 
-##### `comdatadictionary`
+### `comdatadictionary`
 
 常用字典库控件配置
 
@@ -506,7 +506,7 @@ switch开关配置
 ---
 
 
-##### `datadictionaryfortree`
+### `datadictionaryfortree`
 
 全局字典树配置
 ```json
@@ -537,7 +537,7 @@ switch开关配置
 
 ```
 ---
-##### `datadictionaryforsel`
+### `datadictionaryforsel`
 
 全局字典选择控件配置
 ```json
@@ -565,7 +565,7 @@ switch开关配置
 ```
 ---
 
-##### `organizeTree`
+### `organizeTree`
 
 组织机构树按权限全部加载配置
 
@@ -596,7 +596,7 @@ switch开关配置
 
 ```
 ---
-##### `organizeAllTree`
+### `organizeAllTree`
 
 组织机构树全部加载配置
 
@@ -628,7 +628,7 @@ switch开关配置
 ```
 ---
 
-##### `ghtree`
+### `ghtree`
 
 工号树配置
 ```json
@@ -660,7 +660,7 @@ switch开关配置
 ```
 ---
 
-##### `standardghtree`
+### `standardghtree`
 
 标准工号树配置
 ```json
@@ -692,7 +692,7 @@ switch开关配置
 ```
 ---
 
-##### `materialclasstree`
+### `materialclasstree`
 
 材料类别树配置
 ```json
@@ -728,7 +728,7 @@ switch开关配置
 
 
 
-### renderTableRowComs
+## renderTableRowComs
 
 ** 说明：**  `renderTableRowComs`明细编辑行内渲染器主要根据传入配置渲染控件相关配置，主要作用于tableEdit行内控件渲染。
 
@@ -737,7 +737,7 @@ switch开关配置
 
 **控件配置说明**
 
-##### `inputNum`
+### `inputNum`
 
 inputNum输入框配置
 
@@ -766,7 +766,7 @@ inputNum输入框配置
 ```
 ---
 
-##### `inputText`
+### `inputText`
 
 inputText输入框配置
 
@@ -798,7 +798,7 @@ inputText输入框配置
 
 ---
 
-##### `switch`
+### `switch`
 
 switch开关配置
 ```json
@@ -827,7 +827,7 @@ switch开关配置
 
 ---
 
-##### `singleUpload`
+### `singleUpload`
 
 上传组件（单）配置
 ```json
@@ -855,7 +855,7 @@ switch开关配置
 
 ---
 
-##### `datePicker`
+### `datePicker`
 
 日期控件配置
 ```json
@@ -885,7 +885,7 @@ switch开关配置
 
 ---
 
-##### `comdatadictionary`
+### `comdatadictionary`
 
 常用字典库控件配置
 
@@ -916,7 +916,7 @@ switch开关配置
 ---
 
 
-##### `datadictionaryfortree`
+### `datadictionaryfortree`
 
 全局字典树配置
 ```json
@@ -944,7 +944,7 @@ switch开关配置
 
 ```
 ---
-##### `datadictionaryforsel`
+### `datadictionaryforsel`
 
 全局字典选择控件配置
 ```json
@@ -970,7 +970,7 @@ switch开关配置
 
 ---
 
-##### `select`
+### `select`
 
 选择器配置
 ```json
@@ -998,7 +998,7 @@ switch开关配置
 ---
 
 
-##### `format`
+### `format`
 
 文本渲染器配置
 ```json
@@ -1014,7 +1014,7 @@ switch开关配置
 ```
 
 
-### tableSlotComs
+## tableSlotComs
 
 ** 说明：**  `tableSlotComs`表列具名渲染器 主要根据传入配置渲染表格列样式，主要作用于表格列样式渲染。
 
@@ -1023,7 +1023,7 @@ switch开关配置
 
 **控件配置说明**
 
-##### 文本渲染
+### 文本渲染
 
 **tag**
 
@@ -1048,7 +1048,7 @@ switch开关配置
 ```
 ---
 
-##### 按钮组渲染
+### 按钮组渲染
 
 **button**
 
@@ -1091,7 +1091,7 @@ switch开关配置
 ```
 ---
 
-##### 图表按钮组渲染
+### 图表按钮组渲染
 
 **view**
 
@@ -1138,7 +1138,7 @@ switch开关配置
 ```
 ---
 
-##### 文本格式化
+### 文本格式化
 
 **format**
 
@@ -1165,13 +1165,13 @@ switch开关配置
 ---
 
 
-### renderSelComs
+## renderSelComs
 
 ** 说明：**  `renderSelComs`树选择渲染器根据不同树渲染需要的panel树，在业务树中都使用`commonAllPanelTree`和`commonPanelTree`来渲染。
 
 ---
 
-##### `commontreewithpanel`
+### `commontreewithpanel`
 
 通用树逐步加载配置
 
@@ -1201,7 +1201,7 @@ switch开关配置
 
 ---
 
-##### `commonalltreewithpanel`
+### `commonalltreewithpanel`
 
 通用树全部加载配置
 
@@ -1232,7 +1232,7 @@ switch开关配置
 
 ---
 
-##### `organizetreewithpanel`
+### `organizetreewithpanel`
 
 组织机构按照权限加载配置
 
@@ -1260,7 +1260,7 @@ switch开关配置
 
 ---
 
-##### `materialclasstreewithpanel`
+### `materialclasstreewithpanel`
 
 材料类别逐步加载配置
 
@@ -1286,7 +1286,7 @@ switch开关配置
 ```
 ---
 
-##### `ghTreeWithPanel`
+### `ghTreeWithPanel`
 
 工号树逐步加载配置
 
@@ -1312,7 +1312,7 @@ switch开关配置
 ```
 ---
 
-##### `standardghtreewithpanel`
+### `standardghtreewithpanel`
 
 标准工号树逐步加载配置
 
@@ -1340,12 +1340,12 @@ switch开关配置
 
 
 
-### containerComs
+## containerComs
 
 ** 说明：**  `containerComs`容器渲染器根据配置渲染具体容器。
 
 
-##### `querycontainer`
+### `querycontainer`
 
 **业务模块容器配置**
 
@@ -1391,7 +1391,7 @@ switch开关配置
 ```
 ---
 
-##### `querycontainerR`
+### `querycontainerR`
 
 **查询数据容器配置**
 
@@ -1436,7 +1436,7 @@ switch开关配置
 ---
 
 
-##### `queryChart`
+### `queryChart`
 
 **图表展示容器配置**
 
@@ -1482,7 +1482,7 @@ switch开关配置
 
 
 
-##### `htmlContainer`
+### `htmlContainer`
 
 **html渲染展示容器配置**
 
@@ -1528,7 +1528,7 @@ switch开关配置
 
 
 
-##### `complexContainer`
+### `complexContainer`
 
 **html渲染展示容器配置**
 
@@ -1567,7 +1567,7 @@ switch开关配置
 
 
 
-##### `htmlRaw`
+### `htmlRaw`
 
 **html字符串渲染**
 
@@ -1597,7 +1597,7 @@ switch开关配置
 
 
 
-##### `commemt`
+### `commemt`
 
 **评论插件**
 
@@ -1628,7 +1628,7 @@ switch开关配置
 ---
 
 
-##### `statisticsBlock`
+### `statisticsBlock`
  
 
  **数据显示块**

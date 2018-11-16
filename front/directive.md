@@ -1,4 +1,8 @@
-### 功能权限控制
+# 指令
+
+
+
+## v-permissionSetting
 
 >功能权限控制通过`v-permissionSetting`来控制功能按钮是否渲染
 
@@ -18,4 +22,10 @@
 
 ---
 
+
+## clickoutside
+
+
+
+---
 
