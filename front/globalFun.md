@@ -2,9 +2,25 @@
 
 ## 全局变量
 
+> 在系统中常用的一些全局变量存储在cookie或者localStorage中。
+
+### cookie中变量
+
+
+1. `userInfo`   用户的登录信息
+   
+2. `Authorization`  权限令牌
+3. `appCode` 系统代码
+
+### localStorage中变量
+
+1. `SysGlobConf` 系统全局配置
+
 ---
 
 ## 全局方法
+
+全局方法集中在`globalFun.js`中定义。
 
 ### 自定义表单验证
 
@@ -18,7 +34,6 @@
 5. 校验Url  `this.checkurl`
 
 
-
 ##### 单独校验是否输入类型用法(代码示例)
 
 ```javascript
@@ -26,12 +41,12 @@
 export default {
     data(){
     return{
-            rules: {    
-                        userName: [
-                            {  validator: this.checkInt, trigger: 'blur' }
-                        ], 
-                },
-           }
+        rules: {    
+                    userName: [
+                        {  validator: this.checkInt, trigger: 'blur' }
+                    ], 
+            },
+        }
     }
 }
 ```
@@ -428,3 +443,5 @@ export default {
 ---
 
 ## 常用工具方法
+
+常用的工具方法定义在`util.js`中。

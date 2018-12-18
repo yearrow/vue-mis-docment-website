@@ -21,3 +21,6 @@ http请求库： `axios` 文档地址：[https://www.kancloud.cn/yunye/axios/234
 ### 组件结构图
 
 ![图片名称](/YlDocument/img/main.svg)
+
+
+     

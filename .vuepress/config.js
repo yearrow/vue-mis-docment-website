@@ -16,7 +16,6 @@ module.exports = {
   ],
   serviceWorker: true,
   themeConfig: {
-    
     nav: [
       { text: '首页', link: '/' },
       { text: 'PC端配置', link: '/front/' },

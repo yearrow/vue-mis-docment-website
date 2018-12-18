@@ -8,8 +8,11 @@
     "dev": "vuepress dev ",
     "build": "vuepress build "
   },
-  "dependencies": {},
+  "dependencies": {
+    "element-ui": "^2.4.11"
+  },
   "devDependencies": {
+    "element-theme-chalk": "^2.4.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0"
   },
   "keywords": [
