@@ -10,7 +10,6 @@ export default ({
   // ...做一些其他的应用级别的优化
   for(var key in components){    
       Vue.component('yl-'+key, components[key])
-  }    
-  
+  }  
   Vue.use(Element)
 }

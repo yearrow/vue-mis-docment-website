@@ -257,6 +257,19 @@ git push [remote] --all
 
 ```
 
+### 配置SSK
+
+```bash
+
+# 生成sshkey命令
+ssh-keygen
+
+```
+
+之后在`C:\Users\danielmlc\.ssh`中查找`id_rsa.pub`文件。
+将其中的key添加至github账号ssk中管理即可。
+
+
 
 
 
