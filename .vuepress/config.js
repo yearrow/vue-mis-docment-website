@@ -2,14 +2,14 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-03 17:55:53
+ * @LastEditTime : 2020-02-03 18:19:48
  */
 module.exports = {
   title: '易龙软件开发文档 ',
   description: 'YLSoft Work Document',
   port: 8066, 
-  dest: 'docs',
-  base:'/docs/',
+  dest: 'development-normalization',
+  base:'/development-normalization/',
   head: [
     ['link', { rel: 'icon', href: '/img/favicon.ico' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
