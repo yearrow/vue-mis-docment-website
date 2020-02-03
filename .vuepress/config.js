@@ -1,9 +1,15 @@
+/*
+ * @Description: 未描述
+ * @Author: danielmlc
+ * @Date: 2020-02-03 17:47:35
+ * @LastEditTime : 2020-02-03 17:55:53
+ */
 module.exports = {
   title: '易龙软件开发文档 ',
   description: 'YLSoft Work Document',
   port: 8066, 
   dest: 'docs',
-  base:'/YlDocument/',
+  base:'/docs/',
   head: [
     ['link', { rel: 'icon', href: '/img/favicon.ico' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -18,11 +24,10 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: 'PC端配置', link: '/front/' },
-      { text: 'webApp端配置', link: '/webApp/'},
-      { text: '服务端文档', link: '/service/'},
+      { text: '前端开发规范', link: '/front/' },
+      { text: '移动端开发规范', link: '/webApp/'},
+      { text: '服务端开发规范', link: '/service/'},
       { text: '技术扩展', link: '/more/'},
-      { text: '更新日志', link: '/update/'},
       { text: 'GitHub', link: 'https://github.com/YLSoftWorkGroup'  },
     ],
     sidebarDepth :3,
