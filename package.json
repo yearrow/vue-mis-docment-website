@@ -6,10 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev ",
-    "build": "vuepress build "
+    "build": "vuepress build ",
+    "pub": "bash deploy.sh"
   },
   "dependencies": {
-    "element-ui": "^2.4.11"
+    "element-ui": "^2.13.0"
   },
   "devDependencies": {
     "element-theme-chalk": "^2.13.0",

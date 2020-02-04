@@ -2,14 +2,14 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-03 22:09:34
+ * @LastEditTime : 2020-02-04 20:58:51
  */
 module.exports = {
-  title: '易龙软件开发文档 ',
+  title: '易龙软件开发文档',
   description: 'YLSoft Work Document',
   port: 8066, 
   dest: 'docs',
-  base:'/docs/',
+  base:'/YlDocument',
   head: [
     ['link', { rel: 'icon', href: '/img/favicon.ico' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -52,24 +52,6 @@ module.exports = {
         'markdown',
         'git'
       ],
-      // 三级栏目的配置方式
-      // '/more/': [
-      //   {
-      //     title: '文档写作',
-      //     collapsable: true,
-      //     children: [
-      //       'markdown/',
-      //     ]
-      //   },
-      //     {
-      //       title: 'git知识',
-      //       collapsable: true,
-      //       children: [
-      //         'git/',
-      //       ]
-      //     },
-         
-      // ],
     },
    }
   }
