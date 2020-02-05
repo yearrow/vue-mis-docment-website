@@ -2,7 +2,7 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-05 16:13:55
+ * @LastEditTime : 2020-02-05 17:51:55
  */
 
 module.exports = {
@@ -32,6 +32,7 @@ module.exports = {
     searchMaxSuggestions: 10,
     lastUpdated: 'Last Updated',
     smoothScroll: true,
+    displayAllHeaders: true,
     nav: [
       { text: '首页', link: '/' },
       {
@@ -46,7 +47,7 @@ module.exports = {
       { text: '技术扩展', link: '/extend/markdown'},
       { text: 'github', link: 'https://github.com/YLSoftWorkGroup'  },
     ],
-    sidebarDepth :3,
+    sidebarDepth: 4,
     sidebar: {
       '/base/': [ 
         'base-rules',
@@ -68,5 +69,9 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true
-  }
+  },
+  plugins: [
+    '@vuepress/back-to-top',
+    '@vuepress/medium-zoom'
+  ]
   }
