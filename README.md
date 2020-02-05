@@ -1,20 +1,9 @@
----
-home: true
-# heroImage: /YlDocument/img/logo.png
-footer: MIT Licensed | Copyright © 2018-present 易龙软件
-sidebarDepth: 3
----
+#### YlDocument
 
-
-<!-- #### 写作命令
-
-``` bash
-# 安装
-cnpm install -d vuepress
-
-# 开始写作
-cnpm run dev
-
+```bash
+# 本地启动
+npm run dev
 # 发布
-cnpm run build
-``` -->
+npm run pub
+
+```

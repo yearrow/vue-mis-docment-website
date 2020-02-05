@@ -1,25 +1,23 @@
 {
-  "name": "danielmlc",
+  "name": "yldocument",
   "version": "1.0.0",
   "description": "doc-v9.0 for yearrow",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vuepress dev ",
-    "build": "vuepress build ",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "pub": "bash deploy.sh"
   },
   "dependencies": {
-    "element-ui": "^2.13.0"
+    "element-ui": "^2.13.0",
+    "vuepress": "^1.3.0"
   },
   "devDependencies": {
-    "element-theme-chalk": "^2.13.0",
-    "extract-text-webpack-plugin": "^3.0.2"
   },
   "keywords": [
-    "blog",
-    "vuepress",
-    "danielmlc"
+    "document",
+    "vuepress"
   ],
   "author": "danielmlc",
   "license": "ISC"
