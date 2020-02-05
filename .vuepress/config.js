@@ -2,8 +2,9 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-04 20:58:51
+ * @LastEditTime: 2020-02-04 21:27:49
  */
+
 module.exports = {
   title: '易龙软件开发文档',
   description: 'YLSoft Work Document',

@@ -1,14 +1,12 @@
 ---
 home: true
-heroImage: /img/logo.png
-
-actionText: 关于易龙 →
+# heroImage: /YlDocument/img/logo.png
 footer: MIT Licensed | Copyright © 2018-present 易龙软件
 sidebarDepth: 3
 ---
 
 
-#### 写作命令
+<!-- #### 写作命令
 
 ``` bash
 # 安装
@@ -19,4 +17,4 @@ cnpm run dev
 
 # 发布
 cnpm run build
-```
+``` -->
