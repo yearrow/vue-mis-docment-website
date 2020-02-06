@@ -1,6 +1,6 @@
-## 服务端规范
+# 服务端规范
 
-### 路由规范
+## 路由规范
 
 
  路由路径采用中化线命名规范
@@ -21,7 +21,7 @@
 .delete('items/:id/:orgid', Func) // 删除单条信息
 
 ```
-### 服务
+## 服务
 
 ```
   queryItems 根据指定条件获取列表
@@ -36,7 +36,7 @@
 
 ```
 
-#### 服务层代码规范
+### 服务层代码规范
 
   复杂业务逻辑写上说明
   如： 提交收料单： 
@@ -58,13 +58,13 @@ service.get('m-delivery-order/:id/:orgid', async function (ctx, next) {
   await mDeliveryService.getMDelivery(ctx, Models)
 })  
 
-### 实体模型建立
+## 实体模型
 
 
-### 事务
+## 事务
 
 
-### 脚本语法规范
+## 脚本
 
    脚本都按小写命名
    
