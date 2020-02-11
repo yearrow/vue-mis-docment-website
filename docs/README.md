@@ -6,4 +6,5 @@ tagline: 日常开发规范文档参考
 footer: MIT Licensed | Copyright © 2018-present 易龙软件
 ---
 
-<img :src="$withBase('//img/bg.png')" width="100%">
+<img :src="$withBase('/img/bg.png')" width="100%">
+

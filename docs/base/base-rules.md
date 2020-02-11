@@ -297,18 +297,19 @@ const $primaryColor = // ...
   专有列(数量、单价、金额相关列)
 
   ```
-  taxRate: { type: Sequelize.DECIMAL(28, 4) }, // 税率
-  taxFreePrice: { type: Sequelize.DECIMAL(28, 8) }, // 不含税单价
-  taxFreeSum: { type: Sequelize.DECIMAL(28, 4) }, // 不含税金额
-  taxIncludedPrice: { type: Sequelize.DECIMAL(28, 8) }, // 含税单价
-  taxIncludedSum: { type: Sequelize.DECIMAL(28, 4) }, // 含税金额
-  taxAmount: { type: Sequelize.DECIMAL(28, 4) }, // 税额
-  bookPrice: { type: Sequelize.DECIMAL(28, 8) }, // 账面价
-  bookSum: { type: Sequelize.DECIMAL(28, 4) }, // 账面金额
-  difference: { type: Sequelize.DECIMAL(28, 4) }, // 差额
+  tax_rate: DECIMAL(28, 4),  税率
+  tax_free_price:DECIMAL(28, 8), 不含税单价
+  tax_free_sum: DECIMAL(28, 4),  不含税金额
+  tax_included_price:DECIMAL(28, 8),  含税单价
+  tax_included_sum: DECIMAL(28, 4),  含税金额
+  tax_amount: DECIMAL(28, 4), 税额
+  book_price: DECIMAL(28, 8), 账面价
+  book_sum:  DECIMAL(28, 4)}, 账面金额
+  difference: DECIMAL(28, 4), 差额
   ```
 
   专有列(对接列)
+  
   ```
   ori_org_id 对接第三方组织主键
   ori_class_id 对接第三方材料类别主键

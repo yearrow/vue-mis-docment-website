@@ -2,7 +2,7 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-06 17:28:39
+ * @LastEditTime : 2020-02-11 10:28:44
  */
 
 module.exports = {
@@ -44,7 +44,8 @@ module.exports = {
           { text: '服务端规范', link: '/service/service-rules/' }
         ]
       },
-      { text: '日常工作', link: '/daily/editor'},
+      { text: '基础设施', link: '/basic/facilities'},
+      { text: '环境配置', link: '/daily/editor'},
       { text: '技术扩展', link: '/extend/markdown'},
       { text: 'github', link: 'https://github.com/YLSoftWorkGroup'  },
     ],
@@ -63,6 +64,7 @@ module.exports = {
         'service-rules',
       ],
       '/daily/': [ 
+        'editor',
         'editor',
         'npm-use',
       ],

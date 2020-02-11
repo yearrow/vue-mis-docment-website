@@ -10,7 +10,7 @@
     "pub": "bash deploy.sh"
   },
   "dependencies": {
-    "element-ui": "^2.13.0",
+    "element-mini-ui": "^1.1.5",
     "vuepress": "^1.3.0"
   },
   "devDependencies": {
