@@ -419,10 +419,12 @@ const $primaryColor = // ...
                     .henhouserc   代理配置文件
                     bootstrap.yml 项目配置文件
         web-content/
-                    asset/
-                        fonts/   字体文件
+                    assets/
                         images/  图片资源
                         plugins/ 插件
+                    styles/
+                        fonts/   字体图标文件
+                        css/     样式文件
                     components/  项目自定义组件
                     mixins/ 混合组件
                     utils/  项目功能函数

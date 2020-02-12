@@ -2,14 +2,14 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-10 14:23:08
+ * @LastEditTime : 2020-02-11 14:26:54
  */
 
 
 import Element from 'element-mini-ui'
 import 'element-mini-ui/lib/theme/index.css'
 import components from './components'
-
+import './styles/index'
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
 }) => {

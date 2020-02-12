@@ -21,7 +21,7 @@
 ```
 效果：
 
-![示例](/img/title-header.png)
+![示例](/YlDocument/img/title-header.png)
 
 > 以此类推，总共六级标题，建议在井号后加一个空格，并且标题不能有缩进。这是最标准的 Markdown 语法。
 
