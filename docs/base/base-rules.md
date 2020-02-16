@@ -201,6 +201,38 @@ let lastUpdater = 'mlc'
 const $http = // ...
 const $primaryColor = // ... 
 ```
+### 组件
+
+自定义的Vue组件命名为帕斯卡命名法（PascalCase）
+
+示例：
+
+命名组件名时：
+
+```js
+export default {
+    name: 'YlTableEdit',
+}
+```
+
+组件注册时：
+
+```js 
+import YlTableEdit from '../yl-table-edit.vue';
+export default {
+    components: {
+      YlTableEdit
+    },
+}
+```
+
+组件使用时：
+
+```html
+<yl-table-edit
+  :props="...">
+</yl-table-edit>
+```
 
 ### 样式类
 
