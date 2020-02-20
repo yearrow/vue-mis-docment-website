@@ -2,11 +2,12 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-11 14:26:54
+ * @LastEditTime: 2020-02-20 14:45:13
  */
 
 
-import Element from 'element-mini-ui'
+import ElementUi from 'element-mini-ui'
+// import ElementExtension from 'element-extension'
 import 'element-mini-ui/lib/theme/index.css'
 import components from './components'
 import './styles/index'
@@ -17,5 +18,6 @@ export default ({
   for(var key in components){    
       Vue.component('yl-'+key, components[key])
   }  
-  Vue.use(Element)
+  Vue.use(ElementUi)
+  // Vue.use(ElementExtension)
 }

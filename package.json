@@ -10,9 +10,9 @@
     "pub": "bash deploy.sh"
   },
   "dependencies": {
+    "element-extension": "^1.2.17",
     "element-mini-ui": "^1.1.5",
-    "vuepress": "^1.3.0",
-    "element-extension": "^1.2.17"
+    "vuepress": "^1.3.0"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.3.0",

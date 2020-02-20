@@ -413,7 +413,7 @@ const variate = {
 
 ```js
 const variate = {
-  white,
+ white,
   black,
   primary, // 主色
   primaryL1,
@@ -454,8 +454,10 @@ const variate = {
   borderRadiusB,
   borderRadiusS,
   lineHeightB,
-  theme, // 主题色
-  themeFontActive
+  lineHeightE,
+  layoutGapS,
+  layoutGapB,
+  layoutGapL
 }
 ```
 
@@ -473,13 +475,13 @@ const themeFontActive = '#eee'
 ```css
 
 // 边框
-.g-border-solid{
+.g-border-b-solid{
     border:1px $borderColorB solid;
 }
 .g-border-l-solid{
     border:1px $borderColorL solid;
 }
-.g-border-dotted{
+.g-border-b-dotted{
     border:2px $borderColorB dotted;
 }
 .g-border-l-dotted{
@@ -563,19 +565,26 @@ const themeFontActive = '#eee'
     ```
 5. 元素应该尽量使用组件库中提供的容器组件来包裹,容器组件有：`toolbar`、`panel`、`pageheader`、`flexbox`、`splitPanel`
 
-### 元素以及示例
+### 模块和页面布局
 
 > 布局元素指针对某个容器的内部的下级呈现单元区块。
 
 #### 模块页面的布局示例： 
 
-元素：
-
 - header
 - menu
 - footer
-- content
 - appList
+- content
+
+
+#### 约定
+
+::: warning
+1. 模块页面的`header`,`menu`,`footer`,`appList`基础元素由`@yearrow/vue-protal-frameword-library`提供，menu和applist可伸缩。content元素为主区域，根据具体业务进行开发，其中content自带了默认的背景色。
+2. 模块content内容部分也就是模块的根组件，需引入样式类`class="page-main"`。
+:::
+
 
 布局示例：
 
@@ -612,21 +621,30 @@ const themeFontActive = '#eee'
    
 </div>
 
-::: warning
-注意：模块页面的`header`,`menu`,`footer`,`appList`基础元素由`@yearrow/vue-protal-frameword-library`提供，menu和applist可伸缩。content元素为主区域，根据具体业务进行开发，其中content自带了默认的背景色。
-:::
+
 
 #### 页面布局
 
-- page-header
+- page-heade
 - filter
 - tool
-- tip
+- alert
 - dataview
+
+#### 约定
+::: warning
+1. 页面开发中，无论是一级页面还是二级页面等都应该有`page-header`元素，page-header标题应该是模块的路径，page-header元素不应该随页面内容滚动。
+2. 应该适当的使用`tip`元素提示数据展示，或者功能操作。
+3. `filter`、`tool`、`dataview`在使用时应该使用容器组件包裹，有时候为了紧凑性考虑，可以把不同功能组件包裹在同一个容器内。
+4. 页面上的区块之间应该留有间隙，间隙尺寸应该为`const layoutGapL = '10px'`,区块容器内部和组件之间也应该有间隔，间隔见具体容器要求。
+:::
+
 
 ##### 操作类页面
 
 操作类页面布局一般输入操作比较频繁，要求页面整个区域尽量减少通过滚动太浏览隐藏内容，我们一般要求操作内容是直观可见，如果内容较多，一般采用选项卡或者弹窗方式显示二级页面内容。
+
+> 你应该考虑使用`flex-box`组件布局操作类页面。
 
 布局示例：
 
@@ -734,14 +752,10 @@ const themeFontActive = '#eee'
 我们将这类布局称为`流体布局方式`。
 
 
-::: warning
-1. 页面开发中，无论是一级页面还是二级页面等都应该有`page-header`元素，page-header标题应该是模块的路径，page-header元素不应该随页面内容滚动。
-2. 应该适当的使用`tip`元素提示数据展示，或者功能操作。
-3. `filter`、`tool`、`dataview`在使用时应该使用容器组件包裹，有时候为了紧凑性考虑，可以把不懂功能组件包裹在同一个容器内。
-:::
 
 实例展示：
 
+？？ 
 
 > 其它局部容器的布局以及示例请参考场景中各个容器的规范说明。
 
@@ -751,55 +765,368 @@ const themeFontActive = '#eee'
 
 ### 按钮及操作
 
-#### 按钮
+#### 约定
+
+
+- 按钮类型的定义：
+  - 主要功能按钮：业务场景上规定的主要功能按钮，如：添加、修改、审核、保存、确认等之类（对数据进行大量写入的操作）。   
+    
+    ##### 示例
+
+    <div style="display:flex">
+    <el-button 
+        type="primary" 
+        size="small" 
+        class="el-icon-add" 
+        > 主主要功能
+    </el-button>
+
+    <el-button 
+        type="primary" 
+        size="small" 
+        plain 
+        class="el-icon-edit"> 次主要功能
+    </el-button>
+    </div>
+
+    ```html
+    <el-button 
+        type="primary" 
+        size="small" 
+        class="el-icon-add" 
+        > 主主要功能
+    </el-button>
+
+    <el-button 
+        type="primary" 
+        size="small" 
+        plain 
+        class="el-icon-edit"> 次主要功能
+    </el-button>
+    ```
+  - 警告功能按钮：一些逆向的业务操作或者对其他业务有影响的操作，如：撤销审核、撤销审批等之类。
+
+    ##### 示例
+
+    <div style="display:flex;">
+    <el-button 
+        type="warning" 
+        size="small" 
+        class="el-icon-select"> 主警告
+    </el-button>
+
+    <el-button 
+        type="warning" 
+        size="small" 
+        plain
+        plain class="el-icon-select"> 次警告
+    </el-button>
+    </div>
+
+    ```html
+    <el-button 
+        type="warning" 
+        size="small" 
+        class="el-icon-select"> 主警告
+    </el-button>
+
+    <el-button 
+        type="warning" 
+        size="small" 
+        plain
+        plain class="el-icon-select"> 次警告
+    </el-button>
+    ```
+  - 危险功能按钮：一些危险的业务操作，一般会对数据造成不可逆或者可逆过程很复杂的影响。 如：删除、冲红等。
+  
+    ##### 示例
+
+    <div style="display:flex;">
+    <el-button 
+        type="danger" 
+        size="small" 
+        class="el-icon-delete" > 主危险
+    </el-button>
+
+    <el-button 
+        type="danger" 
+        size="small" 
+        plain 
+        class="el-icon-delete" > 次危险
+    </el-button>
+    </div>
+
+    ```html
+    <el-button 
+        type="danger" 
+        size="small" 
+        class="el-icon-delete" > 主危险
+    </el-button>
+
+    <el-button 
+        type="danger" 
+        size="small" 
+        plain 
+        class="el-icon-delete" > 次危险
+    </el-button>
+    ```
+  - 普通功能按钮：业务上实现的一个对主要业务功能进行补充的功能，如：查询、参数设置、选材按钮等。
+  
+    ##### 示例
+
+    <div style="display:flex;">
+    <el-button 
+        type="info" 
+        size="small" 
+        class="el-icon-search"> 主普通功能
+    </el-button>
+
+    <el-button 
+        type="info" 
+        size="small" 
+        plain 
+        class="el-icon-search"> 次普通功能
+    </el-button>
+    </div>
+
+    ```html
+    <el-button 
+        type="info" 
+        size="small" 
+        class="el-icon-search"> 主普通功能
+    </el-button>
+
+    <el-button 
+        type="info" 
+        size="small" 
+        plain 
+        class="el-icon-search"> 次普通功能
+    </el-button>
+    ```
+  - 辅助功能按钮：实现的一些不影响业务数据的功能，如数据导出、打印之类按钮。
+  
+    ##### 示例
+
+    <div style="display:flex;">
+    <el-button 
+        type="success" 
+        size="small" 
+        class="el-icon-file-excel-fill"> 主辅助功能
+    </el-button>
+
+    <el-button 
+        type="success" 
+        size="small" 
+        plain 
+        class="el-icon-file-excel-fill"> 次辅助功能
+    </el-button>
+    </div>
+
+    ```html
+    <el-button 
+        type="success" 
+        size="small" 
+        class="el-icon-file-excel-fill"> 主辅助功能
+    </el-button>
+
+    <el-button 
+        type="success" 
+        size="small" 
+        plain 
+        class="el-icon-file-excel-fill"> 次辅助功能
+    </el-button>
+    ```
+  - 取消功能按钮： 提示框或表单中的取消操作，取消功能按钮使用文字按钮，如：取消、重置、关闭按钮。
+  
+    ##### 示例
+
+    <div style="display:flex;">
+    <el-button 
+        type="text" 
+        size="small" > 取消按钮 
+    </el-button>
+    </div>
+
+    ```html
+    <el-button 
+        type="text" 
+        size="small" > 取消按钮 
+    </el-button>
+
+    ```
+- 在一个视图中只能有一个`主要动作按钮`。
+- 只有存在主要动作按钮时，才会出现`次要动作按钮`。
+- 若存在主要动作按钮，一般动作、辅助动作、危险动作和警告动作也只能使用次动作按钮。
+
+---
+- 警告或危险的操作按钮须使用`Popover`提示框组件让用户确认后再执行。
+- 危险操作在布局上应该远离操作按钮组，应该使用`g-button-margin-left` 辅助类实现。
+- 当button被封装到组件中被使用时，应该使用`mini`尺寸。   
+- 直接应用到页面的功能按钮没有特殊要求的一般尺寸都为`small`。
+- 按钮在使用时应该搭配图标使用，搭配图标时图标在前文字在后,文字图标之间留一空格距离，取消按钮不需要使用图标。
+- 一些对数据进行写入的操作，在执行时应该启用按钮的`loading`属性，避免发起多次写入操作请求。如：保存、提交、撤销等按钮。
+- 按钮使用时应该包裹在`toolBar`、`panel`、`dialog的footer插槽`等容器中，不建议直接暴露在外部中使用。
+
+
+
+#### 常用按钮规范
+
+
+
+#### 示例
+
+有关按钮的使用以及布局以及使用请参考`element-extension`的[tool-bar](https://ylsoftworkgroup.github.io/element-extension/#/tool-bar),示例或 [panel](https://ylsoftworkgroup.github.io/element-extension/#/panel)示例,
+
 
 ### 过滤器
 
 #### 元素
+- form
+- label
+- controller
+- searchButton
+- filterPanel
+- flexBox
 
 #### 约定
 
-#### 尺寸
-
-#### 响应式辅助类
+- 过滤器应该使用tool-bar组件的`filter`和`more`插槽进行包裹。
+- 过滤器控件默认使用`small`尺寸。
+- 过滤器中有可触发change、click事件的控件，应该在该事件中直接进行查询访问（如：select\button等组件）。
+- 过滤器控件应该包裹在`form`组件中,显示控件label,label不能换行,布局时考虑响应式布局,多行布局时，应该考虑各列之间纵向对齐。
+- 如果过滤器布局为了紧凑考虑，可以不显示控件label,不考虑响应式布局（只在控件占不满一行时考虑）。
+- 有时候考虑紧凑型布局过滤器可以考虑和功能按钮混合布局。
+- 使用过滤器面板时，应该考虑使用flex-box将过滤器面板放置固定区域，并设置可折叠。
 
 #### 示例
+
+有关过滤器使用请参考`element-extension`的[tool-bar](https://ylsoftworkgroup.github.io/element-extension/#/tool-bar)示例或[flex-box](https://ylsoftworkgroup.github.io/element-extension/#/flex-box)示例, 。
 
 ### 表单
 
 #### 元素
 
-- form-header
-- tip
-- control-items
+- pageHeader
+- formHeader
+- controller
+- alert
 - footer
-- split-line
-- is-close-btn
-
+- divider 
+- isCloseBtn
+- submitButton
+- cancel
 
 
 #### 约定
 
-::: warning
-1. 表单应该具有标题和关闭功能。
-2. 复杂场景下应该适当的使用`tip`元素提示表单数据、验证，或者功能操作。
-3. 如果是弹出层表单，一般要禁用掉。
-:::
-
+- 表单中控件尺寸应该使用`small`。
+- 表单中应该适当的使用`alert`元素进行操作提示。
+- 表单中控件应该显示控件label，并且label不能出现换行。
+- 表单中控件纵向布局应该对齐，保证布局工整。
+- 表单组件应该标记必填项、根据业务需求使用进行表单验证。
+- 表单组件验证提示应该开启from组件的`status-icon`属性，form组件尺寸为`small`。
+- 表单中应该尽可能使用divider将表单区域进行分割,分割线最好备注区域名称。
+- 表单中应该尽量提供`isCloseBtn`提高数据录入便捷性。
 
 ##### 页面表单
 
+- 页面表单应该有pageHeader组件，在其slot中提供关闭功能。
+- 表单页面布局使用弹性弹性布局方式。
+- 页面表单中的布局应该考虑响应式布局。
+- 页面组件中提交、取消、选材等应该使用`tool-bar`容器包裹。
+
 ##### 弹窗表单
 
+- 弹窗表单应该使用`dialog`或者`drawer`作为载体。
+- 弹窗表单应该有标题和关闭按钮。
+- 弹出层表单一般要禁用掉点击遮罩关闭弹窗功能。
+- 因为弹窗表单都是固定宽度，表单布局不考虑响应式布局。
+- 弹窗组件在布局上只接受一列和两列布局，如果要三列以上布局，考虑使用页面布局。
+- 表单弹窗宽度，一列宽度为？？，两列宽度为？？。
+- 表单弹窗高度根据内容而定，尽量不要超过视口弹窗高度。
+- 如果弹窗组件有弹出弹窗的操作，请尽量将此表单改为页面表单（尽量避免弹窗嵌套）。
+- 表单弹窗的功能操作应该放置在dialog的`footer`插槽中。
 
-实例展示：
+#### 示例
 
-### 数据预备器
 
+
+### 数据预选器
+
+- filterPanel
+- flexBox
+- toolBar
+- filter
+- dataSelecter
+- isCloseBtn
+- alert
+
+#### 约定
+
+- 数据预选器应该使用`dialog`或者`drawer`作为载体。
+- 数据预选器应该有标题和关闭按钮。
+- 应该尽量提供`isCloseBtn`提高数据选择的便捷性。
+- 对于复杂的预选功能应该适当的使用`alert`元素进行操作提示。
+- 数据预先器一般分为过滤区域和预选区域，在布局上要清晰。
+- 树面板应该使用flexBox进行包裹。
+
+#### 示例
 
 ### 内容展示
 
-### 
+- onlyTable
+- table
+- tableNext
+- tableReport
+- list
+- listNext
+- listReport
+- chart
+- statisticalBlock
+- ...
+
+#### 约定
+
+- 单个页面上可以有多个内容展示区。
+- 内容展示区应该使用`panel`或者`tabPanel`包裹。
+- 相同业务不同展示方式的可以放置在同一区域,同一区域的内容数据过滤共享一套过滤器，如果有各自过滤器，区块应该使用tabPanel分割区域。
+- table和list区块在数据预加载期间应该考虑有`loading`效果，statisticalBlock、chart之类的区块在数据加载期间应该有`默认值`不能出现`空白区域`。
+- 容器和展示组件之间应该保持间距，间隔应该遵守`const layoutGapL = '10px'`。
+- 内容展示组件应该尽可能对重要信息做样式渲染，突出重要信息。
+- table和list之类组件约定
+    - table和list有按钮列时,按钮使用应该遵守按钮使用规范,不建议在按钮列中使用危险操作。
+    - table和list中建议辅助类和普通类的功能按钮列可前置（前置按钮可以考虑使用mini尺寸的图标按钮）,主要功能按钮、警告类列应后置在冻结列中（多个按钮操作尽量占用一列）。
+    - table和lis布局应尽量紧凑,使用尺寸`small`。
+    - table应该尽可能使用多级列头显示数据层级关系。
+
+#### 示例
+
 
 ### 消息及状态
+
+#### 约定
+
+- message
+- messageBox
+- alert 
+- popover
+- notification
+
+#### 约定
+ 
+- 消息类型的约定
+
+  - 成功类消息使用`success`
+  - 警告类消息使用`warning`
+  - 一般提示类消息使用`info`
+  - 异常类消息使用`error`
+
+- 消息提示方式的约定
+
+  - message 一般使用在主动发送请求后,返回的各类消息,或操作过程中的信息提示。
+  - messageBox 和 popover 主要用于任务执行过程中给予用户的选择提示。 在按钮的操作提示中推荐使用popover的提示方式,
+  - alert 主要用在页面、表单、预选器中进行辅助说明提示。
+  - notification 一般用在由服务端主动发送给用户的通知消息，主要使用在预警类或者数据更新提示类的消息中。
+
+
 
