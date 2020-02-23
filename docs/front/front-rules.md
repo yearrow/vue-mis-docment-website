@@ -230,82 +230,17 @@ const variate = {
 边框线条在全局中有公共类
 
 ```css
-/*边框*/ 
 .g-border-solid{
-    border:1px $borderColorB solid;
+    border:1px $border solid;
 }
 .g-border-l-solid{
-    border:1px $borderColorL solid;
+    border:1px $borderL solid;
 }
-.g-border-b-dotted{
-    border:2px $borderColorB dotted;
+.g-border-dotted{
+    border:2px $border dotted;
 }
 .g-border-l-dotted{
-    border:2px $borderColorL dotted;
-}
-
-/*边框投影*/ 
-.g-box-shadow-base{
-   box-shadow:0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-}
-.g-box-shadow-light{
-   box-shadow:0 2px 12px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* 危险按钮偏移类 */
-.g-button-margin-left {
-    margin-left: 50px !important;
-}
-
- /* 工具条按钮有浮动 */
-.g-button-float-right {
-    float: right;
-    margin-left:auto;
-}
-
-/* 容器的内边距 */
-.g-container-padding {
-    padding: $layoutGapB;
-    box-sizing: border-box;
-}
-/*容器内边距头部免除*/
-.g-container-padding-nontop {
-    padding: $layoutGapB;
-    padding-top: 0px;
-    box-sizing: border-box;
-}
-
-/*填充容器样式*/
-.g-container-full-fill {
-    width:100%;
-    height:100%;
-}
-
-/*保存后关闭的浮动按钮*/
-.g-form-save-close-float {
-    float: left;
-    padding: $layoutGapL;
-}
- 
-/* 表单底部样式 */
-.g-dialog-footer {
-    text-align: right;
-}
-
-/* tabPanel样式 */
-.g-tab-panel-base {
-    box-sizing: border-box;
-    padding: $layoutGapB;
-    padding-top: 0px;
-    background:$backgroundColorL;
-    height: 100%;
-    display: flex;
-    flex-direction: column
-}
-
-/* 移除边框样式 */
-.g-clear-border {
-    border: none !important;
+    border:2px $borderL dotted;
 }
 ```
 #### 圆角
@@ -538,8 +473,8 @@ const themeFontActive = '#eee'
 
 ```css
 
-// 边框
-.g-border-b-solid{
+/*边框*/ 
+.g-border-solid{
     border:1px $borderColorB solid;
 }
 .g-border-l-solid{
@@ -552,12 +487,68 @@ const themeFontActive = '#eee'
     border:2px $borderColorL dotted;
 }
 
-// 边框投影
+/*边框投影*/ 
 .g-box-shadow-base{
    box-shadow:0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
 }
 .g-box-shadow-light{
    box-shadow:0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 危险按钮偏移类 */
+.g-button-margin-left {
+    margin-left: 50px !important;
+}
+
+ /* 工具条按钮有浮动 */
+.g-button-float-right {
+    float: right;
+    margin-left:auto;
+}
+
+/* 容器的内边距 */
+.g-container-padding {
+    padding: $layoutGapB;
+    box-sizing: border-box;
+}
+/*容器内边距头部免除*/
+.g-container-padding-nontop {
+    padding: $layoutGapB;
+    padding-top: 0px;
+    box-sizing: border-box;
+}
+
+/*填充容器样式*/
+.g-container-full-fill {
+    width:100%;
+    height:100%;
+}
+
+/*保存后关闭的浮动按钮*/
+.g-form-save-close-float {
+    float: left;
+    padding: $layoutGapL;
+}
+ 
+/* 表单底部样式 */
+.g-dialog-footer {
+    text-align: right;
+}
+
+/* tabPanel样式 */
+.g-tab-panel-base {
+    box-sizing: border-box;
+    padding: $layoutGapB;
+    padding-top: 0px;
+    background:$backgroundColorL;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+/* 移除边框样式 */
+.g-clear-border {
+    border: none !important;
 }
 ```
 
@@ -616,18 +607,16 @@ const themeFontActive = '#eee'
 
 ### 布局规则
 
-1. 确定要布局的容器。
-2. 确定容器的布局元素。
-3. 确定容器的主元素,主元素应遵守一下约定：    
-    - 一个容器只能有一个主内容区域元素,主元素应尽量布局在中央位置辅助元素围绕在其周边；  
-    - 如果是弹性布局方式,主元素一般为弹性元素，其他元素应有固定值;
-4. 各元素之间应该使用css`margin`或`padding`属性给元素之间留出间距；间距值应该使用系统提供的间距变量。
+1. 确定要布局的容器,并确定容器布局方式为弹性布局还是流体布局。
+2. 确定容器内的布局元素，并规划布局位置以及尺寸。
+3. 各元素之间应该使用css`margin`或`padding`属性给元素之间留出间距；间距值应该使用系统提供的间距变量。
     ```js
     const layoutGapS = '3px'
     const layoutGapB = '5px'
     const layoutGapL = '10px'
     ```
-5. 元素应该尽量使用组件库中提供的容器组件来包裹,容器组件有：`toolbar`、`panel`、`pageheader`、`flexbox`、`splitPanel`
+4. 元素应该尽量使用组件库中提供的容器组件来包裹,容器组件有：`toolbar`、`panel`、`flexbox`、`splitPanel`、`pageheader`
+5. 布局之后检查并消除元素之间的重复间隔或重复边框问题。
 
 ### 模块和页面布局
 
