@@ -518,7 +518,7 @@ const themeFontActive = '#eee'
 > 引入方式：全局引入
 
 该组件库基于element-mini-ui 基础上扩展了使用日常业务使用的组件。   
-[文档地址](https://ylsoftworkgroup.github.io/element-extension/#/commonselect)
+[文档地址](https://ylsoftworkgroup.github.io/element-extension/)
 
 
 **业务组件库**
@@ -755,7 +755,11 @@ const themeFontActive = '#eee'
 
 实例展示：
 
-？？ 
+   **弹性布局方式示例**   
+  ![示例](/YlDocument/img/front-rules/page-1.png)
+
+     **流体布局方式示例**   
+  ![示例](/YlDocument/img/front-rules/page-2.png)
 
 > 其它局部容器的布局以及示例请参考场景中各个容器的规范说明。
 
@@ -769,7 +773,8 @@ const themeFontActive = '#eee'
 
 
 - 按钮类型的定义：
-  - 主要功能按钮：业务场景上规定的主要功能按钮，如：添加、修改、审核、保存、确认等之类（对数据进行大量写入的操作）。   
+
+  - 主要功能按钮：业务场景上规定的主要功能按钮，如：添加、修改、审核、保存、确认等之类。   
     
     ##### 示例
 
@@ -804,6 +809,7 @@ const themeFontActive = '#eee'
         class="el-icon-edit"> 次主要功能
     </el-button>
     ```
+
   - 警告功能按钮：一些逆向的业务操作或者对其他业务有影响的操作，如：撤销审核、撤销审批等之类。
 
     ##### 示例
@@ -936,7 +942,8 @@ const themeFontActive = '#eee'
         class="el-icon-file-excel-fill"> 次辅助功能
     </el-button>
     ```
-  - 取消功能按钮： 提示框或表单中的取消操作，取消功能按钮使用文字按钮，如：取消、重置、关闭按钮。
+
+  - 文本按钮： 提示框或表单中的取消操作, 如：取消、重置、关闭按钮。
   
     ##### 示例
 
@@ -956,22 +963,121 @@ const themeFontActive = '#eee'
     ```
 - 在一个视图中只能有一个`主要动作按钮`。
 - 只有存在主要动作按钮时，才会出现`次要动作按钮`。
-- 若存在主要动作按钮，一般动作、辅助动作、危险动作和警告动作也只能使用次动作按钮。
+- 若存在主要动作按钮，一般动作、辅助动作、危险动作和警告动作也只能使用次动作按钮。  
+- 警告功能按钮和危险操作按钮在布局上应该远离操作按钮组，应该使用`g-button-margin-left` 辅助类实现。
 
----
-- 警告或危险的操作按钮须使用`Popover`提示框组件让用户确认后再执行。
-- 危险操作在布局上应该远离操作按钮组，应该使用`g-button-margin-left` 辅助类实现。
+  **示例**
+  ![示例](/YlDocument/img/front-rules/btn-1.png)
+
+- 危险的操作按钮须使用`Popover`提示框组件让用户确认后再执行。
+ 
+  **示例**   
+  ![示例](/YlDocument/img/front-rules/btn-2.png)
+  
 - 当button被封装到组件中被使用时，应该使用`mini`尺寸。   
 - 直接应用到页面的功能按钮没有特殊要求的一般尺寸都为`small`。
-- 按钮在使用时应该搭配图标使用，搭配图标时图标在前文字在后,文字图标之间留一空格距离，取消按钮不需要使用图标。
+- 按钮在使用时应该搭配图标使用，搭配图标时图标在前文字在后,文字图标之间留一空格距离，文本按钮不需要图标，常用按钮按照推荐要求使用。
 - 一些对数据进行写入的操作，在执行时应该启用按钮的`loading`属性，避免发起多次写入操作请求。如：保存、提交、撤销等按钮。
-- 按钮使用时应该包裹在`toolBar`、`panel`、`dialog的footer插槽`等容器中，不建议直接暴露在外部中使用。
+- 按钮使用时应该包裹在`toolBar`、`panel` 等容器中，不建议直接暴露在外部中使用。
 
 
+#### 常用按钮要求
 
-#### 常用按钮规范
+主功能按钮
+
+- 添加 <el-button type="primary" size="small" class="el-icon-add" > 添加</el-button>
+
+```html
+<el-button type="primary" size="small" class="el-icon-add" > 添加</el-button>
+```
+
+- 编辑 <el-button type="primary" size="small"  class="el-icon-edit"> 编辑</el-button>
+
+```html
+<el-button type="primary" size="small"  class="el-icon-edit"> 编辑</el-button>
+```
+
+- 保存  <el-button type="primary" size="small"  class="el-icon-save"> 保存</el-button>
+
+```html
+<el-button type="primary" size="small"  class="el-icon-save"> 保存</el-button>
+```
 
 
+- 确定  <el-button type="primary" size="small"  class="el-icon-circle-check-outline"> 确定</el-button>
+
+```html
+<el-button type="primary" size="small"  class="el-icon-circle-check-outline"> 确定</el-button>
+```
+
+- 提交 <el-button type="primary" size="small"  class="el-icon-submit"> 提交</el-button>
+
+```html
+<el-button type="primary" size="small"  class="el-icon-submit"> 提交</el-button>
+```
+
+- 审批 <el-button type="primary" size="small"  class="el-icon-approve"> 审批</el-button>
+
+```html
+<el-button type="primary" size="small"  class="el-icon-approve"> 审批</el-button>
+```
+
+
+普通功能按钮
+
+- 查询   <el-button type="info" size="small"  class="el-icon-search"> 查询</el-button>
+
+```html
+<el-button type="primary" size="small"  class="el-icon-search"> 查询</el-button>
+```
+- 选材  <el-button type="info" size="small"  class="el-icon-select"> 选材</el-button>
+
+```html
+<el-button type="info" size="small"  class="el-icon-select"> 选材</el-button>
+```
+
+- 设置  <el-button type="info" size="small"  class="el-icon-setting"> 设置</el-button>
+
+```html
+<el-button type="info" size="small"  class="el-icon-setting"> 设置</el-button>
+```
+
+辅助功能按钮
+
+- 导出   <el-button type="success" size="small"  class="el-icon-excel"> 导出</el-button>
+
+```html
+ <el-button type="success" size="small"  class="el-icon-excel"> 导出</el-button>
+```
+
+- 打印 <el-button type="success" size="small"  class="el-icon-printer"> 打印</el-button>
+
+```html
+ <el-button type="success" size="small"  class="el-icon-printer"> 打印</el-button>
+```
+
+
+警告按钮
+
+- 撤销提交  <el-button type="warning" size="small"  class="el-icon-undo"> 撤销提交</el-button>
+
+```html
+ <el-button type="warning" size="small"  class="el-icon-undo"> 撤销提交</el-button>
+```
+
+- 撤销审批 <el-button type="warning" size="small"  class="el-icon-cancel"> 撤销审批</el-button>
+
+```html
+ <el-button type="warning" size="small"  class="el-icon-cancel"> 撤销审批</el-button>
+```
+
+危险功能按钮
+
+- 删除   <el-button type="danger" size="small"  class="el-icon-delete"> 删除</el-button>
+
+```html
+ <el-button type="danger" size="small"  class="el-icon-delete"> 删除</el-button>
+```
 
 #### 示例
 
@@ -992,15 +1098,30 @@ const themeFontActive = '#eee'
 
 - 过滤器应该使用tool-bar组件的`filter`和`more`插槽进行包裹。
 - 过滤器控件默认使用`small`尺寸。
-- 过滤器中有可触发change、click事件的控件，应该在该事件中直接进行查询访问（如：select\button等组件）。
-- 过滤器控件应该包裹在`form`组件中,显示控件label,label不能换行,布局时考虑响应式布局,多行布局时，应该考虑各列之间纵向对齐。
-- 如果过滤器布局为了紧凑考虑，可以不显示控件label,不考虑响应式布局（只在控件占不满一行时考虑）。
+- 过滤器控件应该包裹在`form`组件中,显示控件label,label不能换行,布局时考虑响应式布局,多行布局时，应该考虑各列之间纵向对齐,响应式布局时需要可参照一下代码实现`:xs="24" :sm="12" :md="8" :lg="6" :xl="4"`。
+
+  **示例**   
+  ![示例](/YlDocument/img/front-rules/filter-1.png)
+
+- 如果过滤器布局为了紧凑考虑，可以不显示控件label。（只在控件占不满一行时考虑）。
+
+  **示例**   
+  ![示例](/YlDocument/img/front-rules/filter-2.png)
+
 - 有时候考虑紧凑型布局过滤器可以考虑和功能按钮混合布局。
+
+    **示例**   
+  ![示例](/YlDocument/img/front-rules/filter-3.png)
+
 - 使用过滤器面板时，应该考虑使用flex-box将过滤器面板放置固定区域，并设置可折叠。
+
+- 过滤器中有可触发change、click事件的控件，应该在该事件中直接进行查询访问（如：select\button等组件）。
+
+
 
 #### 示例
 
-有关过滤器使用请参考`element-extension`的[tool-bar](https://ylsoftworkgroup.github.io/element-extension/#/tool-bar)示例或[flex-box](https://ylsoftworkgroup.github.io/element-extension/#/flex-box)示例, 。
+有关过滤器使用请参考`element-extension`的[tool-bar](https://ylsoftworkgroup.github.io/element-extension/#/tool-bar)示例或[flex-box](https://ylsoftworkgroup.github.io/element-extension/#/flex-box)示例。
 
 ### 表单
 
@@ -1011,43 +1132,74 @@ const themeFontActive = '#eee'
 - controller
 - alert
 - footer
-- divider 
 - isCloseBtn
 - submitButton
-- cancel
+- close
 
 
 #### 约定
 
 - 表单中控件尺寸应该使用`small`。
-- 表单中应该适当的使用`alert`元素进行操作提示。
 - 表单中控件应该显示控件label，并且label不能出现换行。
+- 表单中应该适当的使用`alert`元素进行操作提示。
 - 表单中控件纵向布局应该对齐，保证布局工整。
 - 表单组件应该标记必填项、根据业务需求使用进行表单验证。
 - 表单组件验证提示应该开启from组件的`status-icon`属性，form组件尺寸为`small`。
-- 表单中应该尽可能使用divider将表单区域进行分割,分割线最好备注区域名称。
 - 表单中应该尽量提供`isCloseBtn`提高数据录入便捷性。
 
 ##### 页面表单
 
 - 页面表单应该有pageHeader组件，在其slot中提供关闭功能。
-- 表单页面布局使用弹性弹性布局方式。
-- 页面表单中的布局应该考虑响应式布局。
+- 表单页面布局使用弹性弹性布局方式,弹性布局考虑使用`flex-box`组件布局。
+- 页面表单中的布局应该考虑响应式布局,响应式布局时需要可参照一下代码实现`:xs="24" :sm="12" :md="8" :lg="6" :xl="4"`。
 - 页面组件中提交、取消、选材等应该使用`tool-bar`容器包裹。
+
+  **示例**   
+  ![示例](/YlDocument/img/front-rules/form-3.png)
 
 ##### 弹窗表单
 
 - 弹窗表单应该使用`dialog`或者`drawer`作为载体。
 - 弹窗表单应该有标题和关闭按钮。
-- 弹出层表单一般要禁用掉点击遮罩关闭弹窗功能。
+- 弹出层表单一般要禁用掉点击遮罩关闭弹窗功能,禁用ESC按钮关闭。
+
+ ```HTML
+    <!-- dialog属性示例 -->
+    <el-dialog
+      title="一列编辑demo"
+      :visible.sync="smallDialogVisible"
+      modal-append-to-body 
+      append-to-body 
+      :close-on-click-modal="false" 
+      :close-on-press-escape="false" 
+      width="450px"> 
+      <small-edit v-if="smallDialogVisible" ref="smallForm" @close="_close" />  <!-- 使用v-if 销毁表单组件 -->
+    </el-dialog>
+
+     <!-- drawer属性示例 -->
+    <el-drawer
+      title="drawer"
+      size="80%"
+      append-to-body
+      :close-on-press-escape="false"
+      destroy-on-close 
+      :modal-append-to-body="false" 
+      :visible.sync="drawer"
+      direction="btt">
+      <select-items />
+    </el-drawer>
+ ```
 - 因为弹窗表单都是固定宽度，表单布局不考虑响应式布局。
 - 弹窗组件在布局上只接受一列和两列布局，如果要三列以上布局，考虑使用页面布局。
-- 表单弹窗宽度，一列宽度为？？，两列宽度为？？。
-- 表单弹窗高度根据内容而定，尽量不要超过视口弹窗高度。
+- 表单弹窗宽度，一列宽度为`450px`，两列宽度为`720PX`。
+- 表单弹窗高度根据内容而定，尽量不要超过视口弹窗高度,如果输入项过多，考虑使用tabPanel分隔内容。
 - 如果弹窗组件有弹出弹窗的操作，请尽量将此表单改为页面表单（尽量避免弹窗嵌套）。
-- 表单弹窗的功能操作应该放置在dialog的`footer`插槽中。
 
-#### 示例
+   **一列示例**   
+  ![示例](/YlDocument/img/front-rules/form-2.png)
+
+  **两列示例**   
+  ![示例](/YlDocument/img/front-rules/form-1.png)
 
 
 
@@ -1070,7 +1222,9 @@ const themeFontActive = '#eee'
 - 数据预先器一般分为过滤区域和预选区域，在布局上要清晰。
 - 树面板应该使用flexBox进行包裹。
 
-#### 示例
+ **示例**   
+  ![示例](/YlDocument/img/front-rules/select-items-1.png)
+
 
 ### 内容展示
 
@@ -1091,15 +1245,25 @@ const themeFontActive = '#eee'
 - 内容展示区应该使用`panel`或者`tabPanel`包裹。
 - 相同业务不同展示方式的可以放置在同一区域,同一区域的内容数据过滤共享一套过滤器，如果有各自过滤器，区块应该使用tabPanel分割区域。
 - table和list区块在数据预加载期间应该考虑有`loading`效果，statisticalBlock、chart之类的区块在数据加载期间应该有`默认值`不能出现`空白区域`。
-- 容器和展示组件之间应该保持间距，间隔应该遵守`const layoutGapL = '10px'`。
+- 容器和展示组件之间应该保持间距，间隔应该遵守`const layoutGapB = '5px'`。
 - 内容展示组件应该尽可能对重要信息做样式渲染，突出重要信息。
+
+ **示例**   
+ ![示例](/YlDocument/img/front-rules/container-2.png)
+
+
+---
+
 - table和list之类组件约定
     - table和list有按钮列时,按钮使用应该遵守按钮使用规范,不建议在按钮列中使用危险操作。
-    - table和list中建议辅助类和普通类的功能按钮列可前置（前置按钮可以考虑使用mini尺寸的图标按钮）,主要功能按钮、警告类列应后置在冻结列中（多个按钮操作尽量占用一列）。
+    - table和list中建议辅助类和普通类的功能按钮列可前置（嵌套的功能按钮尺寸为mini）,主要功能按钮、警告类列应后置在冻结列中（多个按钮操作尽量占用一列）,table按钮列应该居中显示。
     - table和lis布局应尽量紧凑,使用尺寸`small`。
     - table应该尽可能使用多级列头显示数据层级关系。
+    - table中操作列内容应该居中显示。
 
-#### 示例
+
+   **示例**   
+  ![示例](/YlDocument/img/front-rules/container-1.png)
 
 
 ### 消息及状态

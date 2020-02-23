@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "element-extension": "^1.2.17",
-    "element-mini-ui": "^1.1.5",
     "vuepress": "^1.3.0"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.3.0",
-    "@vuepress/plugin-medium-zoom": "^1.3.0"
+    "@vuepress/plugin-medium-zoom": "^1.3.0",
+    "element-mini-ui": "^1.2.0"
   },
   "keywords": [
     "document",
