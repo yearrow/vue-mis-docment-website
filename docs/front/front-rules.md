@@ -460,7 +460,7 @@ const variate = {
 }
 ```
 
-#### 主题变量 ???
+#### 主题变量 
    
 > 主题色根据具体的产品规定了不同产品之间某些区域的样式特殊化
 
@@ -472,7 +472,6 @@ const themeFontActive = '#eee'
 ### 公共类
 
 ```css
-
 /*边框*/ 
 .g-border-solid{
     border:1px $borderColorB solid;
@@ -518,6 +517,15 @@ const themeFontActive = '#eee'
     box-sizing: border-box;
 }
 
+/* 容器的内边距10 */
+.g-container-padding-10 {
+    padding: $layoutGapL;
+    box-sizing: border-box;
+}
+.g-container-padding-nontop-10 {
+    padding: $layoutGapL;
+    box-sizing: border-box;
+}
 /*填充容器样式*/
 .g-container-full-fill {
     width:100%;
@@ -550,6 +558,7 @@ const themeFontActive = '#eee'
 .g-clear-border {
     border: none !important;
 }
+
 ```
 
 
@@ -689,7 +698,8 @@ const themeFontActive = '#eee'
 1. 页面开发中，无论是一级页面还是二级页面等都应该有`page-header`元素，page-header标题应该是模块的路径，page-header元素不应该随页面内容滚动。
 2. 应该适当的使用`tip`元素提示数据展示，或者功能操作。
 3. `filter`、`tool`、`dataview`在使用时应该使用容器组件包裹，有时候为了紧凑性考虑，可以把不同功能组件包裹在同一个容器内。
-4. 页面上的区块之间应该留有间隙，间隙尺寸应该为`const layoutGapL = '10px'`,区块容器内部和组件之间也应该有间隔，间隔见具体容器要求。
+4. 页面上的区块之间应该留有间隙，弹性布局时间隔为：`const layoutGapB = '5px'`,流体布局时间隔为：`const layoutGapL = '10px'`,区块容器内部和组件之间也应该有间隔,间隔见具体容器要求。
+5. 背景色为`backgroundColorB`时不显示页面内容器边框，背景色为`backgroundColorL`时显示页面内容器边框。
 :::
 
 
@@ -1151,6 +1161,7 @@ const themeFontActive = '#eee'
 
 - 过滤器应该使用tool-bar组件的`filter`和`more`插槽进行包裹。
 - 过滤器控件默认使用`small`尺寸。
+- 过滤器小于一行时不要显示label。
 - 过滤器控件应该包裹在`form`组件中,显示控件label,label不能换行,布局时考虑响应式布局,多行布局时，应该考虑各列之间纵向对齐,响应式布局时需要可参照一下代码实现`:xs="24" :sm="12" :md="8" :lg="6" :xl="4"`。
 
   **示例**   
@@ -1244,9 +1255,10 @@ const themeFontActive = '#eee'
  ```
 - 因为弹窗表单都是固定宽度，表单布局不考虑响应式布局。
 - 弹窗组件在布局上只接受一列和两列布局，如果要三列以上布局，考虑使用页面布局。
-- 表单弹窗宽度，一列宽度为`450px`，两列宽度为`720PX`。
+- 表单弹窗宽度，一列宽度为`450px`，两列宽度为`720PX`,
 - 表单弹窗高度根据内容而定，尽量不要超过视口弹窗高度,如果输入项过多，考虑使用tabPanel分隔内容。
 - 如果弹窗组件有弹出弹窗的操作，请尽量将此表单改为页面表单（尽量避免弹窗嵌套）。
+
 
    **一列示例**   
   ![示例](/YlDocument/img/front-rules/form-2.png)
@@ -1254,6 +1266,9 @@ const themeFontActive = '#eee'
   **两列示例**   
   ![示例](/YlDocument/img/front-rules/form-1.png)
 
+
+
+> 一般弹窗宽度在1366*768分辨率下如果内容可以横向展示，可以考虑给弹窗固定宽度，如果内容过多出现滚动条，根据情形考虑百分比宽度。
 
 
 ### 数据预选器
