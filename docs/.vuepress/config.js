@@ -2,7 +2,7 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime: 2020-04-09 11:17:49
+ * @LastEditTime: 2020-04-09 11:47:03
  */
 
 module.exports = {
@@ -55,7 +55,7 @@ module.exports = {
       },
       { text: '环境配置', link: '/daily/editor'},
       { text: '技术扩展', link: '/extend/markdown'},
-      { text: 'github', link: 'https://github.com/YLSoftWorkGroup'  },
+      { text: 'github', link: 'https://github.com/YLSoftWorkGroup/YlDocument'  },
     ],
     sidebarDepth: 4,
     sidebar: {
