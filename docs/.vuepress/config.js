@@ -2,7 +2,7 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime : 2020-02-11 10:28:44
+ * @LastEditTime: 2020-04-09 11:17:49
  */
 
 module.exports = {
@@ -40,11 +40,19 @@ module.exports = {
         items: [
           { text: '基础规范', link: '/base/base-rules/' },
           { text: '前端规范', link: '/front/front-rules/' },
-          // { text: '移动端规范', link: '/webapp/webapp-rules/' },
           { text: '服务端规范', link: '/service/service-rules/' }
         ]
       },
       { text: '基础设施', link: '/basic/facilities'},
+      {
+        text: '数据库脚本',
+        items: [
+          { text: '物资基础数据', link: '/sql/cbaseinfo/' },
+          { text: '物资实物量管控', link: '/sql/mquantity/' },
+          { text: '物资账务管理', link: '/sql/maccount/' },
+          { text: '混凝土核算系统', link: '/sql/concrete/' }
+        ]
+      },
       { text: '环境配置', link: '/daily/editor'},
       { text: '技术扩展', link: '/extend/markdown'},
       { text: 'github', link: 'https://github.com/YLSoftWorkGroup'  },
@@ -62,6 +70,12 @@ module.exports = {
       ],
       '/service/': [ 
         'service-rules',
+      ],
+      '/sql/': [ 
+        'cbaseinfo',
+        'mquantity',
+        'maccount',
+        'concrete',
       ],
       '/daily/': [ 
         'editor',
