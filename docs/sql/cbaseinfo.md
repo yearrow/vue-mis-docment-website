@@ -140,9 +140,9 @@
 | full_name     | STRING    | 字典节点名称链| -- |  |            
 | level         | BIGINT    | 树级别| -- |  |            
 | is_leaf       | BOOLEAN   | 是否为子节点| -- |  |
-| is_tree       | BOOLEAN   | 是否树形结构| -- |  |   
+| is_tree       | BOOLEAN   | 是否树形结构| -- | 单位字典库（如果树形结构）  |   
 | is_static     | BOOLEAN   | 是否静态| -- |  |        
-| code          | STRING    | 编码| -- |  |            
+| code          | STRING    | 编码| -- | 程序内部使用（不能修改） |            
 | remark        | STRING    | 备注| -- |  |            
 | sort_code     | BIGINT    | 排序| -- |  |            
 | creator_id    | BIGINT    | 添加人主键| -- |  |
@@ -153,6 +153,7 @@
 | updated_at    | TIMESTAMP | 修改时间| -- |  |
 | is_removed    | BOOLEAN   | 删除标记| -- |  |
 | version       | BIGINT    | 版本| -- |  |
+
 ### g_statistic_category
 
 **统计类别管理**
@@ -169,13 +170,13 @@
 | name          | STRING | 名称| -- |  |            
 | full_name     | STRING | 名称链| -- |  |            
 | level         | BIGINT | 树级别| -- |  |            
-| is_leaf       | BOOLEAN| 子节点| -- |  |            
-| custome_code  | BIGINT | 自定义编码| -- |  |            
+| is_leaf       | BOOLEAN| 子节点| -- |  |                      
 | material_unit | BIGINT | 单位| -- |  |            
 | quantity_rate | DECIMAL(28, 4) | 数量倍率| -- |  |            
 | money_rate    | DECIMAL(28, 4)  | 金额倍率| -- |  |
-| dict_type     | STRING | 统计类别类型| -- |  |         
-| remark        | STRING | 备注| -- |  |            
+| dict_type     | STRING | 统计类别类型| -- | 字典表里面的code |         
+| remark        | STRING | 备注| -- |  |   
+| custome_code  | BIGINT | 自定义编码| -- | 程序内部使用  |           
 | sort_code     | BIGINT | 排序| -- |  |            
 | creator_id    | BIGINT | 添加人主键| -- |  |
 | creator_name  | BIGINT | 添加人| -- |  |
@@ -185,6 +186,7 @@
 | updated_at    | TIMESTAMP | 修改时间| -- |  |
 | is_removed    | BOOLEAN  | 删除标记| -- |  |
 | version       | BIGINT | 版本| -- |  |
+
 ### g_statistic_items
 
 **统计材料信息**
@@ -195,23 +197,24 @@
 
 |                属性名        | 类型          |   名称 |  主键 |  说明 |
 |:---------------------------- |:-------------| :-----|:-----|:-----|
-| id                           | BIGINT | 主键id| -- |  |
-| category_id                  | BIGINT | 统计类别id| -- |  |
-| category_name                | STRING | 统计类别名称| -- |  |
-| category_full_name           | STRING | 统计类别全称| -- |  |
-| dict_type                    | STRING | 统计类别类型| -- |  |
-| material_category_id         | BIGINT | 材料类别id| -- |  |
-| material_category_name       | STRING | 材料类别名称| -- |  |
-| material_category_full_name  | STRING | 材料类别全称| -- |  |
-| remark                       | STRING | 备注| -- |  |
-| creator_id                   | BIGINT | 添加人主键| -- |  |
-| creator_name                 | STRING | 添加人| -- |  |
-| created_at                   | TIMESTAMP | 创建时间| -- |  |
-| modifier_id                  | BIGINT | 修改人主键| -- |  |
-| modifier_name                | STRING | 修改人| -- |  |
-| updated_at                   | TIMESTAMP | 修改时间| -- |  |
-| is_removed                   | BOOLEAN  | 删除标记| -- |  |
-| version                      | BIGINT | 版本| -- |  |
+| id            | BIGINT | 主键id| -- |  |
+| category_id   | BIGINT | 统计类别id| -- |  |
+| category_name | STRING | 统计类别名称| -- |  |
+| category_full_name | STRING | 统计类别全称| -- |  |
+| dict_type     | STRING | 统计类别类型| -- | 字典表里面的code | 
+| material_category_id   | BIGINT | 材料类别id| -- |  |            
+| material_category_name | STRING | 材料类别名称| -- |  |            
+| material_category_full_name| STRING | 材料类别全称| -- |  |            
+| remark        | STRING | 备注| -- |  |
+| creator_id    | BIGINT | 添加人主键| -- |  |
+| creator_name  | STRING | 添加人| -- |  |
+| created_at    | TIMESTAMP | 创建时间| -- |  |
+| modifier_id   | BIGINT | 修改人主键| -- |  |
+| modifier_name | STRING | 修改人| -- |  |
+| updated_at    | TIMESTAMP | 修改时间| -- |  |
+| is_removed    | BOOLEAN  | 删除标记| -- |  |
+| version       | BIGINT | 版本| -- |  |
+
 ### c_material_template
 
 **常用材料模板**
@@ -223,7 +226,9 @@
 | 属性名        | 类型           | 名称 |  主键 |  说明 |
 |:---------------------  |:---------------| :-----|:-----|:-----|
 | id                     | BIGINT         | 主键id  | -- |  |                             
-| org_id                 | BIGINT         | 复合主键组织机构id| -- |  |                           
+| org_id                 | BIGINT         | 复合主键组织机构id| -- |  | 
+| template_name          | STRING         | 模板名称| -- | 公路工程、地铁工程、房建工程、铁路工程 |  
+| material_id            | BIGINT         | 材料id  | -- |                               
 | material_code          | STRING         | 材料编码| -- |  |            
 | material_name          | STRING         | 材料名称| -- |  |            
 | material_model         | STRING         | 规格型号| -- |  |            
@@ -234,7 +239,7 @@
 | second_auxiliary_unit  | STRING         | 辅单位2| -- |  |            
 | class_id               | BIGINT         | 材料类别id| -- |  |            
 | class_full_id          | STRING         | 材料类别主键链| -- |  |    
-| class_type             | INT            | 材料类型| -- |  |        
+| class_type             | INT            | 材料类型| -- | 0是消耗 1是周转 |        
 | bid_price              | DECIMAL(28, 10)| 投标价| -- |  |            
 | cost_price             | DECIMAL(28, 10)| 责任成本价| -- |  |            
 | purchase_price         | DECIMAL(28, 10)| 采购价或者计划价| -- |  |            
@@ -255,6 +260,184 @@
 | updated_at             | TIMESTAMP      | 修改时间| -- |  |
 | is_removed             | BOOLEAN        | 删除标记| -- |  |
 | version                | BIGINT         | 版本| -- |  |
+
+### c_equipment
+
+**机械设备信息**
+
+所在库： **mtlp**
+
+字段说明：
+
+|     属性名        | 类型           | 名称 |  主键 |  说明 |
+|:-----------------|:---------------| :-----|:-----|:-----|
+| id               | BIGINT   | 主键id| -- |  |
+| org_id           | BIGINT   | 组织机构主键| -- |  |
+| org_name         | STRING   | 所属单位| -- |  |
+| name             | STRING   | 设备名称| -- |  |
+| model            | STRING   | 型号| -- |  |
+| spec             | STRING   | 规格| -- |  |
+| number_plate     | STRING   | 车牌号| -- |  |
+| management_number| STRING   | 管理编号| -- |  |
+| ori_equipment_id | STRING   | 第三方对接设备id| -- |  |
+| ori_org_id       | STRING   | 第三方对接组织id| -- |  |
+| remark           | STRING   | 备注| -- |  |
+| creator_id       | BIGINT   | 添加人主键| -- |  |
+| creator_name     | STRING   | 添加人| -- |  |
+| created_at       | TIMESTAMP| 创建时间| -- |  |
+| modifier_id      | BIGINT   | 修改人主键| -- |  |
+| modifier_name    | STRING   | 修改人| -- |  |
+| updated_at       | TIMESTAMP| 修改时间| -- |  |
+| is_removed       | BOOLEAN  | 删除标记| -- |  |
+| version          | BIGINT   | 版本| -- |  |
+
+### g_people
+
+**物资人员信息**
+
+所在库： **mtlp**
+
+字段说明：
+
+|         属性名        | 类型      | 名称 |  主键 |  说明 |
+|:---------------------|:----------| :-----|:-----|:-----|
+| id                   | BIGINT    | 主键id| -- |  |
+| org_id               | BIGINT    | 组织机构主键| -- |  |
+| org_name             | STRING    | 所属单位| -- |  |
+| sort_code            | INT       | 排序| -- |  |
+| name                 | STRING    | 姓名| -- |  |
+| gender               | BOOLEAN   | 性别| -- | false 男，true 女 |
+| hometown             | STRING    | 籍贯| -- |  |
+| identification_number| STRING    | 身份证号码| -- |  |
+| age                  | INT       | 年龄| -- |  |
+| begin_date           | STRING    | 参加工作时间| -- |  |
+| working_years        | DECIMAL(28, 4)| 从事物资工作年限| -- |  |
+| first_degree         | STRING    | 第一学历| -- | 来源字典库 |
+| graduated_school     | STRING    | 毕业学校| -- | 来源字典库 |
+| major                | STRING    | 所学专业| -- |  |
+| highest_education    | STRING    | 最高学历| -- |  |
+| job_title            | STRING    | 职称| -- |  |
+| employer             | STRING    | 工作单位| -- |  |
+| post                 | STRING    | 岗位| -- |  |
+| employment_properties|  STRING    | 用工性质| -- |  |
+| contact_number       | STRING    | 联系电话| -- |  |
+| qq_number            | STRING    | QQ号| -- |  |
+| company_training     | STRING    | 参加集团公司培训情况| -- |  |
+| material_certificate | BOOLEAN   | 是否取得材料员上岗证| -- |  |
+| other_certificate    | BOOLEAN   | 是否取得其他资格证书| -- |  |
+| issue_date           | STRING    | 物资部长/副部长红头文件下文时间| -- |  |
+| creator_id           | BIGINT    | 添加人主键| -- |  |
+| creator_name         | STRING    | 添加人| -- |  |
+| created_at           | TIMESTAMP | 创建时间| -- |  |
+| modifier_id          | BIGINT    | 修改人主键| -- |  |
+| modifier_name        | STRING    | 修改人| -- |  |
+| updated_at           | TIMESTAMP | 修改时间| -- |  |
+| is_removed           | BOOLEAN   | 删除标记| -- |  |
+| version              | BIGINT    | 版本| -- |  |
+
+
+### g_system_doucument
+
+**模块文档**
+
+所在库： **mtlp**
+
+字段说明：
+
+|         属性名        | 类型      | 名称 |  主键 |  说明 |
+|:---------------------|:----------| :-----|:-----|:-----|
+
+### g_common_data_dictionary
+
+**单位字典管理**
+
+所在库： **mtlp**
+
+字段说明：
+
+|         属性名        | 类型      | 名称 |  主键 |  说明 |
+|:---------------------|:----------| :-----|:-----|:-----|
+| id            | BIGINT    | 主键id| -- |  |
+| org_id                 | BIGINT         | 复合主键组织机构id| -- |  |                             
+| parent_id     | BIGINT    | 父id| -- |  |            
+| full_id       | STRING    | 节点主键链| -- |  |            
+| name          | STRING    | 字典名称| -- |  |
+| full_name     | STRING    | 字典节点名称链| -- |  |              
+| dict_type     | STRING    | 字典类型| -- |  |            
+| level         | BIGINT    | 树级别| -- |  |            
+| is_leaf       | BOOLEAN   | 是否为子节点| -- |  |
+| is_tree       | BOOLEAN   | 是否树形结构| -- |  |         
+| code          | STRING    | 编码| -- |  |            
+| remark        | STRING    | 备注| -- |  |            
+| sort_code     | BIGINT    | 排序| -- |  |            
+| creator_id    | BIGINT    | 添加人主键| -- |  |
+| creator_name  | STRING    | 添加人| -- |  |
+| created_at    | TIMESTAMP | 创建时间| -- |  |
+| modifier_id   | BIGINT    | 修改人主键| -- |  |
+| modifier_name | STRING    | 修改人| -- |  |
+| updated_at    | TIMESTAMP | 修改时间| -- |  |
+| is_removed    | BOOLEAN   | 删除标记| -- |  |
+| version       | BIGINT    | 版本| -- |  |
+
+### g_attachment
+
+**附件表**
+
+所在库： **mtlp**
+
+字段说明：
+
+|    属性名    | 类型    | 名称  |  主键 |  说明 |
+|:-------------|:-------| :-----|:-----|:-----|
+| id           | STRING | 主键| -- |  |
+| org_id       | STRING | 组织机构| -- |  |
+| order_id     | STRING | 主表主键| -- |  |
+| product      | STRING | 产品名称| -- |  |
+| module       | STRING | 模块名称| -- |  |
+| name         | STRING | 附件名称| -- |  |
+| url          | STRING | 附件地址| -- |  |
+| size         | STRING | 附件大小| -- |  |
+| type         | STRING | 附件类型| -- |  |
+| remark       | STRING | 备注| -- |  |
+| sort_code    | STRING | 排序| -- |  |
+| is_disable   | BOOLEAN| 是否启用| -- |  |
+| creator_id   | STRING | 添加人主键| -- |  |
+| creator_name | STRING | 添加人| -- |  |
+| created_at   | TIMESTAMP| 创建时间| -- |  |
+| modifier_id  | STRING | 修改人主键| -- |  |
+| modifier_name| STRING| 修改人| -- |  |
+| updated_at   | TIMESTAMP| 修改时间| -- |  |
+| is_removed   | BOOLEAN| 删除标记| -- |  |
+| version      | STRING | 版本| -- |  |
+
+### g_system_user_config
+
+**用户打印配置（纸质大小设置等）**
+
+所在库： **mtlp**
+
+字段说明：
+
+|         属性名        | 类型      | 名称 |  主键 |  说明 |
+|:---------------------|:----------| :-----|:-----|:-----|
+| id            | BIGINT   | 主键id| -- |  | 
+| user_name     | STRING   | 名称| -- |  |
+| user_id       | BIGINT   | 用户id| -- |  |
+| instructions  | STRING   | 说明| -- |  |  
+| print_template| STRING   | 模板| -- |  |       
+| code          | STRING   | 编码| -- |  |                 
+| content       | STRING   | 内容| -- |  |  
+| remark        | STRING   | 备注| -- |  | 
+| is_enable     | BOOLEAN  | 启用状态| -- |  |
+| sort_code     | INT      | 排序| -- |  |
+| creator_id    | BIGINT   | 添加人主键| -- |  |
+| creator_name  | STRING   | 添加人| -- |  |
+| created_at    | TIMESTAMP| 创建时间| -- |  |
+| modifier_id   | BIGINT   | 修改人主键| -- |  |
+| modifier_name | STRING   | 修改人| -- |  |
+| updated_at    | TIMESTAMP| 修改时间| -- |  |
+| is_removed    | BOOLEAN  | 删除标记| -- |  |
+| version       | BIGINT   | 版本| -- |  |
 
 ## 常用数据管理
 
@@ -409,6 +592,32 @@
 | is_removed         | BOOLEAN    | 删除标记| -- |  |
 | version            | BIGINT     | 版本| -- |  |
 
+
+### c_gh_labour
+
+**工队工号关系表**
+
+所在库： **mtlp**
+
+字段说明：
+
+|         属性名        | 类型      | 名称 |  主键 |  说明 |
+| id           | BIGINT   | 主键id| -- |  |
+| labour_id    | BIGINT   | 用料单位主键| -- |  |
+| labour_name  | STRING   | 用料单位名称| -- |  |
+| gh_id        | BIGINT   | 工号主键| -- |  |
+| gh_full_id   | STRING   | 工号主键链| -- |  |
+| gh_name      | STRING   | 工号名称| -- |  |
+| gh_full_name | STRING   | 工号全称| -- |  |
+| creator_id   | BIGINT   | 添加人主键| -- |  |
+| creator_name | STRING   | 添加人| -- |  |
+| created_at   | TIMESTAMP| 创建时间| -- |  |
+| modifier_id  | BIGINT   | 修改人主键| -- |  |
+| modifier_name| STRING   | 修改人| -- |  |
+| updated_at   | TIMESTAMP| 修改时间| -- |  |
+| is_removed   | BOOLEAN  | 删除标记| -- |  |
+| version      | BIGINT   | 版本| -- |  |
+
 ## 系统配置
 
 
@@ -515,3 +724,25 @@
 | updated_at    | TIMESTAMP    | 修改时间            |-- | | 
 | is_removed    | BOOLEAN      | 删除标识            |-- | true 删除 false（默认）未删除 | 
 | version       | BIGINT       | 版本                |-- | | 
+
+## 监控配置
+
+### g_video_configure
+
+**视频监控配置表**
+
+所在库： **mtlp**
+
+字段说明：
+
+| 属性名         | 类型         | 名称               |  主键 |  说明 |
+
+### g_video_configure_item
+
+**视频监控配置细表**
+
+所在库： **mtlp**
+
+字段说明：
+
+| 属性名         | 类型         | 名称               |  主键 |  说明 |
