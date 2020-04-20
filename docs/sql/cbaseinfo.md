@@ -11,27 +11,31 @@
 
 字段说明：
 
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 | 是 |  |
-| id      | bigint | 主键 |是 | |
-| scope_ord_id | bigint  | 组织机构范围 |-- | |
-| parent_id | bigint  | 父主键 |-- | |
-| full_id | string  | 主键全称 |-- | |
-| name | string  | 类别名称 |-- | |
-| full_name | string  | 类别名称全称 |-- | |
-| code | string  | 编码 |-- | |
-| order_no | string  | 排序 |-- | |
-| level | string  | 层级 |-- | |
-| remark | string  | 备注 |-- | |
-| is_removed | string  | 删除标识 |-- | |
-| creator | string  | 添加人主键 |-- | |
-| creator_at | timestamp  | 添加时间 |-- | |
-| reviser | string  | 添加人 |-- | |
-| updated_at | timestamp  | 更新时间 |-- | |
-| version | bigint  | 版本号 |-- | |
-| type | int  | 类别类型 |-- |0为消耗 1为周转 |
-| unit | string  | 类别单位 |-- | |
+| 属性名             | 类型         | 名称       | 主键|  说明 |
+|:----------------- |:-------------| :----------|:---|:-----|
+| org_id            | BIGINT | 添加人的组织机构id | 是| |
+| id                | BIGINT | 主键 | 是 | |
+| scope_org_id      | BIGINT | 隔离级别id | -- | 默认组织机构根节点 |
+| parent_id         | BIGINT | 父级id | -- |  |
+| full_id           | STRING | 主键链 | -- |  |
+| full_id_ex        | STRING | 主键链 | -- |  |
+| name              | STRING | 类别名称 | -- |  |
+| full_name         | STRING | 类别全称 | -- |  |
+| code              | STRING | 类别编码 | -- |  |
+| order_no          | BIGINT | 排序 | -- |  |
+| level             | BIGINT | 树级别 | -- |  |
+| remark            | STRING | 备注 | -- |  |
+| is_approve        | BOOLEAN| 是否审批 | -- |默认false  |
+| unit              | STRING | 类别单位 | -- |  |
+| type              | INT    | 类别类型 | --|0为消耗 1为周转|
+| integrationId     | STRING | 第三方对接主键 | -- |  |
+| is_discaded       | BOOLEAN| 类别状态 | -- |  |
+| is_removed        | BOOLEAN| 删除标记 | -- |  |
+| creator           | BIGINT | 添加人主键 | -- |  |
+| reviser           | BIGINT | 修改人主键 | -- |  |
+| created_at        | TIMESTAMP | 创建时间 | -- |  |
+| updated_at        | TIMESTAMP | 修改时间 | -- |  |
+| version           | BIGINT | 版本 | -- |  |
 
 
 
@@ -43,8 +47,19 @@
 
 字段说明：
 
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
+| 属性名        | 类型       | 名称           |  主键 |  说明 |
+|:------------- |:----------| :--------------|:-----|:-----|
+| id            | BIGINT    | 主键            | 是 ||
+| org_id        | BIGINT    | 隔离的组织机构id | ||
+| org_name      | STRING    | 隔离的组织名称   | ||
+| creator_id    | BIGINT    | 添加人主键 | ||
+| creator_name  | STRING    | 添加人 | ||
+| created_at    | TIMESTAMP | 创建时间 | ||
+| modifier_id   | BIGINT    | 修改人主键 | ||
+| modifier_name | STRING    | 修改人 | ||
+| updated_at    | TIMESTAMP | 修改时间 | ||
+| is_removed    | BOOLEAN   | 删除标记 | ||
+| version       | BIGINT    | 版本 | ||
 
 ## 材料信息
 
@@ -57,31 +72,59 @@
 
 字段说明：
 
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
+| 属性名               | 类型           | 名称 |  主键 |  说明 |
+| ---------------------| ---- | ---- |  ---- |-----|
+| org_id               | BIGINT | 添加人的组织机构id | 是 ||
+| id                   | BIGINT | 主键 | 是 ||
+| material_category_id | BIGINT | 材料类别id | ||
+| code                 | STRING | 材料编码 | ||
+| full_code            | STRING | 材料全编码 | ||
+| name                 | STRING | 材料名称 | ||
+| model                | STRING | 材料型号 | ||
+| spec                 | STRING | 材料规格 | ||
+| quality              | STRING | | ||
+| unit                 | BIGINT | 材料单位 | ||
+| remark               | STRING | 备注 | ||
+| material_category_type| INT | 材料类型 | ||
+| is_expired             | BOOLEAN | 材料状态 | ||
+| is_removed             | BOOLEAN | 删除标记 | ||
+| creator                | BIGINT | 添加人主键 | ||
+| reviser                | BIGINT | 修改人主键 | ||
+| created_at             | TIMESTAMP | 创建时间 | ||
+| updated_at             | TIMESTAMP | 修改时间 | ||
+| version                | BIGINT | 版本 | ||
+| is_approve             | BOOLEAN | 是否审批 | |类别需要审批且已经审批的材料才有效|
+| approve_date           | TIMESTAMP | 审批时间 | ||
+| approver               | BIGINT | 审批人主键 | ||
+| category_approve       | BOOLEAN | 是否需要审批 | | |
+| approve_name           | STRING | 审批人 | ||
+| create_name            | STRING | 添加人 | ||
+| integration_id         | STRING | 第三方对接主键 | ||
+
 
 ### material_unit
 
-**材料表**
+**材料单位转化系数表**
 
 所在库： **platform**
 
 字段说明：
 
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-
-### material_unit_group
-
-**材料表**
-
-所在库： **platform**
-
-字段说明：
-
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-
+| 属性名             | 类型 | 名称  | 主键 | 说明 |
+| ----------------  | ---- | ---- |  ---- |-----|
+| org_id | BIGINT | 添加人的组织机构id | 是 ||
+| id | BIGINT | 主键 | 是 ||
+| material_id | BIGINT | 材料id | ||
+| name | STRING | 材料名称 | ||
+| unit | STRING | 单位名称 | ||
+| factor | DOUBLE | 换算系数 | ||
+| remark | STRING | 备注 | ||
+| is_removed | BOOLEAN | 删除标记 | ||
+| creator | BIGINT | 添加人主键 | ||
+| reviser | BIGINT | 修改人主键 | ||
+| created_at | TIMESTAMP | 创建时间 | ||
+| updated_at | TIMESTAMP | 修改时间 | ||
+| version | BIGINT | 版本 | ||
 
 ## 供应商
 
@@ -94,8 +137,41 @@
 
 字段说明：
 
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
+| 属性名             | 类型   | 名称 |  主键 |  说明 |
+| ----------------  | ----   | ---- |  ---- |-----|
+| id                | BIGINT | 主键 | 是 ||
+| org_id            | BIGINT | 添加人的组织机构id | ||
+| org_name          | STRING | 添加人的组织名称 | ||
+| name              | STRING | 公司名称 | ||
+| name_en           | STRING | 公司英文名称 | ||
+| short_name        | STRING | 短名称 | ||
+| credit_code       | STRING | 工程类型id | ||
+| cooperation_types | BIGINT | 社会信用统一代码 | ||
+| registered_capital| DOUBLE | 合作类型（位组合数值） | ||
+| legal_person_name | STRING | 法人姓名 | ||
+| business_scope    | STRING | 经营范围 | ||
+| company_property  | STRING | 企业性质 | ||
+| contact_person_name| STRING | 联系人姓名 | ||
+| contact_person_position| STRING | 联系人职务 | ||
+| phone_number        | STRING | 联系电话 | ||
+| address             | STRING | 联系地址 | ||
+| bank_deposit        | STRING | 开户银行 | ||
+| bank_account        | STRING | 银行账号 | ||
+| is_black_list       | BOOLEAN | 是否黑名单 | ||
+| is_audited          | BOOLEAN | 是否审核 | ||
+| is_approved         | BOOLEAN | 是否审批 | ||
+| approve_state       | STRING | 审批状态 | ||
+| approve_person_name | STRING | 审批人 | ||
+| approve_time        | STRING | 审批时间 | ||
+| remark              | STRING | 备注 | ||
+| company_type        | STRING | 供应商类型 | ||
+| integration_id      | STRING | 第三方对接主键 | ||
+| original_id         | STRING | 原始ID | ||
+| original_system_key | STRING | 数据来源系统键 | ||
+| created_at          | TIMESTAMP | 创建时间 | ||
+| is_removed          | BOOLEAN | 删除标志 | ||
+| updated_at          | TIMESTAMP | 更新时间 | ||
+| version             | BIGINT | 版本号 | ||
 
 
 ### company_scope
@@ -106,9 +182,19 @@
 
 字段说明：
 
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-
+| 属性名        | 类型       | 名称           |  主键 |  说明 |
+|:------------- |:----------| :--------------|:-----|:-----|
+| id            | BIGINT    | 主键            | 是 ||
+| org_id        | BIGINT    | 隔离的组织机构id | ||
+| org_name      | STRING    | 隔离的组织名称   | ||
+| creator_id    | BIGINT    | 添加人主键 | ||
+| creator_name  | STRING    | 添加人 | ||
+| created_at    | TIMESTAMP | 创建时间 | ||
+| modifier_id   | BIGINT    | 修改人主键 | ||
+| modifier_name | STRING    | 修改人 | ||
+| updated_at    | TIMESTAMP | 修改时间 | ||
+| is_removed    | BOOLEAN   | 删除标记 | ||
+| version       | BIGINT    | 版本 | ||
 ### company_org
 
 **供应商（小库，隔离级别数据）**
@@ -117,8 +203,42 @@
 
 字段说明：
 
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
+| 属性名                  | 类型    | 名称 |  主键 |  说明 |
+| ---------------------   | ----   | ---- |  ---- |-----|
+| id                      | BIGINT | 主键   | 是 ||
+| org_id                  | BIGINT | 添加人的组织机构id | 是 ||
+| scope_org_id            | BIGINT | 设置隔离的组织机构id | 是 ||
+| org_name                | STRING | 添加人的组织名称 | ||
+| name                    | STRING | 公司名称 | ||
+| name_en                 | STRING | 公司英文名称 | ||
+| short_name              | STRING | 短名称 | ||
+| credit_code             | STRING | 工程类型id | ||
+| cooperation_types       | BIGINT | 社会信用统一代码 | ||
+| registered_capital      | DOUBLE | 合作类型（位组合数值） | ||
+| legal_person_name       | STRING | 法人姓名 | ||
+| business_scope          | STRING | 经营范围 | ||
+| company_property        | STRING | 企业性质 | ||
+| contact_person_name     | STRING | 联系人姓名 | ||
+| contact_person_position | STRING | 联系人职务 | ||
+| phone_number            | STRING | 联系电话 | ||
+| address                 | STRING | 联系地址 | ||
+| bank_deposit            | STRING | 开户银行 | ||
+| bank_account            | STRING | 银行账号 | ||
+| is_black_list           | BOOLEAN | 是否黑名单 | ||
+| is_audited              | BOOLEAN | 是否审核 | ||
+| is_approved             | BOOLEAN | 是否审批 | ||
+| approve_state           | STRING | 审批状态 | ||
+| approve_person_name     | STRING | 审批人 | ||
+| approve_time            | STRING | 审批时间 | ||
+| remark                  | STRING | 备注 | ||
+| company_type            | STRING | 供应商类型 | ||
+| integration_id          | STRING | 第三方对接主键 | ||
+| original_id             | STRING | 原始ID | ||
+| original_system_key     | STRING | 数据来源系统键 | ||
+| created_at              | TIMESTAMP | 创建时间 | ||
+| is_removed              | BOOLEAN | 删除标志 | ||
+| updated_at              | TIMESTAMP | 更新时间 | ||
+| version                 | BIGINT | 版本号 | ||
 
 ## 基础数据
 
@@ -735,7 +855,22 @@
 
 字段说明：
 
-| 属性名         | 类型         | 名称               |  主键 |  说明 |
+| 属性名             | 类型 | 名称  | 主键 | 说明 |
+| ----------------  | ---- | ---- |  ---- |-----|
+| id           | BIGINT | 主键 | 是 ||
+| org_id       | BIGINT | 组织机构主键 | ||
+| org_name     | STRING | 组织机构名称 | ||
+| sort_code    | BIGINT | 序号 | ||
+| remark       | STRING | 备注 | ||
+| creator_id   | BIGINT | 添加人主键 | ||
+| creator_name | STRING | 添加人 | ||
+| created_at   | TIMESTAMP | 创建时间 | ||
+| modifier_id  | BIGINT | 修改人主键 | ||
+| modifier_name| STRING | 修改人 | ||
+| updated_at   | TIMESTAMP | 修改时间 | ||
+| is_removed   | BOOLEAN | 删除标记 | ||
+| version      | BIGINT | 版本 | ||
+
 
 ### g_video_configure_item
 
@@ -745,4 +880,24 @@
 
 字段说明：
 
-| 属性名         | 类型         | 名称               |  主键 |  说明 |
+| 属性名            | 类型 | 名称  | 主键 | 说明 |
+| ----------------  | ---- | ---- |  ---- |-----|
+| id                | BIGINT | 主键 | 是 ||
+| order_id          | BIGINT | 主表主键 | 是 ||
+| org_id            | BIGINT | 组织机构主键 | ||
+| org_name          | STRING | 组织机构名称 | ||
+| equipment_name    | STRING | 设备名称 | ||
+| equipment_no      | STRING | 设备序列号 | ||
+| equipment_channel | STRING | 设备通道 | ||
+| rtmp_url          | STRING | RTMP播放地址 | ||
+| hls_url           | STRING | HLS播放地址 | ||
+| sort_code         | BIGINT | 序号 | ||
+| remark            | STRING | 备注 | ||
+| creator_id | BIGINT | 添加人主键 | ||
+| creator_name | STRING | 添加人 | ||
+| created_at | TIMESTAMP | 创建时间 | ||
+| modifier_id | BIGINT | 修改人主键 | ||
+| modifier_name | STRING | 修改人 | ||
+| updated_at | TIMESTAMP | 修改时间 | ||
+| is_removed | BOOLEAN | 删除标记 | ||
+| version | BIGINT | 版本 | ||
