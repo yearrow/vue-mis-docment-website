@@ -421,7 +421,7 @@
 
 |         属性名        | 类型      | 名称 |  主键 |  说明 |
 |:---------------------|:----------| :-----|:-----|:-----|
-| id                   | BIGINT    | 主键id| -- |  |
+| id                   | BIGINT    | 主键id| 是  |  |
 | org_id               | BIGINT    | 组织机构主键| -- |  |
 | org_name             | STRING    | 所属单位| -- |  |
 | sort_code            | INT       | 排序| -- |  |
@@ -464,9 +464,24 @@
 
 字段说明：
 
-|         属性名        | 类型      | 名称 |  主键 |  说明 |
-|:---------------------|:----------| :-----|:-----|:-----|
-
+| 属性名        | 类型      | 名称 |  主键 |  说明 |
+|:----------   |:----------| :-----|:-----|:-----|
+| id           | BIGINT | 主键id| 是 |  | 
+| name         | STRING| 名称| -- |  |
+| title        | STRING| 标题| -- |  |
+| instructions | STRING| 说明| -- |  |            
+| content      | STRING| 内容| -- |  |  
+| remark       | STRING| 备注| -- |  | 
+| is_enable    | BOOLEAN| 启用状态| -- |  |
+| sort_code    | INT    | 排序| -- |  |
+| creator_id   | BIGINT | 添加人主键| -- |  |
+| creator_name | STRING| 添加人| -- |  |
+| created_at   | TIMESTAMP|创建时间| -- |  |
+| modifier_id  | BIGINT | 修改人主键| -- |  |
+| modifier_name| STRING| 修改人| -- |  |
+| updated_at   | TIMESTAMP|修改时间| -- |  |
+| is_removed   | BOOLEAN|删除标记| -- |  |
+| version      | BIGINT | 版本| -- |  |
 ### g_common_data_dictionary
 
 **单位字典管理**
@@ -721,8 +736,8 @@
 
 字段说明：
 
-|         属性名        | 类型      | 名称 |  主键 |  说明 |
-| id           | BIGINT   | 主键id| -- |  |
+| 属性名        | 类型     | 名称 |  主键 |  说明 |
+| id           | BIGINT   | 主键id| 是 |  |
 | labour_id    | BIGINT   | 用料单位主键| -- |  |
 | labour_name  | STRING   | 用料单位名称| -- |  |
 | gh_id        | BIGINT   | 工号主键| -- |  |
