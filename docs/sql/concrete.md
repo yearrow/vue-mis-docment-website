@@ -41,13 +41,13 @@
 | auxiliary_unit | STRING | 辅单位 | | |
 | conversion_rate | DECIMAL(28, 4) | 转换率 | | |
 | class_id | BIGINT | 类别id | | |
-| is_matching | STRING | 备注 | | |
+| class_full_id | STRING | 材料类别主键链 | | |
+| is_matching | BOOLEAN | 匹配状态 | | 默认为false(未匹配)|
 | first_extract_time | DATE | 首次提取时间 | |  |
-| ori_class_id | STRING | 预留对接材料类别ID | | |
-| ori_material_id | STRING | 材料预留对接 | | |
+| ori_class_id | STRING | 接材料类别ID | | |
+| ori_material_id | STRING | 材料对接id | | |
 | remark| STRING | 备注 | | |
-| sort_code | INTEGER | 排序 | | |
-| is_removed | bool | 删除状态 | | |
+| is_removed | bool | 删除状态 | | 默认为fasle(未删除)|
 | creator_id | bigint | 添加人 | | |
 | creator_name | string | 添加人姓名 | | |
 | created_at | timestamp | 添加时间 | | |
@@ -55,7 +55,8 @@
 | modifier_name | string | 修改人姓名 | | |
 | updated_at | timestamp | 修改时间 | | |
 | version | bigint | 版本号 | | |
-| class_full_id | STRING | 材料类别主键链 | |待删除 |
+| sort_code | INTEGER | 排序 | | 待删除 |
+
 
 
 ## 原材时间段匹配
@@ -71,8 +72,7 @@
 |:------------- |:-------------| :-----|:-----|:-----|
 | org_id | BIGINT | 组织机构主键 |是 | |  
 | id | BIGINT | 主键id | 是 | |        
-| org_name | STRING | 组织机构名称 | | |           
-| order_date | STRING | 单据日期 | | |          
+| org_name | STRING | 组织机构名称 | | |   
 | material | STRING | 机楼原材料名称 | | |          
 | pro_line | STRING | 生产线 | | |          
 | material_id | BIGINT | 材料主键 | | |         
@@ -84,7 +84,7 @@
 | conversion_rate | DECIMAL(28, 4) | 转换率 | | |   
 | class_id| BIGINT | 材料类别id | | |         
 | class_full_id | STRING | 材料类别主键链 | | |
-| is_matching | BOOLEAN | 匹配状态 | | |
+| is_matching | BOOLEAN | 匹配状态 | | 默认为false(未匹配) |
 | begin_date | STRING | 开始时间 | | |
 | end_date | STRING | 结束时间 | | |
 | first_extract_time | DATE| 首次提取时间 | | |
@@ -98,8 +98,9 @@
 | modifier_id | BIGINT | 修改人主键 | | |
 | modifier_name| STRING | 修改人 | | |
 | updated_at | TIMESTAMP | 修改时间 | | |
-| is_removed | BOOLEAN | 删除标记 | | |
+| is_removed | BOOLEAN | 删除标记 | | 默认为fasle(未删除) |
 | version | BIGINT | 版本 | | |
+| order_date | STRING | 单据日期 | | 待删除 |   
 
 
 ## 半成品默认匹配
@@ -116,7 +117,6 @@
 | org_id      | bigint | 组织机构编码 | 是 |  |
 | id      | bigint | 主键 |是 | |
 | org_name | STRING | 组织机构名称| | |
-| material| STRING | 机楼原材料名称 | | |
 | bet_lev| STRING | 混凝土标号 | | |
 | pro_line| STRING | 生产线 | | |
 | material_id | BIGINT | 材料id | |  |
@@ -125,13 +125,13 @@
 | material_model | STRING  | 规格型号 |  | |
 | material_unit | STRING  | 单位 | | |
 | class_id | BIGINT | 类别id | | |
-| is_matching | STRING | 匹配状态 | | |
+| class_full_id | STRING | 材料类别主键链 | | |
+| is_matching | Boolean | 匹配状态 | |  默认为false(未匹配) |
 | first_extract_time| DATE | 首次提取时间 | |  |
 | ori_class_id | STRING | 预留对接材料类别ID | | |
 | ori_material_id | STRING | 材料预留对接 | | |
 | remark | STRING | 备注 | | |
-| sort_code | INTEGER | 排序 | | |
-| is_removed | bool | 删除状态 | | |
+| is_removed | bool | 删除状态 | | 默认为fasle(未删除) |
 | creator_id | bigint | 添加人 | | |
 | creator_name | string | 添加人姓名 | | |
 | created_at | timestamp | 添加时间 | | |
@@ -139,8 +139,8 @@
 | modifier_name | string | 修改人姓名 | | |
 | updated_at | timestamp | 修改时间 | | |
 | version | bigint | 版本号 | | |
-| class_full_id | STRING | 材料类别主键链 | |待删除 |
-| order_date | STRING | 账期 | |待删除 |
+| order_date | STRING | 账期 | | 待删除 |
+| sort_code | INTEGER | 排序 | | 待删除 |
 
 
 ## 半成品按配比编号匹配
@@ -156,17 +156,17 @@
 |:------------- |:-------------| :-----|:-----|:-----|
 | org_id | BIGINT| 组织机构主键 |是 | |  
 | id | BIGINT| 主键id | 是 | |        
-| org_name | STRING | 组织机构名称 | | |  
-| material | STRING | 机楼原材料名称 | | | 
+| org_name | STRING | 组织机构名称 | | |   
 | bet_lev | STRING | 混凝土标号 | | |              
-| pro_line | STRING | 生产线 | | |          
+| pro_line | STRING | 生产线 | | |    
+| reciepe_no | STRING | 配比编号 | | |       
 | material_id | BIGINT | 材料主键 | | |         
 | material_code | STRING | 材料编码 | | |          
 | material_name | STRING | 材料名称 | | |         
 | material_model| STRING | 规格型号 | | |          
 | material_unit | STRING | 主单位 | | |          
 | class_id| BIGINT | 材料类别id | | |         
-| is_matching | BOOLEAN| 匹配状态 | | |
+| is_matching | BOOLEAN| 匹配状态 | |  默认为false(未匹配) |
 | first_extract_time | DATE| 首次提取时间 | | |
 | ori_class_id | STRING | 预留对接材料类别ID | | | 
 | ori_material_id | STRING | 材料预留 | | |
@@ -178,7 +178,7 @@
 | modifier_id | BIGINT | 修改人主键 | | |
 | modifier_name| STRING | 修改人 | | |
 | updated_at | TIMESTAMP | 修改时间 | | |
-| is_removed | BOOLEAN | 删除标记 | | |
+| is_removed | BOOLEAN | 删除标记 | | 默认为fasle(未删除) |
 | version | BIGINT | 版本 | | |
 | order_date| STRING| 单据日期 | | 待删除|   
 | class_full_id | STRING | 材料类别主键链 | | 待删除|
@@ -223,7 +223,7 @@
 | is_audit | BOOLEAN | 审核（默认为false)| | 
 | auditor | STRING | 审核人 | | 
 | audit_date | STRING | 审核时间 | | 
-| is_removed | bool | 删除状态 | | |
+| is_removed | bool | 删除状态 | | 默认为fasle(未删除) |
 | creator_id | bigint | 添加人 | | |
 | creator_name | string | 添加人姓名 | | |
 | created_at | timestamp | 添加时间 | | |
@@ -253,19 +253,20 @@
 | material_name | STRING| 材料名称 | | |         
 | material_model| STRING| 规格型号 | | |          
 | material_unit | STRING| 主单位 | | |          
-| class_id| BIGINT | 材料类别id | | |         
+| class_id| BIGINT | 材料类别id | | |    
+| class_full_id | STRING | 材料类别主键链 | | |
 | auxiliary_unit | STRING| 辅单位 | | |
 | quantity | DECIMAL(28, 4)| 配比量（kg） | | |
 | item_remark | STRING | 备注 | | | 
+| sort_code | INTEGER | 排序 | | |
 | creator_id | BIGINT | 添加人主键 | | |
 | creator_name| STRING | 添加人 | | |
 | created_at| TIMESTAMP | 创建时间 | | |
 | modifier_id | BIGINT| 修改人主键 | | |
 | modifier_name| STRING | 修改人 | | |
 | updated_at | TIMESTAMP | 修改时间 | | |
-| is_removed | BOOLEAN | 删除标记 | | |
+| is_removed | BOOLEAN | 删除标记 | |  默认为fasle(未删除) |
 | version | BIGINT | 版本 | | |
-| class_full_id | STRING | 材料类别主键链 | | 待删除|
 
 
 ## 混凝土补录主表
@@ -283,7 +284,7 @@
 | id  | bigint | 主键 |是 | |
 | org_name | STRING | 组织机构名称| | |
 | order_date| STRING | 单据日期 | | |
-| is_productionsystem| BOOLEAN | 是否经由生产系统 | | |
+| is_productionsystem| BOOLEAN | 是否经由生产系统 | | 默认true(不经由生产系统)|
 | bet_lev| STRING | 混凝土标号 | |  |
 | prod_mete| STRING |生产方量 | | |
 | order_code| STRING | 单据编号 | | |
@@ -296,7 +297,7 @@
 | vehicle| STRING | 车牌号 | | |
 | maker| STRING | 制单人 | | |
 | remark| STRING | 主表备注 | | 
-| is_audit| BOOLEAN | 审核（默认为false)| | 
+| is_audit| BOOLEAN | 审核| |（默认为false)未审核|
 | auditor| STRING | 审核人 | | 
 | audit_date| STRING | 审核时间 | | 
 | is_removed| bool | 删除状态 | | |
@@ -336,9 +337,15 @@
 | material_name | STRING| 材料名称 | | |         
 | material_model| STRING| 规格型号 | | |          
 | material_unit | STRING| 主单位 | | |     
+| class_id | BIGINT| 类别id | | | 
+| class_full_id | STRING| 类别父id | | | 
+| ori_material_id | STRING| 对接材料id | | | 
+| ori_classl_id | STRING| 对接类别id | | | 
+| sort_code | INTEGER | 排序 | | |
 | material | STRING| 原材名称 | | |        
 | fact_amnt | DECIMAL(28, 4)| 材料实耗量 | | |
 | residual_quantity | DECIMAL(28, 4)| 剩余补录量 | | |
+| mix_quantity | DECIMAL(28, 4)|  | | |
 | item_remark | STRING | 备注 | | | 
 | creator_id | BIGINT | 添加人主键 | | |
 | creator_name| STRING | 添加人 | | |
@@ -355,7 +362,7 @@
 
 ## 废料回收主表
 
-### q_waste_
+### q_waste
 **废料回收主表**
 
 所在库： **mtlp**
@@ -367,19 +374,17 @@
 | org_id | bigint | 组织机构编码 | 是 |  |
 | id  | bigint | 主键 |是 | |
 | org_name | STRING | 组织机构名称| | |
-| order_date| STRING | 单据日期 | | |
-| is_productionsystem| BOOLEAN | 是否经由生产系统 | | |
-| bet_lev| STRING | 混凝土标号 | |  |
-| prod_mete| STRING |生产方量 | | |
+| order_date| STRING | 账期 | | |
 | order_code| STRING | 单据编号 | | |
 | recycle_date| STRING | 回收时间 | | |
+| recorded_date | INTEGER | 制单时间 | | |
 | maker| STRING | 制单人 | | |
 | maker_date| STRING | 制单日期 | | |
 | remark| STRING | 主表备注 | | 
-| is_audit| BOOLEAN | 审核（默认为false)| | 
-| auditor| STRING | 审核人 | | 
+| is_audit| BOOLEAN | 审核（默认为false)| |（默认为false)未审核|
+| auditor| STRING | 审核人 | | |
 | audit_date| STRING | 审核时间 | | 
-| is_removed| bool | 删除状态 | | |
+| is_removed| bool | 删除状态 | | 默认false(未删除) |
 | creator_id| bigint | 添加人 | | |
 | creator_name| string | 添加人姓名 | | |
 | created_at| timestamp | 添加时间 | | |
@@ -409,10 +414,12 @@
 | material_model| STRING| 规格型号 | | |          
 | material_unit | STRING| 主单位 | | |     
 | class_id | STRING | 材料类别id | | |
+| class_full_id | STRING | 材料类别主键链 | | |
 | conversion_rate | DECIMAL(28, 4)| 转换率 | | |        
 | quantity | DECIMAL(28, 4)| 重量 | | |
 | recycle_quantity | DECIMAL(28, 4)| 回收方量 | | |
 | item_remark | STRING | 备注 | | | 
+| sort_code | INTEGER | 排序 | | |
 | creator_id | BIGINT | 添加人主键 | | |
 | creator_name| STRING | 添加人 | | |
 | created_at| TIMESTAMP | 创建时间 | | |
@@ -421,7 +428,6 @@
 | updated_at | TIMESTAMP | 修改时间 | | |
 | is_removed | BOOLEAN | 删除标记 | | |
 | version | BIGINT | 版本 | | |
-| class_full_id | STRING | 材料类别主键链 | | 待删除|
 | remark | STRING | 备注 | |待删除 | 
 
 
@@ -437,26 +443,27 @@
 
 | 属性名        | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-| org_id | bigint | 组织机构编码 | 是 |  |
-| id  | bigint | 主键 |是 | |
+| org_id | BIGINT | 组织机构编码 | 是 |  |
+| id  | BIGINT | 主键 |是 | |
 | org_name | STRING | 组织机构名称| | |
 | order_date| STRING | 单据日期 | | |
 | order_code| STRING | 单据编号 | | |
+| recorded_date| STRING | 编制时间 | | |
 | check_date_time| STRING | 盘点时间 | | |
 | maker| STRING | 制单人 | | |
 | maker_date| STRING | 制单日期 | | |
-| remark| STRING | 主表备注 | | 
-| is_audit| BOOLEAN | 审核（默认为false)| | 
-| auditor| STRING | 审核人 | | 
-| audit_date| STRING | 审核时间 | | 
-| is_removed| bool | 删除状态 | | |
-| creator_id| bigint | 添加人 | | |
-| creator_name| string | 添加人姓名 | | |
-| created_at| timestamp | 添加时间 | | |
-| modifier_id| bigint | 修改人 | | |
-| modifier_name| string | 修改人姓名 | | |
-| updated_at| timestamp | 修改时间 | | |
-| version| bigint | 版本号 | | |
+| remark| STRING | 主表备注 | | | 
+| is_audit| BOOLEAN | 审核| |（默认为false) 未提交|
+| auditor| STRING | 审核人 | | |
+| audit_date| STRING | 审核时间 | | |
+| is_removed| Boolean | 删除状态 | | |
+| creator_id| BIGINT | 添加人 | | |
+| creator_name| STRING | 添加人姓名 | | |
+| created_at| Timestamp | 添加时间 | | |
+| modifier_id| BIGINT | 修改人 | | |
+| modifier_name| STRING | 修改人姓名 | | |
+| updated_at| Timestamp | 修改时间 | | |
+| version| BIGINT | 版本号 | | |
 
 
 
@@ -481,20 +488,22 @@
 | material_model| STRING| 规格型号 | | |          
 | material_unit | STRING| 主单位 | | |     
 | class_id | STRING | 材料类别id | | |
+| class_full_id | STRING | 材料类别主键链 | | |
 | auxiliary_unit | STRING | 辅单位 | | |
 | conversion_rate | DECIMAL(28, 4)| 转换率 | | |        
 | reference_quantity | DECIMAL(28, 4)| 参考库存量 | | |
 | quantity | DECIMAL(28, 4)| 盘点数量辅单位 | | |
+| sort_code | INTEGER | 排序 | | |
 | item_remark | STRING | 备注 | | | 
+| is_removed | BOOLEAN | 删除标记 | | |
 | creator_id | BIGINT | 添加人主键 | | |
 | creator_name| STRING | 添加人 | | |
 | created_at| TIMESTAMP | 创建时间 | | |
 | modifier_id | BIGINT| 修改人主键 | | |
 | modifier_name| STRING | 修改人 | | |
 | updated_at | TIMESTAMP | 修改时间 | | |
-| is_removed | BOOLEAN | 删除标记 | | |
 | version | BIGINT | 版本 | | |
-| class_full_id | STRING | 材料类别主键链 | | 待删除|
+
 
 
 
@@ -524,7 +533,7 @@
 | hnt_material_name | STRING | 材料名称 | | | 
 | hnt_material_model | STRING | 规格型号 | | | 
 | hnt_material_unit | STRING | 单位名称 | | | 
-| hnt_class_idBIGINT | 类别主键 | | | 
+| hnt_class_id | BIGINT | 类别主键 | | | 
 | hnt_class_full_id | STRING | 类别主键链 | | | 
 | hnt_statistic_class_id | BIGINT | 统计类别主键 | | | 
 | hnt_statistic_class_name | STRING| 统计类别名称 | | |  
@@ -736,6 +745,7 @@
 | class_full_id | STRING| 类别主键链 | | | 
 | statistic_class_id | BIGINT| 统计类别主键 | | | 
 | statistic_class_name | STRING| 统计类别名称 | | | 
+| ori_org_id | STRING| 组织对接id | | | 
 | ori_material_id | STRING| 【常用材料】预留 | | | 
 | ori_class_id | STRING| 预留对接材料类别ID | | |   
 | creator_id | BIGINT| 添加人主键 | | | 
