@@ -536,6 +536,31 @@
 |:------------- |:-------------| :-----|:-----|:-----|
 | org_id      | bigint | 组织机构编码 | 是 |  |
 | id      | bigint | 主键 |是 | |
+| org_name| string | 组织机构名称 | |
+| order_date | string | 账期 | | |
+| order_code | string | 单号 | | |
+| supplier_id |	bigint | 供应商主键 | |缺少ori_supplier_id |
+| supplier_name | string | 供应商名称 | | |
+| supplier_contact | string | 供应商联系人 | | |
+| supplier_phone| string | 供应商电话 | | |
+| receive_contact| string | 项目联系人 | | |
+| receive_phone| string | 项目联系电话 | | |
+| receive_at| timestamp | 到料日期 | | |
+| remark | string | 备注 | | |
+| is_expired|boolean| 作废状态 | | |
+| is_confirm|boolean| 确认状态 | | |
+| is_send|boolean| 发送状态 | | |
+| is_submit|boolean| 提交状态 | | |
+| is_removed | bool | 删除状态 | | | 
+|creator_id| bigint | 添加人 | | |
+|creator_name| string | 添加人姓名 | | |
+|created_at| timestamp | 添加时间 | | |
+|modifier_id| bigint | 修改人 | | |
+|modifier_name| string | 修改人姓名 | | |
+|updated_at| timestamp | 修改时间 | | |
+|version| bigint | 版本号 | | |
+| recorded_date	|string | 入账日期| |
+
 
 ### q_supply_item
 **供货申请明细表**
@@ -546,8 +571,37 @@
 
 | 属性名        | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 | 是 |  |
+| org_id      | bigint | 组织机构编码 | 是 | 缺少第三方对接id |
 | id      | bigint | 主键 |是 | |
+| order_id      | bigint | 主表主键 |是 | |
+| material_id | bigint | 材料id | | 缺少第三方对接id |
+| material_code| string  | 材料编码 |  | |
+| material_name| string  | 材料名称 |  | |
+| material_model| string  | 规格型号 |  | |
+| material_unit| string  | 单位 | | |
+| class_id | bigint | 类别id | | |
+| class_full_id | string | 材料类别主键链 | | | 
+| quantity|	decimal(28,4) |申请数量 | |
+| actual_quantity|decimal(28,4) | 实际数量 | | |
+| price|decimal(28,4) | 价格 | | |
+| tax_rate|decimal(28,4) | 税率 | | |
+| manufacturer|string | 生产厂商 | | |
+| batch_no|string | 炉批号 | | |
+| skill_card_no|string | 技证号 | | |
+| test_report_no|string | 实验报告号 | | |
+| test_commission_no|string | 试验委托号 | | |
+| item_bar_code	|string |条码 | | |
+| material_remark|string | 材料备注 | | |
+| request|string | 供货要求 | | |
+| item_remark|string | 备注 | | |
+| is_removed | bool | 删除状态 | | | 
+|creator_id| bigint | 添加人 | | |
+|creator_name| string | 添加人姓名 | | |
+|created_at| timestamp | 添加时间 | | |
+|modifier_id| bigint | 修改人 | | |
+|modifier_name| string | 修改人姓名 | | |
+|updated_at| timestamp | 修改时间 | | |
+|version| bigint | 版本号 | | |
 
 
 ## 混凝土签收
@@ -561,8 +615,64 @@
 
 | 属性名        | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 | 是 |  |
+| org_id      | bigint | 组织机构编码 | 是 |缺少第三方对接id |
 | id      | bigint | 主键 |是 | |
+| org_name| string | 组织机构名称 | |
+| order_date | string | 账期 | | |
+| order_code | string | 单号 | | |
+| recorded_date	|string | 入账日期| | |
+| labour_id	|bigint |用料单位主键 | | |
+| labour_name| string|用料单位名称 | | |
+| ori_labour_id |string|用料单位第三方主键 | | |
+| supplier_id |bigint|供应商主键 | | |
+| supplier_name |string|供应商名称 | | |
+| ori_supplier_id |string|供应商第三方主键 | | |
+| gh_id | bigint | 工号id  | | |
+| gh_name | string | 工号名称 | | |
+| gh_full_name | string | 工号全程  | | |
+| ori_gh_id | string | 工号对接第三方主键 | | |
+| is_submit | boolean |  | | |
+| concrete_type |string |  | | |
+| is_sign|boolean |  | | |
+| submitter|string
+| submit_date|string
+| is_approve|string
+| plan_code|string
+| material_id | bigint | 材料id | |  |
+| material_code| string  | 材料编码 |  | |
+| material_name| string  | 材料名称 |  | |
+| material_model| string  | 规格型号 |  | |
+| material_unit| string  | 单位 | | |
+| class_id | bigint | 类别id | | |
+| class_full_id | string | 材料类别主键链 | | |
+| ori_material_id |string|材料第三方对接id | | |
+| ori_class_id |string|材料类别第三方对接id| | |
+concrete_pump_type	string
+slump	string
+detail_target	string
+plan_quantity	decimal(28,8)
+change_quantity	decimal(28,8)
+quantity	decimal(28,8)
+apply_quantity	decimal(28,8)
+applicant	string
+apply_time	string
+show_up_time	string
+require	string
+remark	string
+is_expired	boolean
+engineer_approve_quantity	decimal(28,8)
+receive_method	int
+receive_quantity	decimal(28,8)
+receive_user	string
+receive_time	string
+| is_removed | bool | 删除状态 | | | 
+|creator_id| bigint | 添加人 | | |
+|creator_name| string | 添加人姓名 | | |
+|created_at| timestamp | 添加时间 | | |
+|modifier_id| bigint | 修改人 | | |
+|modifier_name| string | 修改人姓名 | | |
+|updated_at| timestamp | 修改时间 | | |
+|version| bigint | 版本号 | | |
 
 ### q_concrete_receive_item
 **混凝土签收明细表**
@@ -575,6 +685,22 @@
 |:------------- |:-------------| :-----|:-----|:-----|
 | org_id      | bigint | 组织机构编码 | 是 |  |
 | id      | bigint | 主键 |是 | |
+order_id  	bigint
+org_name	string
+receive_user	string
+receive_time	string
+plate_num	string
+receive_item_quantity	decimal(28,8)
+sort_code	int
+creator_id	bigint
+creator_name	string
+created_at	timestamp
+modifier_id	bigint
+modifier_name	string
+updated_at	timestamp
+is_removed	boolean
+version	bigint
+receive_item_quantity_id	bigint
 
 ### q_concrete_receive_photo
 **混凝土签收照片表**
@@ -587,6 +713,18 @@
 |:------------- |:-------------| :-----|:-----|:-----|
 | org_id      | bigint | 组织机构编码 | 是 |  |
 | id      | bigint | 主键 |是 | |
+receive_photo_id  	bigint
+org_name	string
+receive_photo_url	string
+sort_code	int
+creator_id	bigint
+creator_name	string
+created_at	timestamp
+modifier_id	bigint
+modifier_name	string
+updated_at	timestamp
+is_removed	boolean
+version	bigint
 
 ## 收料登记
 
