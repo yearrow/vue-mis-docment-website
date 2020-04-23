@@ -510,7 +510,6 @@
 
 | 属性名         | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-
 | org_id | BIGINT | 组织机构主键 | 是 | |      
 | id | BIGINT | 主键 | 是 | |  
 | org_name | STRING | 组织机构名称 | | | 
@@ -573,9 +572,9 @@
 | created_at | TIMESTAMP | 创建时间 | | | 
 | modifier_id | BIGINT| 修改人主键 | | | 
 | modifier_name | STRING| 修改人 | | | 
-| updated_at | TIMESTAMP | 修改时间 | | | 
-| is_removed | BOOLEAN | 删除标记 | | | 
-| version | BIGINT| 版本 | | | 
+| updated_at | TIMESTAMP | 修改时间 | | |
+| is_removed | BOOLEAN | 删除标记 | | |
+| version | BIGINT| 版本 | | |
 
 
 
@@ -591,7 +590,6 @@
 
 | 属性名         | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-
 | org_id | BIGINT | 组织机构主键 | 是 | |      
 | id | BIGINT | 主键 | 是 | |  
 | org_name | STRING | 组织机构名称 | | | 
@@ -653,7 +651,6 @@
 
 | 属性名         | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-
 | org_id | BIGINT | 组织机构主键 | 是 | |      
 | id | BIGINT | 主键 | 是 | |  
 | org_name | STRING | 组织机构名称 | | | 
@@ -717,7 +714,6 @@
 
 | 属性名         | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-
 | org_id | BIGINT | 组织机构主键 | 是 | |      
 | id | BIGINT | 主键 | 是 | |  
 | org_name | STRING | 组织机构名称 | | | 
