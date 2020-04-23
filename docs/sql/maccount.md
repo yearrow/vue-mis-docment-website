@@ -338,10 +338,10 @@
 |order_code| STRING | 单号 | |  |
 |recorded_date| STRING | 入账时间 | | |
 |order_data_type| INTEGER | 单据类型 | | 限额发料 1 、超发2、其他0 |
-|service_type| INTEGER | 业务类型 | | |
-|order_type| INTEGER | 操作类型 | | |
-|is_refund| INTEGER | 状态（普通模式下退料的状态标记） | | |
-|is_rush| INTEGER | 状态（普通模式下冲红或冲预点状态标记）1 | | |
+|service_type| INTEGER | 业务类型 | |发料（10） 内调（20） 外调（30） 报废 （40） 退发（-11） 退内调（-21） 退外调（-31） |
+|order_type| INTEGER | 操作类型 | |-1冲红   2补录   4正常  -5冲预 |
+|is_refund| INTEGER | 状态（普通模式下退料的状态标记） | | 默认0  退货1 |
+|is_rush| INTEGER | 状态（普通模式下冲红或冲预点状态标记）1 | | 默认0  1(冲红) 2(冲预点) |
 |material_type| STRING | 材料类型 | | |
 |material_type_code| STRING | 材料类型code | | |
 |is_summary | BOOLEAN | 发料汇总状态| | |
@@ -949,16 +949,16 @@
 |contract_code| STRING | 合同Code | | |
 |purchase_method| STRING | 采购方式 | | |
 |settlement_method| STRING | 结算方式 | | |
-|service_type| INTEGER | 业务类型（新增） | | |
-|order_type| INTEGER | 操作类型（新增） | | |
+|service_type| INTEGER | 业务类型 | |收料（10） 退货（-11）, 调入（20） 退调入（-21）, 预点（30） 退预点(-31) ,冲预点（-32) |
+|order_type| INTEGER | 操作类型 | | -1冲红 2补录 4正常 |
 |is_summary | BOOLEAN | 发料汇总状态| | |
 |invoice_number | STRING | 发票号| | |
 |tax_deduction | BIGINT | 是否扣税| | |
 |total_amount | DECIMAL(28, 4) | 合计金额| | |
 |order_data_id | BIGINT | 新增 存冲红、退料功能生产的主表id| | |
 |order_data_code | STRING | 新增 存冲红、退料功能单号| | |
-|is_refund| INTEGER | 状态（普通模式下退料的状态标记） | | |
-|is_rush| INTEGER | 状态（普通模式下冲红或冲预点状态标记）1 | | |
+|is_refund| INTEGER | 状态（普通模式下退料的状态标记） | |默认0  退货1 |
+|is_rush| INTEGER | 状态（普通模式下冲红或冲预点状态标记）1 | | 默认0  1(冲红) 2(冲预点)|
 |remark| STRING | 备注 | | |
 |maker| STRING | 制单人 | | |
 |maker_date| STRING | 制单日期 | | |
