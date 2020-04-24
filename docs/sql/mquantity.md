@@ -159,6 +159,7 @@
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
 | recorded_date | string | 入账日期 | | |
+| ori_order_id | string | 第三方对接单据主键 | | 缺少字段 |
 | check_date_time | string |  | | 拟删除|
 
 ### m_gh_plan_item
@@ -201,6 +202,8 @@
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
 | sort_code | int | 排序 | |
+| ori_order_id | string | 第三方对接单据主键 | | 缺少字段 |
+| ori_item_id | string | 第三方对接明细主键 | | 缺少字段 |
 
 ### m_gh_plan_check
 **工号总需用计划核算工号缓存表**
@@ -359,6 +362,10 @@
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
 | sort_code|	int | 排序| |
+| ori_item_id | string | 第三方对接明细主键 | | 缺少字段 |
+| ori_material_id | string | 对接第三方材料id | | 缺少字段 | 
+| ori_class_id | string | 对接第三方材料类别id | | 缺少字段 | 
+| ori_common_id | string | 对接第三方材料通用信息 | | 缺少字段 | 
 
 ## 物资临时计划
 
@@ -434,6 +441,10 @@
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
 | sort_code|	int | 排序| |
+| ori_item_id | string | 第三方对接明细主键 | | 缺少字段 |
+| ori_material_id | string | 对接第三方材料id | | 缺少字段 | 
+| ori_class_id | string | 对接第三方材料类别id | | 缺少字段 | 
+| ori_common_id | string | 对接第三方材料通用信息 | | 缺少字段 | 
 
 ## 周转物资计划
 
@@ -510,6 +521,10 @@
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
 | sort_code|	int | 排序| |
+| ori_item_id | string | 第三方对接明细主键 | | 缺少字段 |
+| ori_material_id | string | 对接第三方材料id | | 缺少字段 | 
+| ori_class_id | string | 对接第三方材料类别id | | 缺少字段 | 
+| ori_common_id | string | 对接第三方材料通用信息 | | 缺少字段 | 
 
 ## 供货申请
 
@@ -527,7 +542,7 @@
 | org_name| string | 组织机构名称 | |
 | order_date | string | 账期 | | |
 | order_code | string | 单号 | | |
-| supplier_id |	bigint | 供应商主键 | |缺少ori_supplier_id |
+| supplier_id |	bigint | 供应商主键 | | |
 | supplier_name | string | 供应商名称 | | |
 | supplier_contact | string | 供应商联系人 | | |
 | supplier_phone| string | 供应商电话 | | |
@@ -548,6 +563,9 @@
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
 | recorded_date	|string | 入账日期| |
+| ori_org_id | string | 第三方组织机构id | |  缺少字段  |
+| ori_order_id | string | 第三方对接单据主键 | | 缺少字段 |
+| ori_supplier_id | string | 对接第三方供应商信息 | | 缺少字段 | 
 
 
 ### q_supply_item
@@ -590,7 +608,12 @@
 |modifier_name| string | 修改人姓名 | | |
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
-
+| ori_material_id | string | 对接第三方材料id | | 缺少字段 | 
+| ori_class_id | string | 对接第三方材料类别id | | 缺少字段 | 
+| ori_common_id | string | 对接第三方材料通用信息 | | 缺少字段 | 
+| ori_order_id | string | 第三方对接单据主键 | | 缺少字段 |
+| ori_item_id | string | 第三方对接明细主键 | | 缺少字段 |
+| ori_org_id | string | 第三方组织机构id | |  缺少字段 |
 
 ## 混凝土签收
 
@@ -603,7 +626,7 @@
 
 | 属性名        | 类型           | 名称 |  主键 |  说明 |
 |:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 | 是 |缺少第三方对接id |
+| org_id      | bigint | 组织机构编码 | 是 | |
 | id      | bigint | 主键 |是 | |
 | org_name| string | 组织机构名称 | |
 | order_date | string | 账期 | | |
@@ -661,6 +684,7 @@
 |modifier_name| string | 修改人姓名 | | |
 |updated_at| timestamp | 修改时间 | | |
 |version| bigint | 版本号 | | |
+| ori_org_id | string | 第三方组织机构id | |  缺少字段 |
 
 ### q_concrete_receive_item
 **混凝土签收明细表**
@@ -823,33 +847,6 @@
 | is_account_check | boolean | 是否对账 | | 已删除 |
 | account_check_date | string | 对账日期 | | 已删除 |
 
-### q_receive_gpy
-**收料登记高拍仪**
-
-所在库： **mtlp**
-
-字段说明：
-
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 | 是 |  |
-| id      | bigint | 主键 |是 | |
-| order_id | bigint	| 主表主键 | | |
-| gpy_remark | string | 备注 | | |	
-| gpy_weight_type | string | 磅单类型(pt dl zc ) | | |
-| gpy_photo_base64 | string	| 照片Bse64码 | | |
-| gpy_photo_url | string |  照片路径 | | |
-| ori_item_id | string 	| 上传前id | | |
-| ori_order_id | string	| 上传前OrderId | | |
-| is_removed | bool | 删除状态 | | | 
-| creator_id| bigint | 添加人 | | |
-| creator_name| string | 添加人姓名 | | |
-| created_at| timestamp | 添加时间 | | |
-| modifier_id| bigint | 修改人 | | |
-| modifier_name| string | 修改人姓名 | | |
-| updated_at| timestamp | 修改时间 | | |
-| version| bigint | 版本号 | | |
-
 ### q_receive_more_material
 **收料登记材料明细表**
 
@@ -925,56 +922,6 @@
 | plate_number|string | 车牌 | | 已删除 |
 | tare_quantity | decimal(28,4) | 皮重 | | 已删除 |
 
-### q_receive_more_material_temp_data
-**收料登记材料明细临时表**
-
-所在库： **mtlp**
-
-字段说明：
-
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 | 是 |  |
-| id      | bigint | 主键 |是 | |
-| order_id|bigint| 主表主键 | 是 | |
-| service_type |int | 业务类型 | | |
-| order_type | int |操作类型 1冲红（-1）2补录4正常 | | |
-| is_marched| boolean | 是否匹配条码 | | |
-| material_id | bigint | 材料id | |  |
-| material_code| string  | 材料编码 |  | |
-| material_name| string  | 材料名称 |  | |
-| material_model| string  | 规格型号 |  | |
-| material_unit| string  | 单位 | | |
-| class_id | bigint | 类别id | | |
-| class_full_id | string | 材料类别主键链 | | | 
-| auxiliary_unit|string | 辅单位 | | |
-| net_quantity | decimal(28,4) | 最终净值（决定是取地磅称重还是手填的净值）| | |
-| rough_quantity | decimal(28,4) | 原毛重，现在应收数量 | | |
-| conversion_rate | decimal(28,4) | 转化率 | | |
-| deduct_rate | decimal(28,4) | 扣率 | | |
-| deduct_quantity | decimal(28,4) | 扣吨 | | |
-| ori_net_quantity | decimal(28,4) | 原始净重 | | |
-| auxiliary_net_quantity | decimal(28,4) | 辅单位净重 | | |
-| main_net_quantity | decimal(28,4) | 净重主单位 | | |
-| waybill_weight | decimal(28,8) | 运单重量 | | |
-| item_bar_code	|string |条码 | | |
-| remark|string | 备注 | | |
-| ori_material_id | string | 对接第三方材料id | |   |
-| ori_common_id | string | 对接第三方材料通用id | |  |
-| ori_class_id | string | 对接第三方材料类别id | |  |
-| ori_item_id | string 	| 上传前id | | |
-| ori_order_id | string	| 上传前OrderId | | |
-| ori_org_id | string | 对接第三方组织机构id | | |
-| is_removed | bool | 删除状态 | | | 
-| creator_id| bigint | 添加人 | | |
-| creator_name| string | 添加人姓名 | | |
-| created_at| timestamp | 添加时间 | | |
-| modifier_id| bigint | 修改人 | | |
-| modifier_name| string | 修改人姓名 | | |
-| updated_at| timestamp | 修改时间 | | |
-| version| bigint | 版本号 | | |
-| tare_quantity | decimal(28,4) | 皮重 | | 拟删除 |
-
 ### q_receive_photo
 **收料登记照片表**
 
@@ -993,6 +940,33 @@
 | photo_base64|string| 照片BASE64码 | | |
 | photo_url|string| 照片路径 | | |
 | item_remark|string| 备注 | | |
+| ori_item_id | string 	| 上传前id | | |
+| ori_order_id | string	| 上传前OrderId | | |
+| is_removed | bool | 删除状态 | | | 
+| creator_id| bigint | 添加人 | | |
+| creator_name| string | 添加人姓名 | | |
+| created_at| timestamp | 添加时间 | | |
+| modifier_id| bigint | 修改人 | | |
+| modifier_name| string | 修改人姓名 | | |
+| updated_at| timestamp | 修改时间 | | |
+| version| bigint | 版本号 | | |
+
+### q_receive_gpy
+**收料登记高拍仪**
+
+所在库： **mtlp**
+
+字段说明：
+
+| 属性名        | 类型           | 名称 |  主键 |  说明 |
+|:------------- |:-------------| :-----|:-----|:-----|
+| org_id      | bigint | 组织机构编码 | 是 |  |
+| id      | bigint | 主键 |是 | |
+| order_id | bigint	| 主表主键 | | |
+| gpy_remark | string | 备注 | | |	
+| gpy_weight_type | string | 磅单类型(pt dl zc ) | | |
+| gpy_photo_base64 | string	| 照片Bse64码 | | |
+| gpy_photo_url | string |  照片路径 | | |
 | ori_item_id | string 	| 上传前id | | |
 | ori_order_id | string	| 上传前OrderId | | |
 | is_removed | bool | 删除状态 | | | 
@@ -1080,6 +1054,56 @@
 | auxiliary_net_quantity | decimal(28,4) | 辅单位净重 | |拟删除 |
 
 
+### q_receive_more_material_temp_data
+**收料登记材料明细临时表**
+
+所在库： **mtlp**
+
+字段说明：
+
+| 属性名        | 类型           | 名称 |  主键 |  说明 |
+|:------------- |:-------------| :-----|:-----|:-----|
+| org_id      | bigint | 组织机构编码 | 是 |  |
+| id      | bigint | 主键 |是 | |
+| order_id|bigint| 主表主键 | 是 | |
+| service_type |int | 业务类型 | | |
+| order_type | int |操作类型 1冲红（-1）2补录4正常 | | |
+| is_marched| boolean | 是否匹配条码 | | |
+| material_id | bigint | 材料id | |  |
+| material_code| string  | 材料编码 |  | |
+| material_name| string  | 材料名称 |  | |
+| material_model| string  | 规格型号 |  | |
+| material_unit| string  | 单位 | | |
+| class_id | bigint | 类别id | | |
+| class_full_id | string | 材料类别主键链 | | | 
+| auxiliary_unit|string | 辅单位 | | |
+| net_quantity | decimal(28,4) | 最终净值（决定是取地磅称重还是手填的净值）| | |
+| rough_quantity | decimal(28,4) | 原毛重，现在应收数量 | | |
+| conversion_rate | decimal(28,4) | 转化率 | | |
+| deduct_rate | decimal(28,4) | 扣率 | | |
+| deduct_quantity | decimal(28,4) | 扣吨 | | |
+| ori_net_quantity | decimal(28,4) | 原始净重 | | |
+| auxiliary_net_quantity | decimal(28,4) | 辅单位净重 | | |
+| main_net_quantity | decimal(28,4) | 净重主单位 | | |
+| waybill_weight | decimal(28,8) | 运单重量 | | |
+| item_bar_code	|string |条码 | | |
+| remark|string | 备注 | | |
+| ori_material_id | string | 对接第三方材料id | |   |
+| ori_common_id | string | 对接第三方材料通用id | |  |
+| ori_class_id | string | 对接第三方材料类别id | |  |
+| ori_item_id | string 	| 上传前id | | |
+| ori_order_id | string	| 上传前OrderId | | |
+| ori_org_id | string | 对接第三方组织机构id | | |
+| is_removed | bool | 删除状态 | | | 
+| creator_id| bigint | 添加人 | | |
+| creator_name| string | 添加人姓名 | | |
+| created_at| timestamp | 添加时间 | | |
+| modifier_id| bigint | 修改人 | | |
+| modifier_name| string | 修改人姓名 | | |
+| updated_at| timestamp | 修改时间 | | |
+| version| bigint | 版本号 | | |
+| tare_quantity | decimal(28,4) | 皮重 | | 拟删除 |
+
 ### q_receive_weight
 **收料磅单关联字段表**
 
@@ -1148,8 +1172,6 @@
 | ori_material_id | string | 对接第三方材料id | |   |
 | ori_common_id | string | 对接第三方材料通用id | |  |
 | ori_class_id | string | 对接第三方材料类别id | |  |
-| ori_item_id | string 	| 上传前id | | |
-| ori_order_id | string	| 上传前OrderId | | |
 | is_removed | bool | 删除状态 | | | 
 | creator_id| bigint | 添加人 | | |
 | creator_name| string | 添加人姓名 | | |
@@ -1168,6 +1190,8 @@
 | storage_place | string | 存放地 | | 拟删除 |
 | skill_card_no | string | 技证号 | | 拟删除 |
 | is_upload | boolean | 是否上传 | | 拟删除 |
+| ori_order_id | string	| 上传前OrderId | | 拟删除 |
+| ori_item_id | string 	| 上传前id | | 拟删除 |
 
 ## 发料登记
 
@@ -1338,6 +1362,62 @@
 | rough_quantity | decimal(28,4) | 原毛重，现在应收数量 | | 已删除|
 | plate_number|string | 车牌 | | 已删除|
 
+### q_delivery_photo
+**发料照片表**
+
+所在库： **mtlp**
+
+字段说明：
+
+| 属性名        | 类型           | 名称 |  主键 |  说明 |
+|:------------- |:-------------| :-----|:-----|:-----|
+| org_id      | bigint | 组织机构编码 | |  |
+| id      | bigint | 主键 |是 | |
+| order_id      | bigint | 主表主键 | | |
+| camera_position|string| 摄像机位置 | | |
+| photo_type|string| 照片类型（入场、出场） | | |
+| camera_code|string| 摄像机编码 | | |
+| photo_base64|string| 照片BASE64码 | | |
+| photo_url|string| 照片路径 | | |
+| item_remark|string| 备注 | | |
+| ori_item_id | string 	| 上传前id | | |
+| ori_order_id | string	| 上传前OrderId | | |
+| is_removed | bool | 删除状态 | | | 
+| creator_id| bigint | 添加人 | | |
+| creator_name| string | 添加人姓名 | | |
+| created_at| timestamp | 添加时间 | | |
+| modifier_id| bigint | 修改人 | | |
+| modifier_name| string | 修改人姓名 | | |
+| updated_at| timestamp | 修改时间 | | |
+| version| bigint | 版本号 | | |
+
+### q_delivery_signature
+**发料签名表**
+
+所在库： **mtlp**
+
+字段说明：
+
+| 属性名        | 类型           | 名称 |  主键 |  说明 |
+|:------------- |:-------------| :-----|:-----|:-----|
+| org_id      | bigint | 组织机构编码 |  |  |
+| id      | bigint | 主键 |是 | |
+| order_id |bigint| 主表主键 | | |
+| signature_type| string |签名人1、2、3、4 | |
+| photo_base64|string| 照片BASE64码 | | |
+| photo_url|string| 照片路径 | | |
+| item_remark|string| 备注 | | |
+| ori_item_id | string 	| 上传前id | | |
+| ori_order_id | string	| 上传前OrderId | | |
+| is_removed | bool | 删除状态 | | | 
+| creator_id| bigint | 添加人 | | |
+| creator_name| string | 添加人姓名 | | |
+| created_at| timestamp | 添加时间 | | |
+| modifier_id| bigint | 修改人 | | |
+| modifier_name| string | 修改人姓名 | | |
+| updated_at| timestamp | 修改时间 | | |
+| version| bigint | 版本号 | | |
+
 ### q_delivery_temp_data
 **发料临时表**
 
@@ -1427,62 +1507,6 @@
 | ori_material_id | string | 对接第三方材料id | |   |
 | ori_common_id | string | 对接第三方材料通用id | |  |
 | ori_class_id | string | 对接第三方材料类别id | |  |
-| ori_item_id | string 	| 上传前id | | |
-| ori_order_id | string	| 上传前OrderId | | |
-| is_removed | bool | 删除状态 | | | 
-| creator_id| bigint | 添加人 | | |
-| creator_name| string | 添加人姓名 | | |
-| created_at| timestamp | 添加时间 | | |
-| modifier_id| bigint | 修改人 | | |
-| modifier_name| string | 修改人姓名 | | |
-| updated_at| timestamp | 修改时间 | | |
-| version| bigint | 版本号 | | |
-
-### q_delivery_photo
-**发料照片表**
-
-所在库： **mtlp**
-
-字段说明：
-
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 | |  |
-| id      | bigint | 主键 |是 | |
-| order_id      | bigint | 主表主键 | | |
-| camera_position|string| 摄像机位置 | | |
-| photo_type|string| 照片类型（入场、出场） | | |
-| camera_code|string| 摄像机编码 | | |
-| photo_base64|string| 照片BASE64码 | | |
-| photo_url|string| 照片路径 | | |
-| item_remark|string| 备注 | | |
-| ori_item_id | string 	| 上传前id | | |
-| ori_order_id | string	| 上传前OrderId | | |
-| is_removed | bool | 删除状态 | | | 
-| creator_id| bigint | 添加人 | | |
-| creator_name| string | 添加人姓名 | | |
-| created_at| timestamp | 添加时间 | | |
-| modifier_id| bigint | 修改人 | | |
-| modifier_name| string | 修改人姓名 | | |
-| updated_at| timestamp | 修改时间 | | |
-| version| bigint | 版本号 | | |
-
-### q_delivery_signature
-**发料签名表**
-
-所在库： **mtlp**
-
-字段说明：
-
-| 属性名        | 类型           | 名称 |  主键 |  说明 |
-|:------------- |:-------------| :-----|:-----|:-----|
-| org_id      | bigint | 组织机构编码 |  |  |
-| id      | bigint | 主键 |是 | |
-| order_id |bigint| 主表主键 | | |
-| signature_type| string |签名人1、2、3、4 | |
-| photo_base64|string| 照片BASE64码 | | |
-| photo_url|string| 照片路径 | | |
-| item_remark|string| 备注 | | |
 | ori_item_id | string 	| 上传前id | | |
 | ori_order_id | string	| 上传前OrderId | | |
 | is_removed | bool | 删除状态 | | | 
