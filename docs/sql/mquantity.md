@@ -789,7 +789,7 @@
 | order_data_id | bigint | 引用单据id| | |
 | enter_time | string | 进场时间 | | 拟删除 |
 | sort_time | string | 排序时间 | | 拟删除 |
-| class_id | bigint | 类别id | | 拟删除|
+| class_id | bigint | 类别id | | 已删除|
 | org_code | string | 组织机构编码| | 已删除|
 | material_id | bigint | 材料id | |已删除  |
 | material_code| string  | 材料编码 |  | 已删除|
@@ -1250,13 +1250,13 @@
 | material_type | string | 材料类型| | |
 | ori_org_id | string | 对接第三方组织机构id | | |
 | ori_labour_id | string | 对接第三方用料单位id | |  |
+| class_id | bigint | 类别id | |拟删除 |
 | org_code | string| 组织机构编码 || 已删除|
 | material_id | bigint | 材料id | | 已删除 |
 | material_code| string  | 材料编码 |  |已删除 |
 | material_name| string  | 材料名称 |  |已删除 |
 | material_model| string  | 规格型号 |  |已删除 |
 | material_unit| string  | 单位 | |已删除 |
-| class_id | bigint | 类别id | |已删除 |
 | class_full_id | string | 材料类别主键链 | |已删除 | 
 | auxiliary_unit|string | 辅单位 | | 已删除 |
 | warn_times|int | 预警次数 | | 已删除 |
