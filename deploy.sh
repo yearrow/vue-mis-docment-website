@@ -1,3 +1,9 @@
+###
+ # @Description: 未描述
+ # @Author: danielmlc
+ # @Date: 2020-02-04 18:14:14
+ # @LastEditTime: 2020-05-26 11:21:13
+### 
 
  ###
 set -e
@@ -6,8 +12,6 @@ set -e
 npm run build
 
 cd docs/.vuepress/dist
-# 如果是发布到自定义域名
-# echo 'www.example.com' > CNAME
 
 git init
 git add -A
