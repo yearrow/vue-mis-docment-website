@@ -1,0 +1,52 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\danielmlc\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\danielmlc\bin;C:\Program Files (x86)\NetSarang\Xftp 6;C:\Program Files (x86)\NetSarang\Xshell 6;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;D:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn;D:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn;D:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;D:\fluter\bin;C:\Program Files\nodejs;C:\Users\danielmlc\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\danielmlc\AppData\Local\Programs\Python\Python36;C:\Users\danielmlc\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\danielmlc\AppData\Roaming\npm
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  12.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\danielmlc\AppData\Local\Yarn\Cache\v4\npm-ms-2.1.2-d09d1f357b443f493382a8eb3ccd183872ae6009\node_modules\ms\license.md' -> 'E:\公司项目\物资9.0\工具库\YlDocument\node_modules\@babel\core\node_modules\ms\license.md'
+
+npm manifest: 
+  {
+    "name": "yldocument",
+    "version": "1.0.0",
+    "description": "doc-v9.0 for yearrow",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "vuepress dev docs",
+      "build": "vuepress build docs",
+      "pub": "bash deploy.sh"
+    },
+    "dependencies": {
+      "element-extension": "^2.1.0",
+      "vuepress": "1.4.1"
+    },
+    "devDependencies": {
+      "@vuepress/plugin-back-to-top": "^1.3.0",
+      "@vuepress/plugin-medium-zoom": "^1.3.0",
+      "element-mini-ui": "^1.2.0"
+    },
+    "keywords": [
+      "document",
+      "vuepress"
+    ],
+    "author": "danielmlc",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
