@@ -2,7 +2,7 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2020-02-03 17:47:35
- * @LastEditTime: 2020-06-12 10:28:42
+ * @LastEditTime: 2020-07-13 09:16:35
  */
 
 module.exports = {
@@ -40,10 +40,10 @@ module.exports = {
         items: [
           { text: '基础规范', link: '/base/base-rules/' },
           { text: '前端规范', link: '/front/front-rules/' },
-          { text: '服务端规范', link: '/service/service-rules/' }
+          // { text: '服务端规范', link: '/service/service-rules/' }
         ]
       },
-      { text: '基础设施', link: '/basic/facilities'},
+      // { text: '基础设施', link: '/basic/facilities'},
       {
         text: '数据库脚本',
         items: [

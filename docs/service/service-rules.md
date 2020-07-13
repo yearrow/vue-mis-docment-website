@@ -3,7 +3,7 @@
 ## 路由规范
 
 
- 路由路径采用中化线命名规范
+路由路径采用中化线命名规范
 
 ```js
 
@@ -38,22 +38,23 @@
 
 ### 服务层代码规范
 
-  复杂业务逻辑写上说明
-  如： 提交收料单： 
-    1、动态表是否已经结转了，结转返回，没有继续 
-    2、获取发料单查看是否已经提交，提交了返回，未提交继续
-    3、获取材料详情查看是否有发料，有发料返回所有发料单，没有继续
-    4、处理库存
-    5、修改收料单提交状态。
-  model 层字段必须写上说明，没有使用字段需要列出来，枚举类型的一定写上代表的意思。
-  如：serviceType: { type: Sequelize.INTEGER }, // 业务类型（新增） 调入（20） 收料   （10） 调入退（-21） 收料退（-11）预点（30）  
-    storeRoomName: { type: Sequelize.STRING }, // 成本科目（没用字段） 
+  复杂业务逻辑写上说明  
+  如： 提交收料单：   
+    1、动态表是否已经结转了，结转返回，没有继续   
+    2、获取发料单查看是否已经提交，提交了返回，未提交继续  
+    3、获取材料详情查看是否有发料，有发料返回所有发料单，没有继续  
+    4、处理库存  
+    5、修改收料单提交状态。  
+
+  model 层字段必须写上说明，没有使用字段需要列出来，枚举类型的一定写上代表的意思。  
+  如：serviceType: { type: Sequelize.INTEGER }, // 业务类型（新增） 调入（20） 收料   （10） 调入退（-21） 收料退（-11）预点（30）   
+  storeRoomName: { type: Sequelize.STRING }, // 成本科目（没用字段）   
 通过id获取某一条数据的时候，如果是orgId也是主键的时候必须带上orgId.
 如下面不许用出现这种：  
   service.get('m-delivery-order/:id', async function (ctx, next) {
   await mDeliveryService.getMDelivery(ctx, Models)
 })    
-必须下面这种： 
+必须下面这种：  
 service.get('m-delivery-order/:id/:orgid', async function (ctx, next) {
   await mDeliveryService.getMDelivery(ctx, Models)
 })  
