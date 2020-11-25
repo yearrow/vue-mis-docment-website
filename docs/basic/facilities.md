@@ -8,14 +8,18 @@
 ## app打印
 ### 使用步骤
   1、前端站点引入选择打印机 choose-printer.vue 页面， 路由名称和路径为 choosePrinter。 打印单据的时候打印机判断没有连接打印机，或者连接失效，会跳转到打印页面
+
   2、引用 import print from '@yearrow/js-bluetooth-print-library'
+
   3、注意首页 检查一下版本号和蓝牙是否打开
+
   ```
    mounted () {
       print.checkVersion(this) // 检查版本号
       print.checkPrinter(this) // 检查蓝牙是否打开，初始化打印机名称
    }  
   ``` 
+  
   4、获取蓝牙名称 const name = this.cache.getItem('DEVICE_NAME')
 
 ### 打印模板

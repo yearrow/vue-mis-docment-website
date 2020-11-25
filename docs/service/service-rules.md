@@ -4,7 +4,8 @@
 
   我们遵从Restful api 定义 Router，通过不同的http方法（get,post,put,delete）改变服务端资源。
 
-  遵从一下列子接口定义规则。只有特殊的服务以下例子不满足的情况，可以自行加后缀）
+  遵从以下列子接口定义规则。只有特殊的服务以下例子不满足的情况，可以自行加后缀）
+
   如： 表名称：g_order_list， 路由名称 g-ordre-lists-xxx  
 例子：
 ```js
@@ -100,6 +101,7 @@ service.get('m-delivery-order/:id/:orgid', async function (ctx, next) {
     减少内存复制（拼字符串）
     
     拼接前代码
+    
     ```
      let updateDataSql =''
      for (let i = 0; i < data.existsData.length; i++) {
@@ -107,7 +109,9 @@ service.get('m-delivery-order/:id/:orgid', async function (ctx, next) {
      }
     updateDataSql =updateDataSql.length > 0 ? updateDataSql.substr(0, updateDataSql.length - 1) : ''
     ```
+
     改后代码
+
     ```
     let updateDatas = []
     for (let i = 0; i < data.existsData.length; i++) {
@@ -118,7 +122,9 @@ service.get('m-delivery-order/:id/:orgid', async function (ctx, next) {
 
     
     尽可能减少大量的for循环，嵌套循环
+
     改前代码
+
     ```
     const treeList = [....]
     for (const node of treeList) {
@@ -126,7 +132,9 @@ service.get('m-delivery-order/:id/:orgid', async function (ctx, next) {
       ....
     }
     ```
+
     改后代码
+
     ```
     const treeList = […..]
     const treeMap = {}

@@ -40,10 +40,10 @@ module.exports = {
         items: [
           { text: '基础规范', link: '/base/base-rules/' },
           { text: '前端规范', link: '/front/front-rules/' },
-          // { text: '服务端规范', link: '/service/service-rules/' }
+          { text: '服务端规范', link: '/service/service-rules/' }
         ]
       },
-      // { text: '基础设施', link: '/basic/facilities'},
+      { text: '基础设施', link: '/basic/facilities'},
       {
         text: '数据库脚本',
         items: [
@@ -61,6 +61,9 @@ module.exports = {
     sidebar: {
       '/base/': [ 
         'base-rules',
+      ],
+      '/basic/': [ 
+        'facilities',
       ],
       '/front/': [ 
         'front-rules',
