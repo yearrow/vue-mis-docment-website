@@ -9,7 +9,7 @@ module.exports = {
   title: '易龙软件开发文档',
   description: 'YLSoft Work Document',
   port: 8066, 
-  base: 'YlDocument',
+  base: '/YlDocument/',
   head: [
     [
       "link",
@@ -43,7 +43,7 @@ module.exports = {
           { text: '服务端规范', link: '/service/service-rules/' }
         ]
       },
-      // { text: '基础设施', link: '/basic/facilities'},
+      { text: '基础设施', link: '/basic/facilities'},
       {
         text: '数据库脚本',
         items: [
@@ -55,12 +55,15 @@ module.exports = {
       },
       { text: '环境配置', link: '/daily/editor'},
       { text: '技术扩展', link: '/extend/markdown'},
-      { text: 'github', link: 'https://github.com/yearrow/YlDocument'  },
+      { text: 'github', link: 'https://github.com/YLSoftWorkGroup/YlDocument'  },
     ],
     sidebarDepth: 4,
     sidebar: {
       '/base/': [ 
         'base-rules',
+      ],
+      '/basic/': [ 
+        'facilities',
       ],
       '/front/': [ 
         'front-rules',
