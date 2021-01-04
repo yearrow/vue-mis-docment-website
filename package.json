@@ -1,13 +1,13 @@
 {
   "name": "yldocument",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "doc-v9.0 for yearrow",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "pub": "bash deploy.sh"
+    "pubdoc": "bash deploy.sh"
   },
   "dependencies": {
     "element-extension": "^2.1.0",

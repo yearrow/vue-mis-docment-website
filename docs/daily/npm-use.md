@@ -106,12 +106,7 @@ npm login --registry=https://npm.mctech.vip --scope=@mctech
 ``` bash
 npm login --registry=https://npm.mctech.vip --scope=@yearrow
 ```
-**注意**
-注销对应的登录  
 
-```bash
-npm logout --registry=https://npm.mctech.vip --scope=@yearrow
-```
 
 
 *npm* 会询问 *username、password、email* 等信息。
