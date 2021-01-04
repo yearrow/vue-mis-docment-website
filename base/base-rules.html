@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基础规范 | 易龙软件开发文档</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/YlDocument/favicon.ico">
+    <meta name="description" content="YLSoft Work Document">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/YlDocument/assets/css/0.styles.3e4288f7.css" as="style"><link rel="preload" href="/YlDocument/assets/js/app.d7e74e05.js" as="script"><link rel="preload" href="/YlDocument/assets/js/2.b97c573e.js" as="script"><link rel="preload" href="/YlDocument/assets/js/6.f4e8cddd.js" as="script"><link rel="prefetch" href="/YlDocument/assets/js/10.5de03124.js"><link rel="prefetch" href="/YlDocument/assets/js/11.53dd5710.js"><link rel="prefetch" href="/YlDocument/assets/js/12.245cea59.js"><link rel="prefetch" href="/YlDocument/assets/js/13.a0a30431.js"><link rel="prefetch" href="/YlDocument/assets/js/14.4b1c368d.js"><link rel="prefetch" href="/YlDocument/assets/js/15.dd38e28f.js"><link rel="prefetch" href="/YlDocument/assets/js/16.8cc3c715.js"><link rel="prefetch" href="/YlDocument/assets/js/17.266a332a.js"><link rel="prefetch" href="/YlDocument/assets/js/18.fac33c9f.js"><link rel="prefetch" href="/YlDocument/assets/js/19.e7b76d73.js"><link rel="prefetch" href="/YlDocument/assets/js/3.6160bf56.js"><link rel="prefetch" href="/YlDocument/assets/js/4.4e3dcb12.js"><link rel="prefetch" href="/YlDocument/assets/js/5.261d6d3e.js"><link rel="prefetch" href="/YlDocument/assets/js/7.2eba18d7.js"><link rel="prefetch" href="/YlDocument/assets/js/8.0d62bc96.js"><link rel="prefetch" href="/YlDocument/assets/js/9.b3a6ced7.js">
+    <link rel="stylesheet" href="/YlDocument/assets/css/0.styles.3e4288f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/YlDocument/" class="home-link router-link-active"><img src="/YlDocument/img/logo.png" alt="易龙软件开发文档" class="logo"> <span class="site-name can-hide">易龙软件开发文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/YlDocument/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范" class="dropdown-title"><span class="title">开发规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/base/base-rules/" class="nav-link">
+  基础规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/front/front-rules/" class="nav-link">
+  前端规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/service/service-rules/" class="nav-link">
+  服务端规范
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/basic/facilities.html" class="nav-link">
+  基础设施
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库脚本" class="dropdown-title"><span class="title">数据库脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/sql/cbaseinfo/" class="nav-link">
+  物资基础数据
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/mquantity/" class="nav-link">
+  物资实物量管控
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/maccount/" class="nav-link">
+  物资账务管理
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/concrete/" class="nav-link">
+  混凝土核算系统
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/daily/editor.html" class="nav-link">
+  环境配置
+</a></div><div class="nav-item"><a href="/YlDocument/extend/markdown.html" class="nav-link">
+  技术扩展
+</a></div><div class="nav-item"><a href="https://github.com/YLSoftWorkGroup/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/YlDocument/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范" class="dropdown-title"><span class="title">开发规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/base/base-rules/" class="nav-link">
+  基础规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/front/front-rules/" class="nav-link">
+  前端规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/service/service-rules/" class="nav-link">
+  服务端规范
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/basic/facilities.html" class="nav-link">
+  基础设施
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库脚本" class="dropdown-title"><span class="title">数据库脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/sql/cbaseinfo/" class="nav-link">
+  物资基础数据
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/mquantity/" class="nav-link">
+  物资实物量管控
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/maccount/" class="nav-link">
+  物资账务管理
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/concrete/" class="nav-link">
+  混凝土核算系统
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/daily/editor.html" class="nav-link">
+  环境配置
+</a></div><div class="nav-item"><a href="/YlDocument/extend/markdown.html" class="nav-link">
+  技术扩展
+</a></div><div class="nav-item"><a href="https://github.com/YLSoftWorkGroup/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/YlDocument/base/base-rules.html" aria-current="page" class="active sidebar-link">基础规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#命名规范" class="sidebar-link">命名规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#常用的命名规范" class="sidebar-link">常用的命名规范</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#项目" class="sidebar-link">项目</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#目录" class="sidebar-link">目录</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#文件" class="sidebar-link">文件</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#类" class="sidebar-link">类</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#函数" class="sidebar-link">函数</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#变量" class="sidebar-link">变量</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#组件" class="sidebar-link">组件</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#样式类" class="sidebar-link">样式类</a></li></ul></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#数据库" class="sidebar-link">数据库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#表命名规范" class="sidebar-link">表命名规范</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#列名称规范" class="sidebar-link">列名称规范</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#表创建" class="sidebar-link">表创建</a></li></ul></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#元数据配置" class="sidebar-link">元数据配置</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#文件夹目录结构" class="sidebar-link">文件夹目录结构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#站点项目-2" class="sidebar-link">站点项目</a></li><li class="sidebar-sub-header"><a href="/YlDocument/base/base-rules.html#服务项目-2" class="sidebar-link">服务项目</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="基础规范"><a href="#基础规范" class="header-anchor">#</a> 基础规范</h1> <h2 id="命名规范"><a href="#命名规范" class="header-anchor">#</a> 命名规范</h2> <p>开发对象取名一般以英文语义为主，尽量使用比较明确的字面意思描述开发对象，开发对象的命名规则根据具体的对象而定，具体要求如下：</p> <h3 id="常用的命名规范"><a href="#常用的命名规范" class="header-anchor">#</a> 常用的命名规范</h3> <h4 id="下划线命名法"><a href="#下划线命名法" class="header-anchor">#</a> 下划线命名法</h4> <p>变量名使用下划线分割小写字母的方式命名,简称<code>ass_bss</code></p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>material_categories
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="帕斯卡命名法（pascalcase）"><a href="#帕斯卡命名法（pascalcase）" class="header-anchor">#</a> 帕斯卡命名法（PascalCase）</h4> <p>变量名称之间使用首字母大写的命名方式,简称<code>AssBss</code></p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>MaterialCategories
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="驼峰命名法（camelcase）"><a href="#驼峰命名法（camelcase）" class="header-anchor">#</a> 驼峰命名法（camelCase）</h4> <p>变量名称之间使用首字母大写的命名方式,第一个字母首字母为小写,简称<code>assBss</code></p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>materialCategories
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="中划线链接命名法"><a href="#中划线链接命名法" class="header-anchor">#</a> 中划线链接命名法</h4> <p>变量名使用中划线分割小写字母的方式命名,简称<code>ass-bss</code></p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>material-categories
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="项目"><a href="#项目" class="header-anchor">#</a> 项目</h3> <p>项目的命名均采用中划线链接命名法</p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>aaa-bbb-project
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="站点项目"><a href="#站点项目" class="header-anchor">#</a> 站点项目</h4> <p>站点名称中的code也采用<code>ass-bss</code>方式命名</p> <p>PC站点命名如下：</p> <p><strong>node-[aa-bb]-website</strong></p> <p>移动端站点命名如下：</p> <p><strong>node-[aa-bb]-app-website</strong></p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>node-maccount-website 
+node-mquantity-app-website 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="服务项目"><a href="#服务项目" class="header-anchor">#</a> 服务项目</h4> <p>服务端命名规则如下：</p> <p><strong>node-[aa-bb]-service</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>node-maccount-service
+node-mquantity-app-service 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="前端组件库"><a href="#前端组件库" class="header-anchor">#</a> 前端组件库</h4> <p>前端组件库命名规则如下：</p> <p><strong>vue-[aa-bb]-library</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vue-protal-framework-library
+vue-protal-app-framework-library
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>上传至梦诚私有仓库：<code>@yearrow/vue-[aa-bb]-library</code></p></blockquote> <h4 id="一般库"><a href="#一般库" class="header-anchor">#</a> 一般库</h4> <p>一般库命名规则如下：</p> <p><strong>js-[aa-bb]-library</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>js-common-utils-library
+js-lodop-print-library
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>上传至梦诚私有仓库：<code>@yearrow/js-[aa-bb]-library</code></p></blockquote> <h3 id="目录"><a href="#目录" class="header-anchor">#</a> 目录</h3> <p>目录的命名均采用中划线链接命名法</p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> web-content
+ home-page
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="文件"><a href="#文件" class="header-anchor">#</a> 文件</h3> <p>文件的命名均采用中划线链接命名法</p> <p>示例：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> plugin-config.js
+ home-page.html
+ global-style.pcss
+ logo-64*64.png
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="类"><a href="#类" class="header-anchor">#</a> 类</h3> <p>类的命名均采用帕斯卡命名法（PascalCase）</p> <p>示例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">DrawComponent</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h3> <p>类的命名均采用驼峰命名法（camelCase）</p> <p>示例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> drawTable <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>有时候会根据使用环境区分内部函数还是外部函数，如果是内部函数在函数名前加<code>_</code></p></blockquote> <p>示例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">DrawComponent</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">drawTable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">_everyPageShow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="变量"><a href="#变量" class="header-anchor">#</a> 变量</h3> <p>变量的命名均采用驼峰命名法（camelCase）</p> <blockquote><p>这里所说的变量范围主要指<code>js\ts\vue</code>语法的命名</p></blockquote> <p>示例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> listData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> lastUpdater <span class="token operator">=</span> <span class="token string">'mlc'</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>注意</strong></p> <p>有时候会定义一些全局变量或高频使用的变量，这些变量名允许加<code>$</code>起到强调的作用</p> <p>示例：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> $http <span class="token operator">=</span> <span class="token comment">// ...</span>
+<span class="token keyword">const</span> $primaryColor <span class="token operator">=</span> <span class="token comment">// ... </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="组件"><a href="#组件" class="header-anchor">#</a> 组件</h3> <p>自定义的Vue组件命名为帕斯卡命名法（PascalCase）</p> <p>示例：</p> <p>命名组件名时：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'YlTableEdit'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>组件注册时：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> YlTableEdit <span class="token keyword">from</span> <span class="token string">'../yl-table-edit.vue'</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    components<span class="token operator">:</span> <span class="token punctuation">{</span>
+      YlTableEdit
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>组件使用时：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>yl-table-edit</span>
+  <span class="token attr-name">:props</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>...<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>yl-table-edit</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="样式类"><a href="#样式类" class="header-anchor">#</a> 样式类</h3> <p>样式类采用中划线命名方式</p> <p>示例：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.page-main</span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.text-ellipsis</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.yl-message-text</span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="数据库"><a href="#数据库" class="header-anchor">#</a> 数据库</h2> <p>数据库中的变量均采用下划线命名法（ass_bss）</p> <h3 id="表命名规范"><a href="#表命名规范" class="header-anchor">#</a> 表命名规范</h3> <p>命名规则：</p> <ul><li>g_[name]  全局公共表名称</li> <li>c_[name]  常用库表名称</li> <li>q_[name]  实物量管控表名称</li> <li>m_[name]  账务管控表名称</li> <li>t_[name]  周转材料表名称</li> <li>temp_[name]  中间缓存表名称</li></ul> <p>示例：</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code>  g_table_name  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="列名称规范"><a href="#列名称规范" class="header-anchor">#</a> 列名称规范</h3> <p>继承列（所有表具有）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>id     主键  
+creator_id 添加人主键
+creator_name 添加人
+created_at 添加时间
+modifier_id 修改人主键
+modifier_name 修改人
+updated_at 修改时间
+is_removed 是否删除
+version 版本号
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>继承列（按需使用）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>sort_code 排序
+is_active 状态
+is_static 是否静态
+org_id  组织机构主键 （业务表具有）
+order_id 主表主键 （主从明细表具有）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>继承列（树形表具有）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>parent_id 父节点主键
+full_id 节点主键链
+full_name 节点名称链
+level 层级
+is_leaf 子节点
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>专有列（材料信息相关列）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>material_id 材料唯一标识
+material_name 材料名称
+material_model 规格型号
+material_unit 单位名称
+class_id 类别主键
+class_full_id 类别主键链
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>专有列(数量、单价、金额相关列)</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>tax_rate: DECIMAL(28, 4),  税率
+tax_free_price:DECIMAL(28, 8), 不含税单价
+tax_free_sum: DECIMAL(28, 4),  不含税金额
+tax_included_price:DECIMAL(28, 8),  含税单价
+tax_included_sum: DECIMAL(28, 4),  含税金额
+tax_amount: DECIMAL(28, 4), 税额
+book_price: DECIMAL(28, 8), 账面价
+book_sum:  DECIMAL(28, 4)}, 账面金额
+difference: DECIMAL(28, 4), 差额
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>专有列(对接列)</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ori_org_id 对接第三方组织主键
+ori_class_id 对接第三方材料类别主键
+ori_material_id 对接第三方材料信息主键
+ori_supplier_id 对接第三方供应商主键
+ori_labour_id 对接第三方用料单位主键
+ori_gh_id 对接第三方工号主键
+ori_order_id 对接第三方单据主键
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="表创建"><a href="#表创建" class="header-anchor">#</a> 表创建</h3> <h4 id="实体表创建"><a href="#实体表创建" class="header-anchor">#</a> 实体表创建</h4> <blockquote><p>双主键的话，orgId创建表的时候必须当道第一列</p></blockquote> <p>示例:</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> m_demo_table
+<span class="token punctuation">(</span>                       
+  org_id              <span class="token keyword">BIGINT</span>     <span class="token operator">NOT</span> <span class="token boolean">NULL</span>                 <span class="token keyword">COMMENT</span> <span class="token string">'组织机构主键'</span><span class="token punctuation">,</span> 
+  id                  <span class="token keyword">BIGINT</span>     <span class="token operator">NOT</span> <span class="token boolean">NULL</span>                 <span class="token keyword">COMMENT</span> <span class="token string">'主键id'</span><span class="token punctuation">,</span>  
+  string STRING                                           <span class="token keyword">COMMENT</span> <span class="token string">'string类型'</span>
+  filed_decimal       <span class="token keyword">DECIMAL</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>                      <span class="token keyword">COMMENT</span> <span class="token string">'decimal类型'</span><span class="token punctuation">,</span>
+  filed_integer       <span class="token keyword">INTEGER</span>                             <span class="token keyword">COMMENT</span> <span class="token string">'integer类型'</span><span class="token punctuation">,</span>
+  is_removed          <span class="token keyword">BOOLEAN</span>    <span class="token operator">NOT</span> <span class="token boolean">NULL</span>  <span class="token keyword">DEFAULT</span> <span class="token boolean">false</span>  <span class="token keyword">COMMENT</span> <span class="token string">'删除标记'</span><span class="token punctuation">,</span>
+  creator_id          <span class="token keyword">BIGINT</span>                              <span class="token keyword">COMMENT</span> <span class="token string">'添加人主键'</span><span class="token punctuation">,</span>
+  creator_name        STRING                              <span class="token keyword">COMMENT</span> <span class="token string">'添加人'</span><span class="token punctuation">,</span>
+  created_at          <span class="token keyword">TIMESTAMP</span>                           <span class="token keyword">COMMENT</span> <span class="token string">'创建时间'</span><span class="token punctuation">,</span>
+  modifier_id         <span class="token keyword">BIGINT</span>                              <span class="token keyword">COMMENT</span> <span class="token string">'修改人主键'</span><span class="token punctuation">,</span>
+  modifier_name       STRING                              <span class="token keyword">COMMENT</span> <span class="token string">'修改人'</span><span class="token punctuation">,</span>
+  updated_at          <span class="token keyword">TIMESTAMP</span>                           <span class="token keyword">COMMENT</span> <span class="token string">'修改时间'</span><span class="token punctuation">,</span>
+  version             <span class="token keyword">BIGINT</span>                              <span class="token keyword">COMMENT</span> <span class="token string">'版本'</span><span class="token punctuation">,</span>
+  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>org_id<span class="token punctuation">,</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">comment</span> <span class="token string">'实体表示例'</span>
+stored <span class="token keyword">as</span> kudu<span class="token punctuation">;</span>  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h4 id="事务表创建"><a href="#事务表创建" class="header-anchor">#</a> 事务表创建</h4> <p>示例:</p> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> m_demo_table
+<span class="token punctuation">(</span>                       
+  org_id              <span class="token keyword">BIGINT</span>     <span class="token operator">NOT</span> <span class="token boolean">NULL</span>                 <span class="token keyword">COMMENT</span> <span class="token string">'组织机构主键'</span><span class="token punctuation">,</span> 
+  id                  <span class="token keyword">BIGINT</span>     <span class="token operator">NOT</span> <span class="token boolean">NULL</span>                 <span class="token keyword">COMMENT</span> <span class="token string">'主键id'</span><span class="token punctuation">,</span>  
+  string STRING                                           <span class="token keyword">COMMENT</span> <span class="token string">'string类型'</span>
+  filed_decimal       <span class="token keyword">DECIMAL</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>                      <span class="token keyword">COMMENT</span> <span class="token string">'decimal类型'</span><span class="token punctuation">,</span>
+  filed_integer       <span class="token keyword">INTEGER</span>                             <span class="token keyword">COMMENT</span> <span class="token string">'integer类型'</span><span class="token punctuation">,</span>
+  is_removed          <span class="token keyword">BOOLEAN</span>    <span class="token operator">NOT</span> <span class="token boolean">NULL</span>  <span class="token keyword">DEFAULT</span> <span class="token boolean">false</span>  <span class="token keyword">COMMENT</span> <span class="token string">'删除标记'</span><span class="token punctuation">,</span>
+  creator_id          <span class="token keyword">BIGINT</span>                              <span class="token keyword">COMMENT</span> <span class="token string">'添加人主键'</span><span class="token punctuation">,</span>
+  creator_name        STRING                              <span class="token keyword">COMMENT</span> <span class="token string">'添加人'</span><span class="token punctuation">,</span>
+  created_at          <span class="token keyword">TIMESTAMP</span>                           <span class="token keyword">COMMENT</span> <span class="token string">'创建时间'</span><span class="token punctuation">,</span>
+  modifier_id         <span class="token keyword">BIGINT</span>                              <span class="token keyword">COMMENT</span> <span class="token string">'修改人主键'</span><span class="token punctuation">,</span>
+  modifier_name       STRING                              <span class="token keyword">COMMENT</span> <span class="token string">'修改人'</span><span class="token punctuation">,</span>
+  updated_at          <span class="token keyword">TIMESTAMP</span>                           <span class="token keyword">COMMENT</span> <span class="token string">'修改时间'</span><span class="token punctuation">,</span>
+  version             <span class="token keyword">BIGINT</span>                              <span class="token keyword">COMMENT</span> <span class="token string">'版本'</span><span class="token punctuation">,</span>
+  __action            STRING     <span class="token boolean">NULL</span> <span class="token keyword">DEFAULT</span> <span class="token string">'insert'</span>    <span class="token keyword">COMMENT</span> <span class="token string">'对应的操作'</span><span class="token punctuation">,</span>
+  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>__trans_id<span class="token punctuation">,</span>org_id<span class="token punctuation">,</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">comment</span> <span class="token string">'事务表示例'</span>
+stored <span class="token keyword">as</span> kudu<span class="token punctuation">;</span>  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="元数据配置"><a href="#元数据配置" class="header-anchor">#</a> 元数据配置</h2> <blockquote><p>元数据中命名采用<code>ass-bss</code>命名规则</p></blockquote> <table><thead><tr><th>项</th> <th style="text-align:center;">名称规范（采用<code>ass-bss</code>命名规则）</th> <th style="text-align:right;">举例</th> <th style="text-align:right;">唯一性</th> <th style="text-align:right;">属于产品</th></tr></thead> <tbody><tr><td>产品编码</td> <td style="text-align:center;">产品名称简称单字母</td> <td style="text-align:right;">cbaseinfo</td> <td style="text-align:right;">全局唯一</td> <td style="text-align:right;">是</td></tr> <tr><td>功能包编码</td> <td style="text-align:center;">产品编码-功能包名称-pack</td> <td style="text-align:right;">cbaseinfo-base-pack</td> <td style="text-align:right;">全局唯一</td> <td style="text-align:right;">是</td></tr> <tr><td>模块编码</td> <td style="text-align:center;">产品编码-模块名称</td> <td style="text-align:right;">cbaseinfo-supplier</td> <td style="text-align:right;">全局唯一</td> <td style="text-align:right;">是</td></tr> <tr><td>模块地址</td> <td style="text-align:center;">/产品编码/模块名称.html</td> <td style="text-align:right;">/cbaseinfo/supplier.html</td> <td style="text-align:right;">全局唯一</td> <td style="text-align:right;">是</td></tr> <tr><td>模块权限编码</td> <td style="text-align:center;">模块编码-功能编码</td> <td style="text-align:right;">cbaseinfo-supplier-add</td> <td style="text-align:right;">全局唯一</td> <td style="text-align:right;">是</td></tr> <tr><td>菜单设定</td> <td style="text-align:center;">菜单根据使用组织属性命名</td> <td style="text-align:right;">项目及拌合站通用</td> <td style="text-align:right;">---</td> <td style="text-align:right;">跨产品设置</td></tr> <tr><td>角色设定</td> <td style="text-align:center;">具体角色名</td> <td style="text-align:right;">项目部材料员，公司领导</td> <td style="text-align:right;">---</td> <td style="text-align:right;">跨产品设置</td></tr> <tr><td>应用配置</td> <td style="text-align:center;">根据具体功能项命名，移动端以应用结尾</td> <td style="text-align:right;">物资账务管理系统，混凝土签收应用</td> <td style="text-align:right;">---</td> <td style="text-align:right;">跨产品设置</td></tr></tbody></table> <h2 id="文件夹目录结构"><a href="#文件夹目录结构" class="header-anchor">#</a> 文件夹目录结构</h2> <p>规范中只列出项目文件结构骨架</p> <h3 id="站点项目-2"><a href="#站点项目-2" class="header-anchor">#</a> 站点项目</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    dist/
+        web-content/
+                   asset/
+                        fonts/  字体文件
+                        images/  图片资源
+                        plugins/ 插件
+                        *.js  打包的js文件
+                        *.css 打包的css文件      
+                   lib/ 拷贝的库文件
+                   *.html  打包的html文件
+        app.js  项目启动文件
+    src/
+        controllers/
+                    router/       服务路由文件
+                    service/      服务文件
+                    index.js      项目启动文件
+                    .henhouserc   代理配置文件
+                    bootstrap.yml 项目配置文件
+        web-content/
+                    assets/
+                        images/  图片资源
+                        plugins/ 插件
+                    styles/
+                        fonts/   字体图标文件
+                        css/     样式文件
+                    components/  项目自定义组件
+                    mixins/ 混合组件
+                    utils/  项目功能函数
+                    modules/
+                            home-page/ 
+                                      components/ 页面组件
+                                      store/ 全局状态文件
+                                      app.vue   (使用router时具有) 
+                                      router.js (使用router时具有) 
+                                      home-page.html
+                                      index.js  
+                            template.html 通用的html页面
+                    .eslintrc   eslint配置
+        .eslintrc   eslint配置
+    iwop-pack-local.config.js  本地开发配置打包配置
+    iwop-pack.config.js  打包配置
+    babel.config.js babel配置文件 
+    dockerfile  部署docker配置
+    package.json
+    .gitignore 
+    .vscode/
+            settings.json 编辑器配置
+            launch.json 调试配置
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><h3 id="服务项目-2"><a href="#服务项目-2" class="header-anchor">#</a> 服务项目</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    dist/
+        app.js
+    src/
+        sql/          脚本备份
+        model/        实体文件
+        router/       服务路由文件
+        service/      服务文件
+        utils/        功能函数       
+        index.js      项目启动文件
+        bootstrap.yml 项目配置文件
+    .eslintrc   eslint配置
+    README.md   服务说明
+    dockerfile  部署docker配置
+    nodemon.json 热更新配置
+    package.json
+    .gitignore
+    .vscode/
+            settings.json 编辑器配置
+            launch.json 调试配置
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2/16/2020, 3:59:23 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/YlDocument/assets/js/app.d7e74e05.js" defer></script><script src="/YlDocument/assets/js/2.b97c573e.js" defer></script><script src="/YlDocument/assets/js/6.f4e8cddd.js" defer></script>
+  </body>
+</html>

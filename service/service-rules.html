@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服务端规范 | 易龙软件开发文档</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/YlDocument/favicon.ico">
+    <meta name="description" content="YLSoft Work Document">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/YlDocument/assets/css/0.styles.3e4288f7.css" as="style"><link rel="preload" href="/YlDocument/assets/js/app.d7e74e05.js" as="script"><link rel="preload" href="/YlDocument/assets/js/2.b97c573e.js" as="script"><link rel="preload" href="/YlDocument/assets/js/13.a0a30431.js" as="script"><link rel="prefetch" href="/YlDocument/assets/js/10.5de03124.js"><link rel="prefetch" href="/YlDocument/assets/js/11.53dd5710.js"><link rel="prefetch" href="/YlDocument/assets/js/12.245cea59.js"><link rel="prefetch" href="/YlDocument/assets/js/14.4b1c368d.js"><link rel="prefetch" href="/YlDocument/assets/js/15.dd38e28f.js"><link rel="prefetch" href="/YlDocument/assets/js/16.8cc3c715.js"><link rel="prefetch" href="/YlDocument/assets/js/17.266a332a.js"><link rel="prefetch" href="/YlDocument/assets/js/18.fac33c9f.js"><link rel="prefetch" href="/YlDocument/assets/js/19.e7b76d73.js"><link rel="prefetch" href="/YlDocument/assets/js/3.6160bf56.js"><link rel="prefetch" href="/YlDocument/assets/js/4.4e3dcb12.js"><link rel="prefetch" href="/YlDocument/assets/js/5.261d6d3e.js"><link rel="prefetch" href="/YlDocument/assets/js/6.f4e8cddd.js"><link rel="prefetch" href="/YlDocument/assets/js/7.2eba18d7.js"><link rel="prefetch" href="/YlDocument/assets/js/8.0d62bc96.js"><link rel="prefetch" href="/YlDocument/assets/js/9.b3a6ced7.js">
+    <link rel="stylesheet" href="/YlDocument/assets/css/0.styles.3e4288f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/YlDocument/" class="home-link router-link-active"><img src="/YlDocument/img/logo.png" alt="易龙软件开发文档" class="logo"> <span class="site-name can-hide">易龙软件开发文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/YlDocument/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范" class="dropdown-title"><span class="title">开发规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/base/base-rules/" class="nav-link">
+  基础规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/front/front-rules/" class="nav-link">
+  前端规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/service/service-rules/" class="nav-link">
+  服务端规范
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/basic/facilities.html" class="nav-link">
+  基础设施
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库脚本" class="dropdown-title"><span class="title">数据库脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/sql/cbaseinfo/" class="nav-link">
+  物资基础数据
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/mquantity/" class="nav-link">
+  物资实物量管控
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/maccount/" class="nav-link">
+  物资账务管理
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/concrete/" class="nav-link">
+  混凝土核算系统
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/daily/editor.html" class="nav-link">
+  环境配置
+</a></div><div class="nav-item"><a href="/YlDocument/extend/markdown.html" class="nav-link">
+  技术扩展
+</a></div><div class="nav-item"><a href="https://github.com/YLSoftWorkGroup/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/YlDocument/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范" class="dropdown-title"><span class="title">开发规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/base/base-rules/" class="nav-link">
+  基础规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/front/front-rules/" class="nav-link">
+  前端规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/service/service-rules/" class="nav-link">
+  服务端规范
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/basic/facilities.html" class="nav-link">
+  基础设施
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库脚本" class="dropdown-title"><span class="title">数据库脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/sql/cbaseinfo/" class="nav-link">
+  物资基础数据
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/mquantity/" class="nav-link">
+  物资实物量管控
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/maccount/" class="nav-link">
+  物资账务管理
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/concrete/" class="nav-link">
+  混凝土核算系统
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/daily/editor.html" class="nav-link">
+  环境配置
+</a></div><div class="nav-item"><a href="/YlDocument/extend/markdown.html" class="nav-link">
+  技术扩展
+</a></div><div class="nav-item"><a href="https://github.com/YLSoftWorkGroup/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/YlDocument/service/service-rules.html" aria-current="page" class="active sidebar-link">服务端规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/service/service-rules.html#路由规范" class="sidebar-link">路由规范</a></li><li class="sidebar-sub-header"><a href="/YlDocument/service/service-rules.html#服务" class="sidebar-link">服务</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/service/service-rules.html#服务层代码规范" class="sidebar-link">服务层代码规范</a></li></ul></li><li class="sidebar-sub-header"><a href="/YlDocument/service/service-rules.html#脚本" class="sidebar-link">脚本</a></li><li class="sidebar-sub-header"><a href="/YlDocument/service/service-rules.html#其他" class="sidebar-link">其他</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="服务端规范"><a href="#服务端规范" class="header-anchor">#</a> 服务端规范</h1> <h2 id="路由规范"><a href="#路由规范" class="header-anchor">#</a> 路由规范</h2> <p>路由路径采用中化线命名规范</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>
+<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'items'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">// 根据指定条件获取列表</span>
+<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'items/:id'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">// 根据ID获取单条信息</span>
+<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'items/:id/:orgid'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">// 根据双主键获取单条信息</span>
+<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'items-params'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">//根据条件获取列表信息 </span>
+<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'items-bulking'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">//增量获取数据  参数说明 limit: 15,  //增量获取的条目数 缺省时默认值为200 orgId: 123, //组织机构ID  version: 123</span>
+
+
+<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'items'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">// 添加单条数据</span>
+<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'items-bulking'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">// 添加多条数据</span>
+<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">'items/:id'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span>  <span class="token comment">// 修改单条信息</span>
+<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'items/:id'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">// 删除单条信息</span>
+<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'items/:id/:orgid'</span><span class="token punctuation">,</span> Func<span class="token punctuation">)</span> <span class="token comment">// 删除单条信息</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="服务"><a href="#服务" class="header-anchor">#</a> 服务</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>  queryItems 根据指定条件获取列表
+  getItem 根据ID获取单条信息
+  queryItemsParams 根据条件获取列表信息
+  queryItemsBulking 增量获取数据 
+  
+  createItem 添加单条数据
+  createItems 添加多条数据
+  updateItem 修改单条信息
+  deleteItem 删除单条信息
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="服务层代码规范"><a href="#服务层代码规范" class="header-anchor">#</a> 服务层代码规范</h3> <p>复杂业务逻辑写上说明<br>
+如： 提交收料单：<br>
+1、动态表是否已经结转了，结转返回，没有继续<br>
+2、获取发料单查看是否已经提交，提交了返回，未提交继续<br>
+3、获取材料详情查看是否有发料，有发料返回所有发料单，没有继续<br>
+4、处理库存<br>
+5、修改收料单提交状态。</p> <blockquote><p>model 层字段必须写上说明，没有使用字段需要列出来，枚举类型的一定写上代表的意思。<br>
+eg:</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code>serviceType<span class="token operator">:</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> Sequelize<span class="token punctuation">.</span><span class="token constant">INTEGER</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 业务类型（新增） 调入（20） 收料   （10） 调入退（-21） 收料退（-11）预点（30）   </span>
+storeRoomName<span class="token operator">:</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> Sequelize<span class="token punctuation">.</span><span class="token constant">STRING</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 成本科目（没用字段）  </span>
+
+<span class="token comment">// 通过id获取某一条数据的时候，如果是orgId也是主键的时候必须带上orgId.</span>
+<span class="token comment">// 如下面不许用出现这种： </span>
+service<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'m-delivery-order/:id'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">await</span> mDeliveryService<span class="token punctuation">.</span><span class="token function">getMDelivery</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> Models<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>    
+
+<span class="token comment">//必须下面这种：  </span>
+service<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'m-delivery-order/:id/:orgid'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">await</span> mDeliveryService<span class="token punctuation">.</span><span class="token function">getMDelivery</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> Models<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div> <h2 id="脚本"><a href="#脚本" class="header-anchor">#</a> 脚本</h2> <p>脚本:</p> <p>1、查询语句尽量不要出现复杂的计算语句影响性能问题。<br>
+2、查询语句的时候先缩小查询范围，在进行关联查询。</p> <p>使用事务注意事项：</p> <p>1、使用事物的时候内部不要写逻辑的，会影响性能问题，尽量在事务外部处理。<br>
+2、事务内部尽量不要出现查询的语句。<br>
+3、事务内部尽量不要出现for循环语句。</p> <h2 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h2> <p>1、rpc新的调用方式<br>
+@mctech/infra-cloud 包解决了rpc调用时path里带参数导致内存缓慢泄漏的问题</p> <div class="language- extra-class"><pre><code>另外rpc调用增加了路径参数的新的传参方式，用法与传参方式与koa-router的使用方式一样，推荐使用下面这种方式，明确表示这是一个路径参数 
+```
+ const v= await ctx.rpc.get(
+   {
+     path:'/project/:project/:id',
+     params: {
+       project: 4000000,
+       id: 2222222
+     }
+   },
+   {
+     serviced: 'node-cbaseinfo-service'
+   }
+ )
+```
+</code></pre></div><p>2、合理使用数据结构，优化算法</p> <div class="language- extra-class"><pre><code>减少内存复制（拼字符串）
+
+拼接前代码
+
+```
+ let updateDataSql =''
+ for (let i = 0; i &lt; data.existsData.length; i++) {
+  updateDataSql += `(${data.existsData[i].orgId} org_id,'${data.existsData[i].itemBarCode}' item_bar_code,${data.existsData[i].quantity} quantity),`
+ }
+updateDataSql =updateDataSql.length &gt; 0 ? updateDataSql.substr(0, updateDataSql.length - 1) : ''
+```
+
+改后代码
+
+```
+let updateDatas = []
+for (let i = 0; i &lt; data.existsData.length; i++) {
+  updateDatas.push(`(${data.existsData[i].orgId} org_id,'${data.existsData[i].itemBarCode}' item_bar_code,${data.existsData[i].quantity} quantity)`)
+}
+const updateDataSql = updateDatas.join()
+```
+
+
+尽可能减少大量的for循环，嵌套循环
+
+改前代码
+
+```
+const treeList = [....]
+for (const node of treeList) {
+  const parentNode = treeList.find(item =&gt; item.id === node.parentId)
+  ....
+}
+```
+
+改后代码
+
+```
+const treeList = […..]
+const treeMap = {}
+treeList.forEach(node =&gt; treeMap[node.id] = node)
+
+for (const node of treeList) {
+  const parentNode = treeMap[node.parentId]
+  …….
+}
+
+```
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/4/2021, 8:22:44 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/YlDocument/assets/js/app.d7e74e05.js" defer></script><script src="/YlDocument/assets/js/2.b97c573e.js" defer></script><script src="/YlDocument/assets/js/13.a0a30431.js" defer></script>
+  </body>
+</html>

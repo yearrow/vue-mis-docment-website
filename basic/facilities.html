@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常用公共功能 | 易龙软件开发文档</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/YlDocument/favicon.ico">
+    <meta name="description" content="YLSoft Work Document">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/YlDocument/assets/css/0.styles.3e4288f7.css" as="style"><link rel="preload" href="/YlDocument/assets/js/app.d7e74e05.js" as="script"><link rel="preload" href="/YlDocument/assets/js/2.b97c573e.js" as="script"><link rel="preload" href="/YlDocument/assets/js/7.2eba18d7.js" as="script"><link rel="prefetch" href="/YlDocument/assets/js/10.5de03124.js"><link rel="prefetch" href="/YlDocument/assets/js/11.53dd5710.js"><link rel="prefetch" href="/YlDocument/assets/js/12.245cea59.js"><link rel="prefetch" href="/YlDocument/assets/js/13.a0a30431.js"><link rel="prefetch" href="/YlDocument/assets/js/14.4b1c368d.js"><link rel="prefetch" href="/YlDocument/assets/js/15.dd38e28f.js"><link rel="prefetch" href="/YlDocument/assets/js/16.8cc3c715.js"><link rel="prefetch" href="/YlDocument/assets/js/17.266a332a.js"><link rel="prefetch" href="/YlDocument/assets/js/18.fac33c9f.js"><link rel="prefetch" href="/YlDocument/assets/js/19.e7b76d73.js"><link rel="prefetch" href="/YlDocument/assets/js/3.6160bf56.js"><link rel="prefetch" href="/YlDocument/assets/js/4.4e3dcb12.js"><link rel="prefetch" href="/YlDocument/assets/js/5.261d6d3e.js"><link rel="prefetch" href="/YlDocument/assets/js/6.f4e8cddd.js"><link rel="prefetch" href="/YlDocument/assets/js/8.0d62bc96.js"><link rel="prefetch" href="/YlDocument/assets/js/9.b3a6ced7.js">
+    <link rel="stylesheet" href="/YlDocument/assets/css/0.styles.3e4288f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/YlDocument/" class="home-link router-link-active"><img src="/YlDocument/img/logo.png" alt="易龙软件开发文档" class="logo"> <span class="site-name can-hide">易龙软件开发文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/YlDocument/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范" class="dropdown-title"><span class="title">开发规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/base/base-rules/" class="nav-link">
+  基础规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/front/front-rules/" class="nav-link">
+  前端规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/service/service-rules/" class="nav-link">
+  服务端规范
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/basic/facilities.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  基础设施
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库脚本" class="dropdown-title"><span class="title">数据库脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/sql/cbaseinfo/" class="nav-link">
+  物资基础数据
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/mquantity/" class="nav-link">
+  物资实物量管控
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/maccount/" class="nav-link">
+  物资账务管理
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/concrete/" class="nav-link">
+  混凝土核算系统
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/daily/editor.html" class="nav-link">
+  环境配置
+</a></div><div class="nav-item"><a href="/YlDocument/extend/markdown.html" class="nav-link">
+  技术扩展
+</a></div><div class="nav-item"><a href="https://github.com/YLSoftWorkGroup/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/YlDocument/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范" class="dropdown-title"><span class="title">开发规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/base/base-rules/" class="nav-link">
+  基础规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/front/front-rules/" class="nav-link">
+  前端规范
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/service/service-rules/" class="nav-link">
+  服务端规范
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/basic/facilities.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  基础设施
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库脚本" class="dropdown-title"><span class="title">数据库脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YlDocument/sql/cbaseinfo/" class="nav-link">
+  物资基础数据
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/mquantity/" class="nav-link">
+  物资实物量管控
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/maccount/" class="nav-link">
+  物资账务管理
+</a></li><li class="dropdown-item"><!----> <a href="/YlDocument/sql/concrete/" class="nav-link">
+  混凝土核算系统
+</a></li></ul></div></div><div class="nav-item"><a href="/YlDocument/daily/editor.html" class="nav-link">
+  环境配置
+</a></div><div class="nav-item"><a href="/YlDocument/extend/markdown.html" class="nav-link">
+  技术扩展
+</a></div><div class="nav-item"><a href="https://github.com/YLSoftWorkGroup/YlDocument" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/YlDocument/basic/facilities.html" aria-current="page" class="active sidebar-link">常用公共功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/basic/facilities.html#excel导入-导出" class="sidebar-link">excel导入/导出</a></li><li class="sidebar-sub-header"><a href="/YlDocument/basic/facilities.html#打印" class="sidebar-link">打印</a></li><li class="sidebar-sub-header"><a href="/YlDocument/basic/facilities.html#app打印" class="sidebar-link">app打印</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/YlDocument/basic/facilities.html#使用步骤" class="sidebar-link">使用步骤</a></li><li class="sidebar-sub-header"><a href="/YlDocument/basic/facilities.html#打印模板" class="sidebar-link">打印模板</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="常用公共功能"><a href="#常用公共功能" class="header-anchor">#</a> 常用公共功能</h1> <h2 id="excel导入-导出"><a href="#excel导入-导出" class="header-anchor">#</a> excel导入/导出</h2> <h2 id="打印"><a href="#打印" class="header-anchor">#</a> 打印</h2> <h2 id="app打印"><a href="#app打印" class="header-anchor">#</a> app打印</h2> <h3 id="使用步骤"><a href="#使用步骤" class="header-anchor">#</a> 使用步骤</h3> <p>1、前端站点引入选择打印机 choose-printer.vue 页面， 路由名称和路径为 choosePrinter。 打印单据的时候打印机判断没有连接打印机，或者连接失效，会跳转到打印页面</p> <p>2、引用 import print from '@yearrow/js-bluetooth-print-library'</p> <p>3、注意首页 检查一下版本号和蓝牙是否打开</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> mounted () {
+    print.checkVersion(this) // 检查版本号
+    print.checkPrinter(this) // 检查蓝牙是否打开，初始化打印机名称
+ }  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>4、获取蓝牙名称 const name = this.cache.getItem('DEVICE_NAME')</p> <h3 id="打印模板"><a href="#打印模板" class="header-anchor">#</a> 打印模板</h3> <h4 id="_1、printorder-打印单据流式模式（针式、热敏打印机都支持）-超过打印纸的宽度就自动换行"><a href="#_1、printorder-打印单据流式模式（针式、热敏打印机都支持）-超过打印纸的宽度就自动换行" class="header-anchor">#</a> 1、printOrder 打印单据流式模式（针式、热敏打印机都支持） 超过打印纸的宽度就自动换行</h4> <div class="language- extra-class"><pre><code>使用配置说明 
+    const templateData = {
+      order: {
+        id:805597885583360,
+        supplierName: '天水田烨矿业有限公司',
+        orderCode: '收料-20200800001',
+        orgName: '北海西村港跨海大桥工程',
+        exitTime: '2020-07-24 11:12:59',
+        plateNumber: '陕A.123456',
+        maker: '王晓燕',
+        makerDate: '2020-07-24' 
+      },
+      orderItem:[{
+        materialName:'钢管',
+        materialModel :'中型',
+        netQuantity:8229.7806,
+        materialUnit:'吨',
+        remark:'测试备注',
+        id:805597886205952 
+      },
+      {
+        materialName:'钢管1',
+        materialModel :'中型1',
+        netQuantity:8229.7806,
+        materialUnit:'吨',
+        remark:'测试备注',
+        id:805597886205953 
+      }]
+    }
+
+    
+    const templateConf = {
+        titleName: '收料单',
+        signature: '送料人：       收料人：       监收人：     ',
+        orderModel: [{
+          prop: 'supplierName',
+          label: '供应商'
+        },{
+          prop: 'exitTime',
+          label: '入库时间'
+        }, {
+          prop: 'plateNumber',
+          label: &quot;车牌号&quot;
+        }],
+        itemsModel: [{
+          prop: 'materialName',
+          label: '材料名称'
+        }, {
+          prop: 'materialModel',
+          label: '规格型号'
+        }, {
+          prop: &quot;netQuantity,materialUnit&quot;,
+          label: '数    量'
+        }, {
+          prop: 'remark',
+          label: '备    注'
+        }]
+      }
+    print.printOrder( this, templateConf, templateData)
+</code></pre></div><h4 id="_2、printmaterialqrcode-（热敏打印机）材料二维码打印，（打印类似左边显示内容，右边显示二维码都可以使用此模板）"><a href="#_2、printmaterialqrcode-（热敏打印机）材料二维码打印，（打印类似左边显示内容，右边显示二维码都可以使用此模板）" class="header-anchor">#</a> 2、printMaterialQRCode （热敏打印机）材料二维码打印，（打印类似左边显示内容，右边显示二维码都可以使用此模板）</h4> <p>const templateData = [{
+materialName:'钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管钢管',
+materialModel :'钢管钢管钢1#钢管钢管钢1#钢管钢管钢1#钢管钢管钢1#钢管钢管钢1#钢管钢管钢1#钢管钢管钢1#钢管钢管钢1#',
+materialUnit:'吨吨吨吨吨吨吨',
+id:805597886205952
+}]
+const templateConf = [{
+prop: 'materialName',
+label: '材料名称',
+maxLins: 3,
+fontNum: 18
+}, {
+prop: 'materialModel',
+label: '规格型号',
+maxLins: 5,
+fontNum: 7,
+rightQRCode: true
+}, {
+prop: &quot;materialUnit&quot;,
+label: '单   位',
+maxLins: 1,
+fontNum: 5
+}]
+print.printMaterialQRCode( this, templateConf, templateData)</p> <h4 id="_3、printordertable-支持热敏打印机（中间是表格的样子）"><a href="#_3、printordertable-支持热敏打印机（中间是表格的样子）" class="header-anchor">#</a> 3、printOrderTable 支持热敏打印机（中间是表格的样子）</h4> <p>const templateData = {
+order: {
+id:805597885583360,
+supplierName: '天水田烨矿业有限公司',
+orderCode: '收料-20200800001',
+orgName: '北海西村港跨海大桥工程名字很长名字很长名字很长名字很长名字很长',
+exitTime: '2020-07-24 11:12:59',
+plateNumber: '陕A.123456',
+maker: '王晓燕',
+makerDate: '2020-07-24'
+},
+orderItem:[{
+materialName:'钢管名字很长名字很长名字很长',
+materialModel :'规格型号名字很长名字很长',
+netQuantity: 1250.7806,
+materialUnit:'立方米',
+remark:'测试备注数据',
+id:805597886205952
+},
+{
+materialName:'钢管1',
+materialModel :'中型1',
+netQuantity: 8229.7806,
+materialUnit:'根',
+remark:'测试备注数据',
+id:805597886205953
+}]
+}</p> <div class="language- extra-class"><pre><code>    const templateConf = {
+        titleName: '收料单',
+        signature: '送料人：       收料人：       监收人：     ',
+        orderModel: [{
+          prop: 'supplierName',
+          label: '供应商'
+        },{
+          prop: 'exitTime',
+          label: '入库时间'
+        }, {
+          prop: 'plateNumber',
+          label: &quot;车牌号&quot;
+        }],
+        itemsModel: [{
+          prop: 'materialName,materialModel',
+          label: '材料信息',
+          widthStart: 0,  // 第一列起始位0 
+          fontNum: 10     // 打印10个汉字，超过换行
+        }, {
+          prop: &quot;netQuantity,materialUnit&quot;,
+          label: '数量',
+          widthStart: 250, // 第二列从250点开始打印
+          fontNum: 6  // 打印6个汉字，超过换行
+        }, {
+          prop: 'remark',
+          label: '备注',
+          widthStart: 410, // 第三列从410点开始打印
+          fontNum: 5 // 打印5个汉字，超过换行
+        }]
+      }
+
+    print.printOrderTable( this, templateConf, templateData)       
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/4/2021, 8:22:44 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/YlDocument/assets/js/app.d7e74e05.js" defer></script><script src="/YlDocument/assets/js/2.b97c573e.js" defer></script><script src="/YlDocument/assets/js/7.2eba18d7.js" defer></script>
+  </body>
+</html>
