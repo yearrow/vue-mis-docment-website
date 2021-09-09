@@ -62,6 +62,27 @@ git pull --all
 
 
 ```
+
+### tag管理
+
+```bash
+
+# 查看tag(列出1.几的版本)
+git tag -l v1.*
+
+# 添加tag
+git tag -a xxx
+
+# 删除tag
+git tag -d v1.0
+
+
+# 共享(推送)tag 
+git push origin --tags
+
+
+
+```
 ### 推送覆盖远程仓库
 
 > 如果确认要全部覆盖远程仓库内容时：
@@ -129,12 +150,9 @@ git branch -d temp
     #查看配置列表
     git  config  list  
 
-
     # 设置提交代码时的用户信息
      git config [--global] user.name "[name]"
      git config [--global] user.email "[email address]"
-
-
 ```
 ---
 
